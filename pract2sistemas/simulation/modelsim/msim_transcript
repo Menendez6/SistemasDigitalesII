@@ -1,0 +1,113 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do pract2_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/pract2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pract2
+# -- Compiling architecture behavioral of pract2
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Controlar_paridad.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Controlar_paridad
+# -- Compiling architecture behavioral of Controlar_paridad
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/DetectorFlancobajada.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DetectorFlancobajada
+# -- Compiling architecture behavioral of DetectorFlancobajada
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Contador1bit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Contador1bit
+# -- Compiling architecture behavioral of Contador1bit
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/registrops8.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Registrops8
+# -- Compiling architecture behavioral of Registrops8
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Unidad_control.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Unidad_control
+# -- Compiling architecture behavioral of Unidad_control
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Contador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Contador
+# -- Compiling architecture behavioral of Contador
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/mux_enviar.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mux_enviar
+# -- Compiling architecture behavioral of Mux_enviar
+# 
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/simulation/modelsim/pract2.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pract2_vhd_tst
+# -- Compiling architecture pract2_arch of pract2_vhd_tst
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  pract2_vhd_tst
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps pract2_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pract2_vhd_tst(pract2_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.pract2(behavioral)
+# Loading work.registrops8(behavioral)
+# Loading work.controlar_paridad(behavioral)
+# Loading work.mux_enviar(behavioral)
+# Loading work.unidad_control(behavioral)
+# Loading work.detectorflancobajada(behavioral)
+# Loading work.contador(behavioral)
+# Loading work.contador1bit(behavioral)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /pract2_vhd_tst/i1/i_Unidad_control/i1_Contador1bit
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /pract2_vhd_tst/i1/i_Unidad_control/i1_Contador1bit
+# ** Failure: Fin de la simulación
+#    Time: 573010 ns  Iteration: 0  Process: /pract2_vhd_tst/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/simulation/modelsim/pract2.vht
+# Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/simulation/modelsim/pract2.vht line 79
+# Simulation Breakpoint: Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/simulation/modelsim/pract2.vht line 79
+# MACRO ./pract2_run_msim_rtl_vhdl.do PAUSED at line 24

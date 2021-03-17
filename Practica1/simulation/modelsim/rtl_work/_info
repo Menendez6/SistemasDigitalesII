@@ -1,0 +1,76 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\SistemasDigitalesII\Practica1\simulation\modelsim
+Ecomprobar_paridad
+Z1 w1613752997
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\altera\13.0sp1\SistemasDigitalesII\Practica1\simulation\modelsim
+Z5 8C:/altera/13.0sp1/SistemasDigitalesII/Practica1/Comprobar_paridad.vhd
+Z6 FC:/altera/13.0sp1/SistemasDigitalesII/Practica1/Comprobar_paridad.vhd
+l0
+L4
+V<FDMj1f7E0zd3]D:lDYa63
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1613756525.976000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica1/Comprobar_paridad.vhd|
+Z10 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica1/Comprobar_paridad.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 h=KzlE;=QMTFa5_VUTC:_0
+!i10b 1
+Abehavioral
+R2
+R3
+Z13 DEx4 work 17 comprobar_paridad 0 22 <FDMj1f7E0zd3]D:lDYa63
+l17
+L15
+V=a?9UGB8N[X0Wc_72aS5>2
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 @Vi>XVP8eDh;<c78Eh@ia0
+!i10b 1
+Ecomprobar_paridad_vhd_tst
+Z14 w1613756497
+R2
+R3
+R4
+Z15 8C:/altera/13.0sp1/SistemasDigitalesII/Practica1/simulation/modelsim/Comprobar_paridad.vht
+Z16 FC:/altera/13.0sp1/SistemasDigitalesII/Practica1/simulation/modelsim/Comprobar_paridad.vht
+l0
+L4
+VSo=dm>XFXB7K8_1Q0cc6g1
+!s100 >[nfP92Cb<:0d;gIPVUQU2
+R7
+31
+!i10b 1
+Z17 !s108 1613756526.072000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica1/simulation/modelsim/Comprobar_paridad.vht|
+Z19 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica1/simulation/modelsim/Comprobar_paridad.vht|
+R11
+R12
+Acomprobar_paridad_arch
+R13
+R2
+R3
+DEx4 work 25 comprobar_paridad_vhd_tst 0 22 So=dm>XFXB7K8_1Q0cc6g1
+l16
+L7
+VM6f;HHIibAEA7MQ=>UWf=2
+!s100 79SJUFjJajeL61Tm94i6I3
+R7
+31
+!i10b 1
+R17
+R18
+R19
+R11
+R12

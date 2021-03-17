@@ -1,0 +1,192 @@
+|pract2
+clk => registrops8:i_registrops8.clk
+clk => Controlar_paridad:i_Controlar_paridad.clk
+clk => Unidad_control:i_Unidad_control.clk
+e_p[0] => registrops8:i_registrops8.e_p[0]
+e_p[1] => registrops8:i_registrops8.e_p[1]
+e_p[2] => registrops8:i_registrops8.e_p[2]
+e_p[3] => registrops8:i_registrops8.e_p[3]
+e_p[4] => registrops8:i_registrops8.e_p[4]
+e_p[5] => registrops8:i_registrops8.e_p[5]
+e_p[6] => registrops8:i_registrops8.e_p[6]
+e_p[7] => registrops8:i_registrops8.e_p[7]
+reset => registrops8:i_registrops8.reset_n
+reset => Controlar_paridad:i_Controlar_paridad.reset_n
+reset => Unidad_control:i_Unidad_control.reset_n
+s_s <= Mux_enviar:i_Mux_enviar.s_serie
+transmi => Unidad_control:i_Unidad_control.transmi
+
+
+|pract2|Registrops8:i_registrops8
+clk => registro[0].CLK
+clk => registro[1].CLK
+clk => registro[2].CLK
+clk => registro[3].CLK
+clk => registro[4].CLK
+clk => registro[5].CLK
+clk => registro[6].CLK
+clk => registro[7].CLK
+clk => salida.CLK
+reset_n => registro[0].ACLR
+reset_n => registro[1].ACLR
+reset_n => registro[2].ACLR
+reset_n => registro[3].ACLR
+reset_n => registro[4].ACLR
+reset_n => registro[5].ACLR
+reset_n => registro[6].ACLR
+reset_n => registro[7].ACLR
+reset_n => salida.ACLR
+enable => salida.ENA
+enable => registro[7].ENA
+enable => registro[6].ENA
+enable => registro[5].ENA
+enable => registro[4].ENA
+enable => registro[3].ENA
+enable => registro[2].ENA
+enable => registro[1].ENA
+enable => registro[0].ENA
+c_d => registro.OUTPUTSELECT
+c_d => registro.OUTPUTSELECT
+c_d => registro.OUTPUTSELECT
+c_d => registro.OUTPUTSELECT
+c_d => registro.OUTPUTSELECT
+c_d => registro.OUTPUTSELECT
+c_d => registro.OUTPUTSELECT
+c_d => registro.OUTPUTSELECT
+c_d => salida.OUTPUTSELECT
+e_p[0] => registro.DATAB
+e_p[1] => registro.DATAB
+e_p[2] => registro.DATAB
+e_p[3] => registro.DATAB
+e_p[4] => registro.DATAB
+e_p[5] => registro.DATAB
+e_p[6] => registro.DATAB
+e_p[7] => registro.DATAB
+s_s <= salida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pract2|Controlar_paridad:i_Controlar_paridad
+data => b.IN1
+paridad <= b.DB_MAX_OUTPUT_PORT_TYPE
+clk => b.CLK
+back_to_0 => b.OUTPUTSELECT
+reset_n => b.ACLR
+enable => b.OUTPUTSELECT
+
+
+|pract2|Mux_enviar:i_Mux_enviar
+s_registro => Mux0.IN2
+paridad => Mux0.IN3
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+s_serie <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pract2|Unidad_control:i_Unidad_control
+clk => DetectorFlancoBajada:i1_Flanco.clk
+clk => Contador:i1_Contador.clk
+clk => Contador1bit:i1_Contador1bit.clk
+clk => estado_act~1.DATAIN
+reset_n => DetectorFlancoBajada:i1_Flanco.reset_n
+reset_n => Contador:i1_Contador.reset_n
+reset_n => Contador1bit:i1_Contador1bit.reset_n
+reset_n => estado_act~3.DATAIN
+transmi => DetectorFlancoBajada:i1_Flanco.e
+en_registro <= en_registro.DB_MAX_OUTPUT_PORT_TYPE
+c_d <= c_d.DB_MAX_OUTPUT_PORT_TYPE
+en_paridad <= en_paridad.DB_MAX_OUTPUT_PORT_TYPE
+selector[0] <= selector.DB_MAX_OUTPUT_PORT_TYPE
+selector[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+back_to_0 <= reinit.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pract2|Unidad_control:i_Unidad_control|DetectorFlancobajada:i1_Flanco
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => Selector0.IN2
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => Selector2.IN0
+reset_n => estado_act~3.DATAIN
+clk => estado_act~1.DATAIN
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pract2|Unidad_control:i_Unidad_control|Contador:i1_Contador
+reset_n => contador[0].ACLR
+reset_n => contador[1].ACLR
+reset_n => contador[2].ACLR
+reset_n => contador[3].ACLR
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+en => contador.OUTPUTSELECT
+en => contador.OUTPUTSELECT
+en => contador.OUTPUTSELECT
+en => contador.OUTPUTSELECT
+salida[0] <= contador[0].DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= contador[1].DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= contador[2].DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= contador[3].DB_MAX_OUTPUT_PORT_TYPE
+back_to_0 => contador.OUTPUTSELECT
+back_to_0 => contador.OUTPUTSELECT
+back_to_0 => contador.OUTPUTSELECT
+back_to_0 => contador.OUTPUTSELECT
+
+
+|pract2|Unidad_control:i_Unidad_control|Contador1bit:i1_Contador1bit
+reset_n => contador[0].ACLR
+reset_n => contador[1].ACLR
+reset_n => contador[2].ACLR
+reset_n => contador[3].ACLR
+reset_n => contador[4].ACLR
+reset_n => contador[5].ACLR
+reset_n => contador[6].ACLR
+reset_n => contador[7].ACLR
+reset_n => contador[8].ACLR
+reset_n => contador[9].ACLR
+reset_n => contador[10].ACLR
+reset_n => contador[11].ACLR
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+en => contador.OUTPUTSELECT
+en => contador.OUTPUTSELECT
+en => contador.OUTPUTSELECT
+en => contador.OUTPUTSELECT
+en => contador.OUTPUTSELECT
+en => contador.OUTPUTSELECT
+en => contador.OUTPUTSELECT
+en => contador.OUTPUTSELECT
+en => contador.OUTPUTSELECT
+en => contador.OUTPUTSELECT
+en => contador.OUTPUTSELECT
+en => contador.OUTPUTSELECT
+en => co.IN1
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+back_to_0 => contador.OUTPUTSELECT
+back_to_0 => contador.OUTPUTSELECT
+back_to_0 => contador.OUTPUTSELECT
+back_to_0 => contador.OUTPUTSELECT
+back_to_0 => contador.OUTPUTSELECT
+back_to_0 => contador.OUTPUTSELECT
+back_to_0 => contador.OUTPUTSELECT
+back_to_0 => contador.OUTPUTSELECT
+back_to_0 => contador.OUTPUTSELECT
+back_to_0 => contador.OUTPUTSELECT
+back_to_0 => contador.OUTPUTSELECT
+back_to_0 => contador.OUTPUTSELECT
+
+

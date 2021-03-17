@@ -1,0 +1,103 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Practica3_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/Practica3/practica3.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Practica3
+# -- Compiling architecture structural of Practica3
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/Practica3/contador1ms.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Contador1ms
+# -- Compiling architecture behavioral of Contador1ms
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/Practica3/contador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Contador
+# -- Compiling architecture behavioral of Contador
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/Practica3/selector.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Selector
+# -- Compiling architecture behavioral of Selector
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/Practica3/registro.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Registro
+# -- Compiling architecture behavioral of Registro
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/Practica3/multiplexor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Multiplexor
+# -- Compiling architecture behavioral of Multiplexor
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/Practica3/asciia16seg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity AsciiA16Seg
+# -- Compiling architecture behavioural of AsciiA16Seg
+# 
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/Practica3/simulation/modelsim/Practica3.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Practica3_vhd_tst
+# -- Compiling architecture tb of Practica3_vhd_tst
+# -- Loading entity Practica3
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  Practica3_vhd_tst
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps Practica3_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.practica3_vhd_tst(tb)
+# Loading work.practica3(structural)
+# Loading work.contador1ms(behavioral)
+# Loading work.contador(behavioral)
+# Loading work.selector(behavioral)
+# Loading work.registro(behavioral)
+# Loading work.multiplexor(behavioral)
+# Loading work.asciia16seg(behavioural)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /practica3_vhd_tst/i1/i_contador1ms
+# ** Failure: Fin de la simulación
+#    Time: 5000100 ns  Iteration: 0  Process: /practica3_vhd_tst/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/Practica3/simulation/modelsim/Practica3.vht
+# Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/Practica3/simulation/modelsim/Practica3.vht line 48
+# Simulation Breakpoint: Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/Practica3/simulation/modelsim/Practica3.vht line 48
+# MACRO ./Practica3_run_msim_rtl_vhdl.do PAUSED at line 23

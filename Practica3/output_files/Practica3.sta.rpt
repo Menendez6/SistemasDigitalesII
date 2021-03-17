@@ -1,0 +1,1161 @@
+TimeQuest Timing Analyzer report for Practica3
+Wed Mar 03 08:47:48 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Fast Model Setup Summary
+ 17. Fast Model Hold Summary
+ 18. Fast Model Recovery Summary
+ 19. Fast Model Removal Summary
+ 20. Fast Model Minimum Pulse Width Summary
+ 21. Fast Model Setup: 'clk'
+ 22. Fast Model Hold: 'clk'
+ 23. Fast Model Minimum Pulse Width: 'clk'
+ 24. Clock to Output Times
+ 25. Minimum Clock to Output Times
+ 26. Multicorner Timing Analysis Summary
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Setup Transfers
+ 30. Hold Transfers
+ 31. Report TCCS
+ 32. Report RSKM
+ 33. Unconstrained Paths
+ 34. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Practica3                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                           ;
++------------+-----------------+------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                  ;
++------------+-----------------+------------+-------------------------------------------------------+
+; 265.04 MHz ; 216.08 MHz      ; clk        ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -2.773 ; -60.111       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.445 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.814 ; -60.021               ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                                                                                                   ;
++--------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                                                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.773 ; Contador:i_Contador|contador[0]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ; clk          ; clk         ; 1.000        ; 0.077      ; 3.810      ;
+; -2.664 ; Contador:i_Contador|contador[2]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ; clk          ; clk         ; 1.000        ; 0.077      ; 3.701      ;
+; -2.647 ; Contador:i_Contador|contador[2]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ; clk          ; clk         ; 1.000        ; 0.077      ; 3.684      ;
+; -2.623 ; Contador1ms:i_contador1ms|contador[7]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.018     ; 3.643      ;
+; -2.598 ; Contador1ms:i_contador1ms|contador[1]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.018     ; 3.618      ;
+; -2.595 ; Registro:i1_Registro0|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ; clk          ; clk         ; 1.000        ; 0.083      ; 3.638      ;
+; -2.578 ; Contador:i_Contador|contador[0]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ; clk          ; clk         ; 1.000        ; 0.077      ; 3.615      ;
+; -2.549 ; Contador1ms:i_contador1ms|contador[6]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.017     ; 3.570      ;
+; -2.548 ; Contador1ms:i_contador1ms|contador[5]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.018     ; 3.568      ;
+; -2.542 ; Contador1ms:i_contador1ms|contador[3]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.018     ; 3.562      ;
+; -2.528 ; Registro:i1_Registro1|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ; clk          ; clk         ; 1.000        ; 0.083      ; 3.571      ;
+; -2.513 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 3.550      ;
+; -2.511 ; Contador1ms:i_contador1ms|contador[0]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.018     ; 3.531      ;
+; -2.507 ; Contador1ms:i_contador1ms|contador[15] ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.017     ; 3.528      ;
+; -2.498 ; Contador1ms:i_contador1ms|contador[13] ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.018     ; 3.518      ;
+; -2.489 ; Contador:i_Contador|contador[2]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ; clk          ; clk         ; 1.000        ; 0.077      ; 3.526      ;
+; -2.484 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 3.521      ;
+; -2.469 ; Contador1ms:i_contador1ms|contador[14] ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.017     ; 3.490      ;
+; -2.439 ; Contador1ms:i_contador1ms|contador[11] ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.018     ; 3.459      ;
+; -2.433 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 3.470      ;
+; -2.409 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 3.447      ;
+; -2.404 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 3.441      ;
+; -2.380 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 3.418      ;
+; -2.354 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 3.391      ;
+; -2.351 ; Registro:i1_Registro3|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ; clk          ; clk         ; 1.000        ; 0.084      ; 3.395      ;
+; -2.351 ; Contador1ms:i_contador1ms|contador[12] ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.018     ; 3.371      ;
+; -2.325 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 3.362      ;
+; -2.315 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 3.352      ;
+; -2.307 ; Contador:i_Contador|contador[0]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ; clk          ; clk         ; 1.000        ; 0.077      ; 3.344      ;
+; -2.298 ; Registro:i1_Registro2|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ; clk          ; clk         ; 1.000        ; 0.084      ; 3.342      ;
+; -2.293 ; Contador:i_Contador|contador[0]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ; clk          ; clk         ; 1.000        ; 0.077      ; 3.330      ;
+; -2.290 ; Contador1ms:i_contador1ms|contador[10] ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.018     ; 3.310      ;
+; -2.286 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 3.323      ;
+; -2.278 ; Contador1ms:i_contador1ms|contador[7]  ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.304      ;
+; -2.278 ; Contador1ms:i_contador1ms|contador[7]  ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.304      ;
+; -2.271 ; Registro:i1_Registro2|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ; clk          ; clk         ; 1.000        ; 0.084      ; 3.315      ;
+; -2.269 ; Registro:i1_Registro6|s[5]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ; clk          ; clk         ; 1.000        ; 0.083      ; 3.312      ;
+; -2.265 ; Contador1ms:i_contador1ms|contador[6]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 3.303      ;
+; -2.253 ; Contador1ms:i_contador1ms|contador[1]  ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.279      ;
+; -2.253 ; Contador1ms:i_contador1ms|contador[1]  ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.279      ;
+; -2.236 ; Contador1ms:i_contador1ms|contador[6]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 3.274      ;
+; -2.221 ; Contador:i_Contador|contador[1]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ; clk          ; clk         ; 1.000        ; 0.083      ; 3.264      ;
+; -2.204 ; Contador1ms:i_contador1ms|contador[6]  ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.011     ; 3.231      ;
+; -2.204 ; Contador1ms:i_contador1ms|contador[6]  ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.011     ; 3.231      ;
+; -2.203 ; Contador1ms:i_contador1ms|contador[5]  ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.229      ;
+; -2.203 ; Contador1ms:i_contador1ms|contador[5]  ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.229      ;
+; -2.197 ; Contador1ms:i_contador1ms|contador[3]  ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.223      ;
+; -2.197 ; Contador1ms:i_contador1ms|contador[3]  ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.223      ;
+; -2.192 ; Registro:i1_Registro0|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ; clk          ; clk         ; 1.000        ; 0.083      ; 3.235      ;
+; -2.192 ; Registro:i1_Registro0|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ; clk          ; clk         ; 1.000        ; 0.083      ; 3.235      ;
+; -2.189 ; Contador1ms:i_contador1ms|contador[2]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.018     ; 3.209      ;
+; -2.184 ; Registro:i1_Registro0|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg1 ; clk          ; clk         ; 1.000        ; 0.083      ; 3.227      ;
+; -2.180 ; Contador1ms:i_contador1ms|contador[8]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.017     ; 3.201      ;
+; -2.167 ; Contador:i_Contador|contador[0]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg1 ; clk          ; clk         ; 1.000        ; 0.077      ; 3.204      ;
+; -2.166 ; Contador1ms:i_contador1ms|contador[0]  ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.192      ;
+; -2.166 ; Contador1ms:i_contador1ms|contador[0]  ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.192      ;
+; -2.163 ; Contador1ms:i_contador1ms|contador[4]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.017     ; 3.184      ;
+; -2.162 ; Contador1ms:i_contador1ms|contador[15] ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.011     ; 3.189      ;
+; -2.162 ; Contador1ms:i_contador1ms|contador[15] ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.011     ; 3.189      ;
+; -2.156 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[8]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 3.193      ;
+; -2.155 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 3.192      ;
+; -2.153 ; Contador1ms:i_contador1ms|contador[13] ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.179      ;
+; -2.153 ; Contador1ms:i_contador1ms|contador[13] ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.179      ;
+; -2.139 ; Contador1ms:i_contador1ms|contador[9]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.017     ; 3.160      ;
+; -2.126 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 3.163      ;
+; -2.125 ; Registro:i1_Registro1|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ; clk          ; clk         ; 1.000        ; 0.083      ; 3.168      ;
+; -2.125 ; Registro:i1_Registro1|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ; clk          ; clk         ; 1.000        ; 0.083      ; 3.168      ;
+; -2.124 ; Contador1ms:i_contador1ms|contador[14] ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.011     ; 3.151      ;
+; -2.124 ; Contador1ms:i_contador1ms|contador[14] ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.011     ; 3.151      ;
+; -2.119 ; Contador:i_Contador|contador[1]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ; clk          ; clk         ; 1.000        ; 0.083      ; 3.162      ;
+; -2.117 ; Registro:i1_Registro1|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg1 ; clk          ; clk         ; 1.000        ; 0.083      ; 3.160      ;
+; -2.094 ; Contador1ms:i_contador1ms|contador[11] ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.120      ;
+; -2.094 ; Contador1ms:i_contador1ms|contador[11] ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.120      ;
+; -2.086 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[9]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 3.123      ;
+; -2.084 ; Registro:i1_Registro6|s[5]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg5 ; clk          ; clk         ; 1.000        ; 0.083      ; 3.127      ;
+; -2.076 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[8]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 3.113      ;
+; -2.053 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 3.091      ;
+; -2.053 ; Registro:i1_Registro7|s[5]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ; clk          ; clk         ; 1.000        ; 0.084      ; 3.097      ;
+; -2.052 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[8]                                                                             ; clk          ; clk         ; 1.000        ; 0.000      ; 3.090      ;
+; -2.024 ; Contador:i_Contador|contador[2]        ; Registro:i1_Registro4|s[5]                                                                                        ; clk          ; clk         ; 1.000        ; -0.006     ; 3.056      ;
+; -2.024 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 3.062      ;
+; -2.018 ; Contador:i_Contador|contador[1]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ; clk          ; clk         ; 1.000        ; 0.083      ; 3.061      ;
+; -2.017 ; Contador:i_Contador|contador[2]        ; Registro:i1_Registro6|s[5]                                                                                        ; clk          ; clk         ; 1.000        ; -0.006     ; 3.049      ;
+; -2.006 ; Contador1ms:i_contador1ms|contador[12] ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.032      ;
+; -2.006 ; Contador1ms:i_contador1ms|contador[12] ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 3.032      ;
+; -2.006 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[9]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 3.043      ;
+; -1.997 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[8]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 3.034      ;
+; -1.982 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[9]                                                                             ; clk          ; clk         ; 1.000        ; 0.000      ; 3.020      ;
+; -1.965 ; Registro:i1_Registro2|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ; clk          ; clk         ; 1.000        ; 0.084      ; 3.009      ;
+; -1.961 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 2.998      ;
+; -1.958 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[8]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 2.995      ;
+; -1.948 ; Registro:i1_Registro6|s[5]             ; Registro:i1_Registro6|s[5]                                                                                        ; clk          ; clk         ; 1.000        ; 0.000      ; 2.986      ;
+; -1.945 ; Contador1ms:i_contador1ms|contador[10] ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 2.971      ;
+; -1.945 ; Contador1ms:i_contador1ms|contador[10] ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.012     ; 2.971      ;
+; -1.938 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.976      ;
+; -1.934 ; Contador:i_Contador|contador[1]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg5 ; clk          ; clk         ; 1.000        ; 0.083      ; 2.977      ;
+; -1.934 ; Registro:i1_Registro4|s[5]             ; Registro:i1_Registro4|s[5]                                                                                        ; clk          ; clk         ; 1.000        ; 0.000      ; 2.972      ;
+; -1.932 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 2.969      ;
+; -1.927 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[9]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 2.964      ;
+; -1.921 ; Registro:i1_Registro4|s[5]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ; clk          ; clk         ; 1.000        ; 0.083      ; 2.964      ;
++--------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                                                                                   ;
++-------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                              ; To Node                                                                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; Contador:i_Contador|contador[0]        ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Contador:i_Contador|contador[1]        ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Contador:i_Contador|contador[2]        ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Registro:i1_Registro2|s[6]             ; Registro:i1_Registro2|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Registro:i1_Registro3|s[6]             ; Registro:i1_Registro3|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Registro:i1_Registro5|s[5]             ; Registro:i1_Registro5|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Registro:i1_Registro7|s[5]             ; Registro:i1_Registro7|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.955 ; Contador:i_Contador|contador[1]        ; Registro:i1_Registro7|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; -0.001     ; 1.240      ;
+; 0.956 ; Contador:i_Contador|contador[1]        ; Registro:i1_Registro2|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; -0.001     ; 1.241      ;
+; 0.956 ; Contador:i_Contador|contador[1]        ; Registro:i1_Registro3|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; -0.001     ; 1.241      ;
+; 0.962 ; Contador:i_Contador|contador[1]        ; Registro:i1_Registro5|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; -0.001     ; 1.247      ;
+; 0.968 ; Contador1ms:i_contador1ms|contador[13] ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.254      ;
+; 0.971 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[0]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.257      ;
+; 0.971 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[1]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.257      ;
+; 0.972 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[2]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.258      ;
+; 0.972 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.258      ;
+; 0.972 ; Contador1ms:i_contador1ms|contador[11] ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.258      ;
+; 1.011 ; Contador1ms:i_contador1ms|contador[10] ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.297      ;
+; 1.012 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[3]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.298      ;
+; 1.012 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[5]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.298      ;
+; 1.012 ; Contador1ms:i_contador1ms|contador[12] ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.298      ;
+; 1.246 ; Contador:i_Contador|contador[0]        ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.532      ;
+; 1.403 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[1]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.689      ;
+; 1.403 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[2]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.689      ;
+; 1.404 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[3]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.690      ;
+; 1.404 ; Contador1ms:i_contador1ms|contador[11] ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.690      ;
+; 1.444 ; Contador1ms:i_contador1ms|contador[10] ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.730      ;
+; 1.445 ; Contador1ms:i_contador1ms|contador[12] ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.731      ;
+; 1.483 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[2]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.769      ;
+; 1.483 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[3]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.769      ;
+; 1.484 ; Contador1ms:i_contador1ms|contador[11] ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.770      ;
+; 1.513 ; Contador1ms:i_contador1ms|contador[15] ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.799      ;
+; 1.524 ; Contador1ms:i_contador1ms|contador[10] ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.810      ;
+; 1.525 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.811      ;
+; 1.525 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[5]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.811      ;
+; 1.562 ; Contador:i_Contador|contador[1]        ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 0.000        ; 0.006      ; 1.854      ;
+; 1.563 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[3]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.849      ;
+; 1.564 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[5]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.850      ;
+; 1.599 ; Contador:i_Contador|contador[0]        ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 0.000        ; -0.006     ; 1.879      ;
+; 1.604 ; Contador1ms:i_contador1ms|contador[10] ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.890      ;
+; 1.619 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[5]                                                                             ; clk          ; clk         ; 0.000        ; 0.001      ; 1.906      ;
+; 1.635 ; Contador1ms:i_contador1ms|contador[6]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.001      ; 1.922      ;
+; 1.642 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 1.929      ;
+; 1.643 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[5]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.929      ;
+; 1.665 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.951      ;
+; 1.685 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.971      ;
+; 1.708 ; Contador:i_Contador|contador[0]        ; Registro:i1_Registro7|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 1.987      ;
+; 1.710 ; Contador:i_Contador|contador[0]        ; Registro:i1_Registro2|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 1.989      ;
+; 1.710 ; Contador:i_Contador|contador[0]        ; Registro:i1_Registro3|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 1.989      ;
+; 1.713 ; Contador:i_Contador|contador[0]        ; Registro:i1_Registro5|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 1.992      ;
+; 1.722 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 2.009      ;
+; 1.723 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[5]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.009      ;
+; 1.724 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.010      ;
+; 1.745 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.031      ;
+; 1.757 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 2.044      ;
+; 1.779 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.001      ; 2.066      ;
+; 1.802 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 2.089      ;
+; 1.803 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.089      ;
+; 1.815 ; Contador:i_Contador|contador[1]        ; Registro:i1_Registro1|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 2.101      ;
+; 1.818 ; Contador:i_Contador|contador[1]        ; Registro:i1_Registro0|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 2.104      ;
+; 1.825 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.111      ;
+; 1.837 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 2.124      ;
+; 1.859 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.145      ;
+; 1.882 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 2.169      ;
+; 1.883 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.169      ;
+; 1.905 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.191      ;
+; 1.910 ; Contador1ms:i_contador1ms|contador[14] ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.196      ;
+; 1.911 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[9]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.197      ;
+; 1.917 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 2.204      ;
+; 1.919 ; Contador:i_Contador|contador[1]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg1 ; clk          ; clk         ; 0.000        ; 0.083      ; 2.252      ;
+; 1.939 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.225      ;
+; 1.951 ; Contador:i_Contador|contador[2]        ; Registro:i1_Registro7|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 2.230      ;
+; 1.952 ; Contador:i_Contador|contador[2]        ; Registro:i1_Registro2|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 2.231      ;
+; 1.952 ; Contador:i_Contador|contador[2]        ; Registro:i1_Registro3|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 2.231      ;
+; 1.952 ; Contador:i_Contador|contador[2]        ; Registro:i1_Registro5|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 2.231      ;
+; 1.969 ; Contador1ms:i_contador1ms|contador[6]  ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 2.256      ;
+; 1.997 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 2.284      ;
+; 2.016 ; Contador:i_Contador|contador[1]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ; clk          ; clk         ; 0.000        ; 0.083      ; 2.349      ;
+; 2.017 ; Contador:i_Contador|contador[1]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ; clk          ; clk         ; 0.000        ; 0.083      ; 2.350      ;
+; 2.019 ; Registro:i1_Registro3|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.084      ; 2.353      ;
+; 2.019 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.305      ;
+; 2.019 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.305      ;
+; 2.043 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[4]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.329      ;
+; 2.049 ; Contador1ms:i_contador1ms|contador[6]  ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 2.336      ;
+; 2.054 ; Contador1ms:i_contador1ms|contador[6]  ; Contador1ms:i_contador1ms|contador[6]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.340      ;
+; 2.058 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.344      ;
+; 2.083 ; Contador:i_Contador|contador[0]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.077      ; 2.410      ;
+; 2.089 ; Registro:i1_Registro1|s[6]             ; Registro:i1_Registro1|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 2.375      ;
+; 2.090 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.376      ;
+; 2.091 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.377      ;
+; 2.095 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[8]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.381      ;
+; 2.099 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.385      ;
+; 2.099 ; Contador1ms:i_contador1ms|contador[13] ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 0.000        ; -0.001     ; 2.384      ;
+; 2.099 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.385      ;
+; 2.113 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 2.400      ;
+; 2.114 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.400      ;
+; 2.115 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.401      ;
+; 2.115 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[9]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.401      ;
+; 2.128 ; Contador1ms:i_contador1ms|contador[13] ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 0.000        ; -0.001     ; 2.413      ;
+; 2.129 ; Contador1ms:i_contador1ms|contador[6]  ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 2.416      ;
++-------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------+
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                                                                                                               ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[0]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[0]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[10]                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[10]                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[11]                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[11]                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[12]                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[12]                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[13]                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[13]                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[14]                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[14]                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[15]                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[15]                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[1]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[1]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[2]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[2]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[3]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[3]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[4]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[4]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[5]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[5]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[6]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[6]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[7]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[7]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[8]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[8]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[9]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[9]                                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador:i_Contador|contador[0]                                                                                   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador:i_Contador|contador[0]                                                                                   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador:i_Contador|contador[1]                                                                                   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador:i_Contador|contador[1]                                                                                   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Contador:i_Contador|contador[2]                                                                                   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Contador:i_Contador|contador[2]                                                                                   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro0|s[6]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro0|s[6]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro1|s[6]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro1|s[6]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro2|s[6]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro2|s[6]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro3|s[6]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro3|s[6]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro4|s[5]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro4|s[5]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro5|s[5]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro5|s[5]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro6|s[5]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro6|s[5]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro7|s[5]                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro7|s[5]                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                                                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                                                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                                                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                                                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro0|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro0|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro1|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro1|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro2|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro2|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro3|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro3|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro4|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro4|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro5|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro5|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro6|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro6|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro7|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro7|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_ASCIIa17Seg|memoria_rtl_0|auto_generated|ram_block1a0|clk0                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_ASCIIa17Seg|memoria_rtl_0|auto_generated|ram_block1a0|clk0                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_Contador|contador[0]|clk                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_Contador|contador[0]|clk                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_Contador|contador[1]|clk                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_Contador|contador[1]|clk                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_Contador|contador[2]|clk                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_Contador|contador[2]|clk                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contador1ms|contador[0]|clk                                                                                     ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; dig_led[*]   ; clk        ; 11.074 ; 11.074 ; Rise       ; clk             ;
+;  dig_led[0]  ; clk        ; 11.074 ; 11.074 ; Rise       ; clk             ;
+;  dig_led[1]  ; clk        ; 10.969 ; 10.969 ; Rise       ; clk             ;
+;  dig_led[2]  ; clk        ; 11.015 ; 11.015 ; Rise       ; clk             ;
+;  dig_led[3]  ; clk        ; 10.620 ; 10.620 ; Rise       ; clk             ;
+;  dig_led[4]  ; clk        ; 10.899 ; 10.899 ; Rise       ; clk             ;
+;  dig_led[5]  ; clk        ; 10.618 ; 10.618 ; Rise       ; clk             ;
+;  dig_led[6]  ; clk        ; 10.986 ; 10.986 ; Rise       ; clk             ;
+;  dig_led[7]  ; clk        ; 10.954 ; 10.954 ; Rise       ; clk             ;
+;  dig_led[8]  ; clk        ; 10.984 ; 10.984 ; Rise       ; clk             ;
+;  dig_led[9]  ; clk        ; 11.023 ; 11.023 ; Rise       ; clk             ;
+;  dig_led[10] ; clk        ; 10.677 ; 10.677 ; Rise       ; clk             ;
+;  dig_led[11] ; clk        ; 11.013 ; 11.013 ; Rise       ; clk             ;
+;  dig_led[12] ; clk        ; 11.072 ; 11.072 ; Rise       ; clk             ;
+;  dig_led[13] ; clk        ; 10.626 ; 10.626 ; Rise       ; clk             ;
+;  dig_led[14] ; clk        ; 10.994 ; 10.994 ; Rise       ; clk             ;
+;  dig_led[15] ; clk        ; 10.995 ; 10.995 ; Rise       ; clk             ;
+;  dig_led[16] ; clk        ; 10.957 ; 10.957 ; Rise       ; clk             ;
+; digito[*]    ; clk        ; 9.023  ; 9.023  ; Rise       ; clk             ;
+;  digito[0]   ; clk        ; 9.002  ; 9.002  ; Rise       ; clk             ;
+;  digito[1]   ; clk        ; 8.933  ; 8.933  ; Rise       ; clk             ;
+;  digito[2]   ; clk        ; 9.023  ; 9.023  ; Rise       ; clk             ;
+;  digito[3]   ; clk        ; 8.744  ; 8.744  ; Rise       ; clk             ;
+;  digito[4]   ; clk        ; 8.723  ; 8.723  ; Rise       ; clk             ;
+;  digito[5]   ; clk        ; 8.936  ; 8.936  ; Rise       ; clk             ;
+;  digito[6]   ; clk        ; 8.724  ; 8.724  ; Rise       ; clk             ;
+;  digito[7]   ; clk        ; 8.588  ; 8.588  ; Rise       ; clk             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; dig_led[*]   ; clk        ; 10.618 ; 10.618 ; Rise       ; clk             ;
+;  dig_led[0]  ; clk        ; 11.074 ; 11.074 ; Rise       ; clk             ;
+;  dig_led[1]  ; clk        ; 10.969 ; 10.969 ; Rise       ; clk             ;
+;  dig_led[2]  ; clk        ; 11.015 ; 11.015 ; Rise       ; clk             ;
+;  dig_led[3]  ; clk        ; 10.620 ; 10.620 ; Rise       ; clk             ;
+;  dig_led[4]  ; clk        ; 10.899 ; 10.899 ; Rise       ; clk             ;
+;  dig_led[5]  ; clk        ; 10.618 ; 10.618 ; Rise       ; clk             ;
+;  dig_led[6]  ; clk        ; 10.986 ; 10.986 ; Rise       ; clk             ;
+;  dig_led[7]  ; clk        ; 10.954 ; 10.954 ; Rise       ; clk             ;
+;  dig_led[8]  ; clk        ; 10.984 ; 10.984 ; Rise       ; clk             ;
+;  dig_led[9]  ; clk        ; 11.023 ; 11.023 ; Rise       ; clk             ;
+;  dig_led[10] ; clk        ; 10.677 ; 10.677 ; Rise       ; clk             ;
+;  dig_led[11] ; clk        ; 11.013 ; 11.013 ; Rise       ; clk             ;
+;  dig_led[12] ; clk        ; 11.072 ; 11.072 ; Rise       ; clk             ;
+;  dig_led[13] ; clk        ; 10.626 ; 10.626 ; Rise       ; clk             ;
+;  dig_led[14] ; clk        ; 10.994 ; 10.994 ; Rise       ; clk             ;
+;  dig_led[15] ; clk        ; 10.995 ; 10.995 ; Rise       ; clk             ;
+;  dig_led[16] ; clk        ; 10.957 ; 10.957 ; Rise       ; clk             ;
+; digito[*]    ; clk        ; 8.181  ; 8.181  ; Rise       ; clk             ;
+;  digito[0]   ; clk        ; 8.325  ; 8.325  ; Rise       ; clk             ;
+;  digito[1]   ; clk        ; 8.324  ; 8.324  ; Rise       ; clk             ;
+;  digito[2]   ; clk        ; 8.354  ; 8.354  ; Rise       ; clk             ;
+;  digito[3]   ; clk        ; 8.423  ; 8.423  ; Rise       ; clk             ;
+;  digito[4]   ; clk        ; 8.423  ; 8.423  ; Rise       ; clk             ;
+;  digito[5]   ; clk        ; 8.325  ; 8.325  ; Rise       ; clk             ;
+;  digito[6]   ; clk        ; 8.460  ; 8.460  ; Rise       ; clk             ;
+;  digito[7]   ; clk        ; 8.181  ; 8.181  ; Rise       ; clk             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.427 ; -5.292        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.423 ; -48.302               ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                                                                                                   ;
++--------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                                                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.427 ; Contador1ms:i_contador1ms|contador[7]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.016     ; 1.443      ;
+; -0.425 ; Contador:i_Contador|contador[2]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ; clk          ; clk         ; 1.000        ; 0.065      ; 1.489      ;
+; -0.419 ; Contador1ms:i_contador1ms|contador[1]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.016     ; 1.435      ;
+; -0.417 ; Contador:i_Contador|contador[2]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ; clk          ; clk         ; 1.000        ; 0.065      ; 1.481      ;
+; -0.404 ; Contador:i_Contador|contador[0]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ; clk          ; clk         ; 1.000        ; 0.065      ; 1.468      ;
+; -0.403 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 1.434      ;
+; -0.386 ; Contador1ms:i_contador1ms|contador[3]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.016     ; 1.402      ;
+; -0.378 ; Contador1ms:i_contador1ms|contador[0]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.016     ; 1.394      ;
+; -0.375 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 1.406      ;
+; -0.370 ; Contador1ms:i_contador1ms|contador[5]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.016     ; 1.386      ;
+; -0.368 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 1.399      ;
+; -0.365 ; Contador1ms:i_contador1ms|contador[6]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.015     ; 1.382      ;
+; -0.351 ; Contador1ms:i_contador1ms|contador[15] ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.015     ; 1.368      ;
+; -0.350 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.382      ;
+; -0.349 ; Contador1ms:i_contador1ms|contador[13] ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.016     ; 1.365      ;
+; -0.340 ; Contador:i_Contador|contador[0]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ; clk          ; clk         ; 1.000        ; 0.065      ; 1.404      ;
+; -0.340 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 1.371      ;
+; -0.338 ; Contador1ms:i_contador1ms|contador[14] ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.015     ; 1.355      ;
+; -0.334 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 1.365      ;
+; -0.323 ; Contador:i_Contador|contador[2]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ; clk          ; clk         ; 1.000        ; 0.065      ; 1.387      ;
+; -0.322 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.354      ;
+; -0.320 ; Registro:i1_Registro0|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ; clk          ; clk         ; 1.000        ; 0.071      ; 1.390      ;
+; -0.318 ; Contador1ms:i_contador1ms|contador[11] ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.016     ; 1.334      ;
+; -0.312 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 1.343      ;
+; -0.306 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 1.337      ;
+; -0.297 ; Contador1ms:i_contador1ms|contador[12] ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.016     ; 1.313      ;
+; -0.296 ; Registro:i1_Registro1|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ; clk          ; clk         ; 1.000        ; 0.071      ; 1.366      ;
+; -0.284 ; Contador1ms:i_contador1ms|contador[7]  ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.306      ;
+; -0.284 ; Contador1ms:i_contador1ms|contador[7]  ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.306      ;
+; -0.284 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 1.315      ;
+; -0.280 ; Contador:i_Contador|contador[0]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ; clk          ; clk         ; 1.000        ; 0.065      ; 1.344      ;
+; -0.278 ; Contador1ms:i_contador1ms|contador[6]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.310      ;
+; -0.276 ; Contador1ms:i_contador1ms|contador[1]  ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.298      ;
+; -0.276 ; Contador1ms:i_contador1ms|contador[1]  ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.298      ;
+; -0.266 ; Contador:i_Contador|contador[0]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ; clk          ; clk         ; 1.000        ; 0.065      ; 1.330      ;
+; -0.263 ; Contador1ms:i_contador1ms|contador[10] ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.016     ; 1.279      ;
+; -0.252 ; Contador1ms:i_contador1ms|contador[2]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.016     ; 1.268      ;
+; -0.250 ; Contador1ms:i_contador1ms|contador[6]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.282      ;
+; -0.245 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[8]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 1.276      ;
+; -0.243 ; Contador1ms:i_contador1ms|contador[3]  ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.265      ;
+; -0.243 ; Contador1ms:i_contador1ms|contador[3]  ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.265      ;
+; -0.242 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 1.273      ;
+; -0.235 ; Contador1ms:i_contador1ms|contador[0]  ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.257      ;
+; -0.235 ; Contador1ms:i_contador1ms|contador[0]  ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.257      ;
+; -0.231 ; Contador1ms:i_contador1ms|contador[4]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.015     ; 1.248      ;
+; -0.227 ; Contador1ms:i_contador1ms|contador[5]  ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.249      ;
+; -0.227 ; Contador1ms:i_contador1ms|contador[5]  ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.249      ;
+; -0.226 ; Registro:i1_Registro3|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ; clk          ; clk         ; 1.000        ; 0.072      ; 1.297      ;
+; -0.224 ; Contador:i_Contador|contador[2]        ; Registro:i1_Registro4|s[5]                                                                                        ; clk          ; clk         ; 1.000        ; -0.006     ; 1.250      ;
+; -0.222 ; Contador1ms:i_contador1ms|contador[8]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.015     ; 1.239      ;
+; -0.222 ; Contador1ms:i_contador1ms|contador[6]  ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.009     ; 1.245      ;
+; -0.222 ; Contador1ms:i_contador1ms|contador[6]  ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.009     ; 1.245      ;
+; -0.220 ; Contador:i_Contador|contador[1]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ; clk          ; clk         ; 1.000        ; 0.071      ; 1.290      ;
+; -0.219 ; Contador:i_Contador|contador[2]        ; Registro:i1_Registro6|s[5]                                                                                        ; clk          ; clk         ; 1.000        ; -0.006     ; 1.245      ;
+; -0.214 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 1.245      ;
+; -0.210 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[8]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 1.241      ;
+; -0.208 ; Contador1ms:i_contador1ms|contador[9]  ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 1.000        ; -0.015     ; 1.225      ;
+; -0.208 ; Contador1ms:i_contador1ms|contador[15] ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.009     ; 1.231      ;
+; -0.208 ; Contador1ms:i_contador1ms|contador[15] ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.009     ; 1.231      ;
+; -0.206 ; Contador1ms:i_contador1ms|contador[13] ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.228      ;
+; -0.206 ; Contador1ms:i_contador1ms|contador[13] ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.228      ;
+; -0.205 ; Contador:i_Contador|contador[0]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg1 ; clk          ; clk         ; 1.000        ; 0.065      ; 1.269      ;
+; -0.204 ; Registro:i1_Registro2|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ; clk          ; clk         ; 1.000        ; 0.072      ; 1.275      ;
+; -0.202 ; Registro:i1_Registro6|s[5]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ; clk          ; clk         ; 1.000        ; 0.071      ; 1.272      ;
+; -0.201 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[9]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 1.232      ;
+; -0.195 ; Contador1ms:i_contador1ms|contador[14] ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.009     ; 1.218      ;
+; -0.195 ; Contador1ms:i_contador1ms|contador[14] ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.009     ; 1.218      ;
+; -0.194 ; Registro:i1_Registro2|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ; clk          ; clk         ; 1.000        ; 0.072      ; 1.265      ;
+; -0.192 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[8]                                                                             ; clk          ; clk         ; 1.000        ; 0.000      ; 1.224      ;
+; -0.187 ; Registro:i1_Registro0|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ; clk          ; clk         ; 1.000        ; 0.071      ; 1.257      ;
+; -0.186 ; Registro:i1_Registro0|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ; clk          ; clk         ; 1.000        ; 0.071      ; 1.256      ;
+; -0.185 ; Registro:i1_Registro0|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg1 ; clk          ; clk         ; 1.000        ; 0.071      ; 1.255      ;
+; -0.178 ; Contador:i_Contador|contador[1]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ; clk          ; clk         ; 1.000        ; 0.071      ; 1.248      ;
+; -0.176 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[8]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 1.207      ;
+; -0.175 ; Contador1ms:i_contador1ms|contador[11] ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.197      ;
+; -0.175 ; Contador1ms:i_contador1ms|contador[11] ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.197      ;
+; -0.168 ; Contador:i_Contador|contador[0]        ; Registro:i1_Registro4|s[5]                                                                                        ; clk          ; clk         ; 1.000        ; -0.006     ; 1.194      ;
+; -0.166 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[9]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 1.197      ;
+; -0.165 ; Contador:i_Contador|contador[0]        ; Registro:i1_Registro6|s[5]                                                                                        ; clk          ; clk         ; 1.000        ; -0.006     ; 1.191      ;
+; -0.163 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.195      ;
+; -0.163 ; Registro:i1_Registro1|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ; clk          ; clk         ; 1.000        ; 0.071      ; 1.233      ;
+; -0.162 ; Registro:i1_Registro1|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ; clk          ; clk         ; 1.000        ; 0.071      ; 1.232      ;
+; -0.161 ; Registro:i1_Registro6|s[5]             ; Registro:i1_Registro6|s[5]                                                                                        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.193      ;
+; -0.161 ; Registro:i1_Registro1|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg1 ; clk          ; clk         ; 1.000        ; 0.071      ; 1.231      ;
+; -0.161 ; Contador:i_Contador|contador[1]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ; clk          ; clk         ; 1.000        ; 0.071      ; 1.231      ;
+; -0.155 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 1.186      ;
+; -0.154 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[8]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 1.185      ;
+; -0.154 ; Contador1ms:i_contador1ms|contador[12] ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.176      ;
+; -0.154 ; Contador1ms:i_contador1ms|contador[12] ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 1.000        ; -0.010     ; 1.176      ;
+; -0.148 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[9]                                                                             ; clk          ; clk         ; 1.000        ; 0.000      ; 1.180      ;
+; -0.138 ; Registro:i1_Registro4|s[5]             ; Registro:i1_Registro4|s[5]                                                                                        ; clk          ; clk         ; 1.000        ; 0.000      ; 1.170      ;
+; -0.135 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.167      ;
+; -0.132 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[6]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 1.163      ;
+; -0.132 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[9]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 1.163      ;
+; -0.130 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[4]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 1.161      ;
+; -0.129 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[8]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 1.160      ;
+; -0.127 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 1.000        ; -0.001     ; 1.158      ;
+; -0.124 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[6]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 1.155      ;
+; -0.123 ; Contador:i_Contador|contador[0]        ; Registro:i1_Registro0|s[6]                                                                                        ; clk          ; clk         ; 1.000        ; -0.006     ; 1.149      ;
+; -0.122 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[4]                                                                             ; clk          ; clk         ; 1.000        ; -0.001     ; 1.153      ;
++--------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                                                                                   ;
++-------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                              ; To Node                                                                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; Contador:i_Contador|contador[0]        ; Contador:i_Contador|contador[0]                                                                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Contador:i_Contador|contador[1]        ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Contador:i_Contador|contador[2]        ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Registro:i1_Registro2|s[6]             ; Registro:i1_Registro2|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Registro:i1_Registro3|s[6]             ; Registro:i1_Registro3|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Registro:i1_Registro5|s[5]             ; Registro:i1_Registro5|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Registro:i1_Registro7|s[5]             ; Registro:i1_Registro7|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.357 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[0]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.357 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[1]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.357 ; Contador1ms:i_contador1ms|contador[13] ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[2]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; Contador1ms:i_contador1ms|contador[11] ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.369 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[3]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[5]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; Contador1ms:i_contador1ms|contador[10] ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; Contador1ms:i_contador1ms|contador[12] ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.378 ; Contador:i_Contador|contador[1]        ; Registro:i1_Registro7|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; -0.001     ; 0.529      ;
+; 0.379 ; Contador:i_Contador|contador[1]        ; Registro:i1_Registro2|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; -0.001     ; 0.530      ;
+; 0.379 ; Contador:i_Contador|contador[1]        ; Registro:i1_Registro3|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; -0.001     ; 0.530      ;
+; 0.384 ; Contador:i_Contador|contador[1]        ; Registro:i1_Registro5|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; -0.001     ; 0.535      ;
+; 0.453 ; Contador:i_Contador|contador[0]        ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.605      ;
+; 0.495 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[1]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.647      ;
+; 0.495 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[2]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.647      ;
+; 0.496 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[3]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496 ; Contador1ms:i_contador1ms|contador[11] ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.509 ; Contador1ms:i_contador1ms|contador[12] ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509 ; Contador1ms:i_contador1ms|contador[10] ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.661      ;
+; 0.530 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[2]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.682      ;
+; 0.530 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[3]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.682      ;
+; 0.531 ; Contador1ms:i_contador1ms|contador[11] ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.683      ;
+; 0.544 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[5]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; Contador1ms:i_contador1ms|contador[10] ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.696      ;
+; 0.565 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[3]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.717      ;
+; 0.566 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[5]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.718      ;
+; 0.567 ; Contador1ms:i_contador1ms|contador[15] ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.719      ;
+; 0.579 ; Contador1ms:i_contador1ms|contador[10] ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.580 ; Contador1ms:i_contador1ms|contador[6]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.733      ;
+; 0.582 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 0.735      ;
+; 0.582 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[5]                                                                             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.735      ;
+; 0.585 ; Contador:i_Contador|contador[1]        ; Contador:i_Contador|contador[2]                                                                                   ; clk          ; clk         ; 0.000        ; 0.006      ; 0.743      ;
+; 0.600 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[5]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.752      ;
+; 0.610 ; Contador:i_Contador|contador[0]        ; Contador:i_Contador|contador[1]                                                                                   ; clk          ; clk         ; 0.000        ; -0.006     ; 0.756      ;
+; 0.614 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.766      ;
+; 0.617 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 0.770      ;
+; 0.621 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.773      ;
+; 0.629 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 0.782      ;
+; 0.635 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[5]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.787      ;
+; 0.636 ; Contador1ms:i_contador1ms|contador[2]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.788      ;
+; 0.652 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 0.805      ;
+; 0.652 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.805      ;
+; 0.656 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.808      ;
+; 0.661 ; Contador:i_Contador|contador[0]        ; Registro:i1_Registro7|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 0.806      ;
+; 0.663 ; Contador:i_Contador|contador[0]        ; Registro:i1_Registro2|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 0.808      ;
+; 0.663 ; Contador:i_Contador|contador[0]        ; Registro:i1_Registro3|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 0.808      ;
+; 0.664 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 0.817      ;
+; 0.666 ; Contador:i_Contador|contador[0]        ; Registro:i1_Registro5|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 0.811      ;
+; 0.670 ; Contador1ms:i_contador1ms|contador[1]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.822      ;
+; 0.687 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 0.840      ;
+; 0.691 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[9]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.843      ;
+; 0.691 ; Contador1ms:i_contador1ms|contador[14] ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.843      ;
+; 0.691 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.843      ;
+; 0.699 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 0.852      ;
+; 0.705 ; Contador1ms:i_contador1ms|contador[0]  ; Contador1ms:i_contador1ms|contador[7]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.857      ;
+; 0.708 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.860      ;
+; 0.713 ; Contador:i_Contador|contador[1]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ; clk          ; clk         ; 0.000        ; 0.071      ; 0.922      ;
+; 0.715 ; Contador:i_Contador|contador[1]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ; clk          ; clk         ; 0.000        ; 0.071      ; 0.924      ;
+; 0.715 ; Registro:i1_Registro3|s[6]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.925      ;
+; 0.720 ; Contador:i_Contador|contador[1]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg1 ; clk          ; clk         ; 0.000        ; 0.071      ; 0.929      ;
+; 0.720 ; Contador:i_Contador|contador[1]        ; Registro:i1_Registro1|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.872      ;
+; 0.721 ; Contador:i_Contador|contador[1]        ; Registro:i1_Registro0|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.873      ;
+; 0.726 ; Contador1ms:i_contador1ms|contador[7]  ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.878      ;
+; 0.734 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[13]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 0.887      ;
+; 0.738 ; Registro:i1_Registro4|s[5]             ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.071      ; 0.947      ;
+; 0.741 ; Contador1ms:i_contador1ms|contador[13] ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 0.000        ; -0.001     ; 0.892      ;
+; 0.743 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.895      ;
+; 0.744 ; Contador1ms:i_contador1ms|contador[6]  ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 0.897      ;
+; 0.755 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.907      ;
+; 0.756 ; Contador:i_Contador|contador[2]        ; Registro:i1_Registro7|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 0.901      ;
+; 0.756 ; Contador1ms:i_contador1ms|contador[9]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.908      ;
+; 0.757 ; Contador:i_Contador|contador[2]        ; Registro:i1_Registro2|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 0.902      ;
+; 0.757 ; Contador:i_Contador|contador[2]        ; Registro:i1_Registro3|s[6]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 0.902      ;
+; 0.757 ; Contador:i_Contador|contador[2]        ; Registro:i1_Registro5|s[5]                                                                                        ; clk          ; clk         ; 0.000        ; -0.007     ; 0.902      ;
+; 0.760 ; Contador:i_Contador|contador[1]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.071      ; 0.969      ;
+; 0.766 ; Contador:i_Contador|contador[0]        ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.065      ; 0.969      ;
+; 0.768 ; Contador1ms:i_contador1ms|contador[6]  ; Contador1ms:i_contador1ms|contador[6]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.920      ;
+; 0.769 ; Contador1ms:i_contador1ms|contador[13] ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 0.000        ; -0.001     ; 0.920      ;
+; 0.769 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.921      ;
+; 0.770 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.922      ;
+; 0.770 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[9]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.922      ;
+; 0.772 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[4]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.924      ;
+; 0.778 ; Contador1ms:i_contador1ms|contador[5]  ; Contador1ms:i_contador1ms|contador[12]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.930      ;
+; 0.778 ; Contador1ms:i_contador1ms|contador[3]  ; Contador1ms:i_contador1ms|contador[10]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.930      ;
+; 0.778 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.930      ;
+; 0.779 ; Contador1ms:i_contador1ms|contador[6]  ; Contador1ms:i_contador1ms|contador[11]                                                                            ; clk          ; clk         ; 0.000        ; 0.001      ; 0.932      ;
+; 0.779 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[15]                                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.931      ;
+; 0.779 ; Contador1ms:i_contador1ms|contador[4]  ; Contador1ms:i_contador1ms|contador[9]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.931      ;
+; 0.780 ; Contador1ms:i_contador1ms|contador[8]  ; Contador1ms:i_contador1ms|contador[8]                                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.932      ;
+; 0.790 ; Contador1ms:i_contador1ms|contador[12] ; Contador1ms:i_contador1ms|contador[14]                                                                            ; clk          ; clk         ; 0.000        ; -0.001     ; 0.941      ;
++-------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------+
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                                                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[0]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[0]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[10]                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[10]                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[11]                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[11]                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[12]                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[12]                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[13]                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[13]                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[14]                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[14]                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[15]                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[15]                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[1]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[1]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[2]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[2]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[3]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[3]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[4]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[4]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[5]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[5]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[6]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[6]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[7]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[7]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[8]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[8]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[9]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador1ms:i_contador1ms|contador[9]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador:i_Contador|contador[0]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador:i_Contador|contador[0]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador:i_Contador|contador[1]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador:i_Contador|contador[1]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Contador:i_Contador|contador[2]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Contador:i_Contador|contador[2]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro0|s[6]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro0|s[6]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro1|s[6]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro1|s[6]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro2|s[6]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro2|s[6]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro3|s[6]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro3|s[6]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro4|s[5]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro4|s[5]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro5|s[5]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro5|s[5]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro6|s[5]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro6|s[5]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Registro:i1_Registro7|s[5]                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Registro:i1_Registro7|s[5]                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                                                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                                                                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                                                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                                                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro0|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro0|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro1|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro1|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro2|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro2|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro3|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro3|s[6]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro4|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro4|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro5|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro5|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro6|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro6|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i1_Registro7|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i1_Registro7|s[5]|clk                                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_ASCIIa17Seg|memoria_rtl_0|auto_generated|ram_block1a0|clk0                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_ASCIIa17Seg|memoria_rtl_0|auto_generated|ram_block1a0|clk0                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_Contador|contador[0]|clk                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_Contador|contador[0]|clk                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_Contador|contador[1]|clk                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_Contador|contador[1]|clk                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_Contador|contador[2]|clk                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_Contador|contador[2]|clk                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contador1ms|contador[0]|clk                                                                                     ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; dig_led[*]   ; clk        ; 6.013 ; 6.013 ; Rise       ; clk             ;
+;  dig_led[0]  ; clk        ; 5.978 ; 5.978 ; Rise       ; clk             ;
+;  dig_led[1]  ; clk        ; 5.911 ; 5.911 ; Rise       ; clk             ;
+;  dig_led[2]  ; clk        ; 5.954 ; 5.954 ; Rise       ; clk             ;
+;  dig_led[3]  ; clk        ; 5.769 ; 5.769 ; Rise       ; clk             ;
+;  dig_led[4]  ; clk        ; 5.969 ; 5.969 ; Rise       ; clk             ;
+;  dig_led[5]  ; clk        ; 5.768 ; 5.768 ; Rise       ; clk             ;
+;  dig_led[6]  ; clk        ; 5.925 ; 5.925 ; Rise       ; clk             ;
+;  dig_led[7]  ; clk        ; 5.906 ; 5.906 ; Rise       ; clk             ;
+;  dig_led[8]  ; clk        ; 5.913 ; 5.913 ; Rise       ; clk             ;
+;  dig_led[9]  ; clk        ; 5.959 ; 5.959 ; Rise       ; clk             ;
+;  dig_led[10] ; clk        ; 5.803 ; 5.803 ; Rise       ; clk             ;
+;  dig_led[11] ; clk        ; 5.938 ; 5.938 ; Rise       ; clk             ;
+;  dig_led[12] ; clk        ; 5.986 ; 5.986 ; Rise       ; clk             ;
+;  dig_led[13] ; clk        ; 5.866 ; 5.866 ; Rise       ; clk             ;
+;  dig_led[14] ; clk        ; 5.918 ; 5.918 ; Rise       ; clk             ;
+;  dig_led[15] ; clk        ; 5.929 ; 5.929 ; Rise       ; clk             ;
+;  dig_led[16] ; clk        ; 6.013 ; 6.013 ; Rise       ; clk             ;
+; digito[*]    ; clk        ; 4.653 ; 4.653 ; Rise       ; clk             ;
+;  digito[0]   ; clk        ; 4.633 ; 4.633 ; Rise       ; clk             ;
+;  digito[1]   ; clk        ; 4.581 ; 4.581 ; Rise       ; clk             ;
+;  digito[2]   ; clk        ; 4.653 ; 4.653 ; Rise       ; clk             ;
+;  digito[3]   ; clk        ; 4.420 ; 4.420 ; Rise       ; clk             ;
+;  digito[4]   ; clk        ; 4.419 ; 4.419 ; Rise       ; clk             ;
+;  digito[5]   ; clk        ; 4.609 ; 4.609 ; Rise       ; clk             ;
+;  digito[6]   ; clk        ; 4.439 ; 4.439 ; Rise       ; clk             ;
+;  digito[7]   ; clk        ; 4.459 ; 4.459 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; dig_led[*]   ; clk        ; 5.768 ; 5.768 ; Rise       ; clk             ;
+;  dig_led[0]  ; clk        ; 5.978 ; 5.978 ; Rise       ; clk             ;
+;  dig_led[1]  ; clk        ; 5.911 ; 5.911 ; Rise       ; clk             ;
+;  dig_led[2]  ; clk        ; 5.954 ; 5.954 ; Rise       ; clk             ;
+;  dig_led[3]  ; clk        ; 5.769 ; 5.769 ; Rise       ; clk             ;
+;  dig_led[4]  ; clk        ; 5.969 ; 5.969 ; Rise       ; clk             ;
+;  dig_led[5]  ; clk        ; 5.768 ; 5.768 ; Rise       ; clk             ;
+;  dig_led[6]  ; clk        ; 5.925 ; 5.925 ; Rise       ; clk             ;
+;  dig_led[7]  ; clk        ; 5.906 ; 5.906 ; Rise       ; clk             ;
+;  dig_led[8]  ; clk        ; 5.913 ; 5.913 ; Rise       ; clk             ;
+;  dig_led[9]  ; clk        ; 5.959 ; 5.959 ; Rise       ; clk             ;
+;  dig_led[10] ; clk        ; 5.803 ; 5.803 ; Rise       ; clk             ;
+;  dig_led[11] ; clk        ; 5.938 ; 5.938 ; Rise       ; clk             ;
+;  dig_led[12] ; clk        ; 5.986 ; 5.986 ; Rise       ; clk             ;
+;  dig_led[13] ; clk        ; 5.866 ; 5.866 ; Rise       ; clk             ;
+;  dig_led[14] ; clk        ; 5.918 ; 5.918 ; Rise       ; clk             ;
+;  dig_led[15] ; clk        ; 5.929 ; 5.929 ; Rise       ; clk             ;
+;  dig_led[16] ; clk        ; 6.013 ; 6.013 ; Rise       ; clk             ;
+; digito[*]    ; clk        ; 4.269 ; 4.269 ; Rise       ; clk             ;
+;  digito[0]   ; clk        ; 4.356 ; 4.356 ; Rise       ; clk             ;
+;  digito[1]   ; clk        ; 4.312 ; 4.312 ; Rise       ; clk             ;
+;  digito[2]   ; clk        ; 4.379 ; 4.379 ; Rise       ; clk             ;
+;  digito[3]   ; clk        ; 4.277 ; 4.277 ; Rise       ; clk             ;
+;  digito[4]   ; clk        ; 4.276 ; 4.276 ; Rise       ; clk             ;
+;  digito[5]   ; clk        ; 4.312 ; 4.312 ; Rise       ; clk             ;
+;  digito[6]   ; clk        ; 4.301 ; 4.301 ; Rise       ; clk             ;
+;  digito[7]   ; clk        ; 4.269 ; 4.269 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.773  ; 0.215 ; N/A      ; N/A     ; -1.814              ;
+;  clk             ; -2.773  ; 0.215 ; N/A      ; N/A     ; -1.814              ;
+; Design-wide TNS  ; -60.111 ; 0.0   ; 0.0      ; 0.0     ; -60.021             ;
+;  clk             ; -60.111 ; 0.000 ; N/A      ; N/A     ; -60.021             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; dig_led[*]   ; clk        ; 11.074 ; 11.074 ; Rise       ; clk             ;
+;  dig_led[0]  ; clk        ; 11.074 ; 11.074 ; Rise       ; clk             ;
+;  dig_led[1]  ; clk        ; 10.969 ; 10.969 ; Rise       ; clk             ;
+;  dig_led[2]  ; clk        ; 11.015 ; 11.015 ; Rise       ; clk             ;
+;  dig_led[3]  ; clk        ; 10.620 ; 10.620 ; Rise       ; clk             ;
+;  dig_led[4]  ; clk        ; 10.899 ; 10.899 ; Rise       ; clk             ;
+;  dig_led[5]  ; clk        ; 10.618 ; 10.618 ; Rise       ; clk             ;
+;  dig_led[6]  ; clk        ; 10.986 ; 10.986 ; Rise       ; clk             ;
+;  dig_led[7]  ; clk        ; 10.954 ; 10.954 ; Rise       ; clk             ;
+;  dig_led[8]  ; clk        ; 10.984 ; 10.984 ; Rise       ; clk             ;
+;  dig_led[9]  ; clk        ; 11.023 ; 11.023 ; Rise       ; clk             ;
+;  dig_led[10] ; clk        ; 10.677 ; 10.677 ; Rise       ; clk             ;
+;  dig_led[11] ; clk        ; 11.013 ; 11.013 ; Rise       ; clk             ;
+;  dig_led[12] ; clk        ; 11.072 ; 11.072 ; Rise       ; clk             ;
+;  dig_led[13] ; clk        ; 10.626 ; 10.626 ; Rise       ; clk             ;
+;  dig_led[14] ; clk        ; 10.994 ; 10.994 ; Rise       ; clk             ;
+;  dig_led[15] ; clk        ; 10.995 ; 10.995 ; Rise       ; clk             ;
+;  dig_led[16] ; clk        ; 10.957 ; 10.957 ; Rise       ; clk             ;
+; digito[*]    ; clk        ; 9.023  ; 9.023  ; Rise       ; clk             ;
+;  digito[0]   ; clk        ; 9.002  ; 9.002  ; Rise       ; clk             ;
+;  digito[1]   ; clk        ; 8.933  ; 8.933  ; Rise       ; clk             ;
+;  digito[2]   ; clk        ; 9.023  ; 9.023  ; Rise       ; clk             ;
+;  digito[3]   ; clk        ; 8.744  ; 8.744  ; Rise       ; clk             ;
+;  digito[4]   ; clk        ; 8.723  ; 8.723  ; Rise       ; clk             ;
+;  digito[5]   ; clk        ; 8.936  ; 8.936  ; Rise       ; clk             ;
+;  digito[6]   ; clk        ; 8.724  ; 8.724  ; Rise       ; clk             ;
+;  digito[7]   ; clk        ; 8.588  ; 8.588  ; Rise       ; clk             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; dig_led[*]   ; clk        ; 5.768 ; 5.768 ; Rise       ; clk             ;
+;  dig_led[0]  ; clk        ; 5.978 ; 5.978 ; Rise       ; clk             ;
+;  dig_led[1]  ; clk        ; 5.911 ; 5.911 ; Rise       ; clk             ;
+;  dig_led[2]  ; clk        ; 5.954 ; 5.954 ; Rise       ; clk             ;
+;  dig_led[3]  ; clk        ; 5.769 ; 5.769 ; Rise       ; clk             ;
+;  dig_led[4]  ; clk        ; 5.969 ; 5.969 ; Rise       ; clk             ;
+;  dig_led[5]  ; clk        ; 5.768 ; 5.768 ; Rise       ; clk             ;
+;  dig_led[6]  ; clk        ; 5.925 ; 5.925 ; Rise       ; clk             ;
+;  dig_led[7]  ; clk        ; 5.906 ; 5.906 ; Rise       ; clk             ;
+;  dig_led[8]  ; clk        ; 5.913 ; 5.913 ; Rise       ; clk             ;
+;  dig_led[9]  ; clk        ; 5.959 ; 5.959 ; Rise       ; clk             ;
+;  dig_led[10] ; clk        ; 5.803 ; 5.803 ; Rise       ; clk             ;
+;  dig_led[11] ; clk        ; 5.938 ; 5.938 ; Rise       ; clk             ;
+;  dig_led[12] ; clk        ; 5.986 ; 5.986 ; Rise       ; clk             ;
+;  dig_led[13] ; clk        ; 5.866 ; 5.866 ; Rise       ; clk             ;
+;  dig_led[14] ; clk        ; 5.918 ; 5.918 ; Rise       ; clk             ;
+;  dig_led[15] ; clk        ; 5.929 ; 5.929 ; Rise       ; clk             ;
+;  dig_led[16] ; clk        ; 6.013 ; 6.013 ; Rise       ; clk             ;
+; digito[*]    ; clk        ; 4.269 ; 4.269 ; Rise       ; clk             ;
+;  digito[0]   ; clk        ; 4.356 ; 4.356 ; Rise       ; clk             ;
+;  digito[1]   ; clk        ; 4.312 ; 4.312 ; Rise       ; clk             ;
+;  digito[2]   ; clk        ; 4.379 ; 4.379 ; Rise       ; clk             ;
+;  digito[3]   ; clk        ; 4.277 ; 4.277 ; Rise       ; clk             ;
+;  digito[4]   ; clk        ; 4.276 ; 4.276 ; Rise       ; clk             ;
+;  digito[5]   ; clk        ; 4.312 ; 4.312 ; Rise       ; clk             ;
+;  digito[6]   ; clk        ; 4.301 ; 4.301 ; Rise       ; clk             ;
+;  digito[7]   ; clk        ; 4.269 ; 4.269 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 383      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 383      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 27    ; 27   ;
+; Unconstrained Output Ports      ; 25    ; 25   ;
+; Unconstrained Output Port Paths ; 143   ; 143  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Mar 03 08:47:47 2021
+Info: Command: quartus_sta Practica3 -c Practica3
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Practica3.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.773
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.773       -60.111 clk 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.814
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.814       -60.021 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.427
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.427        -5.292 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.423
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.423       -48.302 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4543 megabytes
+    Info: Processing ended: Wed Mar 03 08:47:48 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

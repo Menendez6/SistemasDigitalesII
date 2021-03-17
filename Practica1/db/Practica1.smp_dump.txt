@@ -1,0 +1,18 @@
+
+State Machine - |Practica1|Unidad_control:i1_UnidadControl|estado_act
+Name estado_act.Paralelo estado_act.Parar estado_act.ErrorTrama estado_act.ErrorParidad estado_act.Par estado_act.Registrar estado_act.Espera1bit estado_act.Arranque estado_act.Reposo 
+estado_act.Reposo 0 0 0 0 0 0 0 0 0 
+estado_act.Arranque 0 0 0 0 0 0 0 1 1 
+estado_act.Espera1bit 0 0 0 0 0 0 1 0 1 
+estado_act.Registrar 0 0 0 0 0 1 0 0 1 
+estado_act.Par 0 0 0 0 1 0 0 0 1 
+estado_act.ErrorParidad 0 0 0 1 0 0 0 0 1 
+estado_act.ErrorTrama 0 0 1 0 0 0 0 0 1 
+estado_act.Parar 0 1 0 0 0 0 0 0 1 
+estado_act.Paralelo 1 0 0 0 0 0 0 0 1 
+
+State Machine - |Practica1|Unidad_control:i1_UnidadControl|DetectorFlancobajada:i1_Flanco|estado_act
+Name estado_act.Esp1 estado_act.Pulso estado_act.Esp0 
+estado_act.Esp0 0 0 0 
+estado_act.Pulso 0 1 1 
+estado_act.Esp1 1 0 1 

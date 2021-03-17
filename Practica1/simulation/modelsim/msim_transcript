@@ -1,0 +1,48 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Practica1_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/Practica1/Comprobar_paridad.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Comprobar_paridad
+# -- Compiling architecture behavioral of Comprobar_paridad
+# 
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/Practica1/simulation/modelsim/Comprobar_paridad.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Comprobar_paridad_vhd_tst
+# -- Compiling architecture Comprobar_paridad_arch of Comprobar_paridad_vhd_tst
+# -- Loading entity Comprobar_paridad
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  Comprobar_paridad_vhd_tst
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps Comprobar_paridad_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.comprobar_paridad_vhd_tst(comprobar_paridad_arch)
+# Loading work.comprobar_paridad(behavioral)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Failure: Error: salida de paridad errónea
+#    Time: 1190 ns  Iteration: 0  Process: /comprobar_paridad_vhd_tst/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/Practica1/simulation/modelsim/Comprobar_paridad.vht
+# Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/Practica1/simulation/modelsim/Comprobar_paridad.vht line 86
+# Simulation Breakpoint: Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/Practica1/simulation/modelsim/Comprobar_paridad.vht line 86
+# MACRO ./Practica1_run_msim_rtl_vhdl.do PAUSED at line 17

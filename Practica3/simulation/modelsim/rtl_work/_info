@@ -1,0 +1,294 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\SistemasDigitalesII\Practica3\simulation\modelsim
+Easciia16seg
+Z1 w1614704515
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\altera\13.0sp1\SistemasDigitalesII\Practica3\simulation\modelsim
+Z6 8C:/altera/13.0sp1/SistemasDigitalesII/Practica3/asciia16seg.vhd
+Z7 FC:/altera/13.0sp1/SistemasDigitalesII/Practica3/asciia16seg.vhd
+l0
+L9
+VB7h8f4=5Ed]7l6X[f:KIe2
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1614757680.068000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica3/asciia16seg.vhd|
+Z11 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica3/asciia16seg.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 02TbiI1OFYjDgM;7lJJD62
+!i10b 1
+Abehavioural
+R2
+R3
+R4
+DEx4 work 11 asciia16seg 0 22 B7h8f4=5Ed]7l6X[f:KIe2
+l127
+L18
+V25fK?9`^SHF6]:Km`e<IB2
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 fVzi[8TQeh:^FMAECkLn`2
+!i10b 1
+Econtador
+R1
+R2
+R3
+R4
+R5
+Z14 8C:/altera/13.0sp1/SistemasDigitalesII/Practica3/contador.vhd
+Z15 FC:/altera/13.0sp1/SistemasDigitalesII/Practica3/contador.vhd
+l0
+L5
+VC0maDh0^@iCb[N7Rf3E<`0
+R8
+31
+Z16 !s108 1614757679.652000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica3/contador.vhd|
+Z18 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica3/contador.vhd|
+R12
+R13
+!s100 aHc[NlG`zA4bYLdL38ToN2
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 8 contador 0 22 C0maDh0^@iCb[N7Rf3E<`0
+l17
+L14
+Vk[0QglF@d<G]6CMc]bb953
+R8
+31
+R16
+R17
+R18
+R12
+R13
+!s100 mmUjS;7n?hD[A7H[43dID1
+!i10b 1
+Econtador1ms
+R1
+R2
+R3
+R4
+R5
+Z19 8C:/altera/13.0sp1/SistemasDigitalesII/Practica3/contador1ms.vhd
+Z20 FC:/altera/13.0sp1/SistemasDigitalesII/Practica3/contador1ms.vhd
+l0
+L5
+V`<Mn1hXfbb3D[cdzja2AL1
+R8
+31
+Z21 !s108 1614757679.536000
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica3/contador1ms.vhd|
+Z23 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica3/contador1ms.vhd|
+R12
+R13
+!s100 Ef3H;>fmC0BBaIVMzg9Rb3
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 11 contador1ms 0 22 `<Mn1hXfbb3D[cdzja2AL1
+l15
+L13
+VQljabfD3P<1Ejga1JDBPB3
+R8
+31
+R21
+R22
+R23
+R12
+R13
+!s100 2m6=iN2G^86Z5JFdcNSK22
+!i10b 1
+Emultiplexor
+R1
+R3
+R4
+R5
+Z24 8C:/altera/13.0sp1/SistemasDigitalesII/Practica3/multiplexor.vhd
+Z25 FC:/altera/13.0sp1/SistemasDigitalesII/Practica3/multiplexor.vhd
+l0
+L4
+VziGlh_cY5eTJ7SjDi7kJF0
+R8
+31
+Z26 !s108 1614757679.953000
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica3/multiplexor.vhd|
+Z28 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica3/multiplexor.vhd|
+R12
+R13
+!s100 Vi;oG^Z7o1[6Oc?IV<ZH>0
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 11 multiplexor 0 22 ziGlh_cY5eTJ7SjDi7kJF0
+l21
+L19
+VzFIH05]bO[8;58]8Oa?FA0
+R8
+31
+R26
+R27
+R28
+R12
+R13
+!s100 NoaGneRVT_c1ZBfhgKM2M2
+!i10b 1
+Epractica3
+Z29 w1614757618
+R3
+R4
+R5
+Z30 8C:/altera/13.0sp1/SistemasDigitalesII/Practica3/practica3.vhd
+Z31 FC:/altera/13.0sp1/SistemasDigitalesII/Practica3/practica3.vhd
+l0
+L4
+VcmM=zCGg0JblT[ARVV?DP3
+R8
+31
+Z32 !s108 1614757679.436000
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica3/practica3.vhd|
+Z34 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica3/practica3.vhd|
+R12
+R13
+!s100 al`n4jiNE?`lAM0C0Z9B[1
+!i10b 1
+Astructural
+R3
+R4
+Z35 DEx4 work 9 practica3 0 22 cmM=zCGg0JblT[ARVV?DP3
+l76
+L13
+VNV88C3khDk0?WdFcC43ak2
+R8
+31
+R32
+R33
+R34
+R12
+R13
+!s100 0MNcmHOf?SoYo;]azzbS00
+!i10b 1
+Epractica3_vhd_tst
+Z36 w1614756488
+R2
+R3
+R4
+R5
+Z37 8C:/altera/13.0sp1/SistemasDigitalesII/Practica3/simulation/modelsim/Practica3.vht
+Z38 FC:/altera/13.0sp1/SistemasDigitalesII/Practica3/simulation/modelsim/Practica3.vht
+l0
+L5
+V_55Lo5UQ0VaHbdMb^BTTH2
+!s100 6Q1Cl8c9WZYZTFbCf9LAh1
+R8
+31
+!i10b 1
+Z39 !s108 1614757680.169000
+Z40 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica3/simulation/modelsim/Practica3.vht|
+Z41 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica3/simulation/modelsim/Practica3.vht|
+R12
+R13
+Atb
+R35
+R2
+R3
+R4
+DEx4 work 17 practica3_vhd_tst 0 22 _55Lo5UQ0VaHbdMb^BTTH2
+l15
+L8
+VhPE?8hT<ndG?:faECGL1X3
+!s100 m;k:YnPkYOmG3nR=7zgBk3
+R8
+31
+!i10b 1
+R39
+R40
+R41
+R12
+R13
+Eregistro
+Z42 w1614756942
+R3
+R4
+R5
+Z43 8C:/altera/13.0sp1/SistemasDigitalesII/Practica3/registro.vhd
+Z44 FC:/altera/13.0sp1/SistemasDigitalesII/Practica3/registro.vhd
+l0
+L4
+Vz8nHDAMNnfce>Bf]DfcFO0
+R8
+31
+Z45 !s108 1614757679.863000
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica3/registro.vhd|
+Z47 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica3/registro.vhd|
+R12
+R13
+!s100 KazX3FRN>_^>kG7Y;]D::1
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 8 registro 0 22 z8nHDAMNnfce>Bf]DfcFO0
+l15
+L14
+VeIZ`GWK1V6ih<U_P2Q2gX2
+R8
+31
+R45
+R46
+R47
+R12
+R13
+!s100 ^3@RON?C1Sc12_R^]Z;d22
+!i10b 1
+Eselector
+R1
+R3
+R4
+R5
+Z48 8C:/altera/13.0sp1/SistemasDigitalesII/Practica3/selector.vhd
+Z49 FC:/altera/13.0sp1/SistemasDigitalesII/Practica3/selector.vhd
+l0
+L4
+V24Fj7zdg;W16_QG1akCC<0
+R8
+31
+Z50 !s108 1614757679.752000
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica3/selector.vhd|
+Z52 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica3/selector.vhd|
+R12
+R13
+!s100 kSXCC2CC[UTKZQ1_h]Lk@3
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 8 selector 0 22 24Fj7zdg;W16_QG1akCC<0
+l13
+L11
+Vz;b1XdEfXGe2f6?d4^Qgn3
+R8
+31
+R50
+R51
+R52
+R12
+R13
+!s100 24RC?nKeF290Zm<3LP57<0
+!i10b 1

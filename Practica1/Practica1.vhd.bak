@@ -1,0 +1,84 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Practica1 is
+    port(
+        clk : in std_logic;
+        reset_n : in std_logic;
+        data    : in std_logic;
+        err_paridad : out std_logic;
+        err_trama   : out std_logic;
+        bits        : out std_logic_vector(7 downto 0)
+    );
+end Practica1;
+
+architecture structural of Practica1 is
+
+    signal paridad, en_paridad, en_registro: std_logic; 
+
+    component Comprobar_paridad
+    port(
+        data : in std_logic;
+        paridad : out std_logic;
+        clk     : in std_logic;
+        reset_n : in std_logic;
+        enable  : in std_logic
+    );
+    end component;
+
+    component Registro
+    port(
+        clk     : in std_logic;
+        enable  : in std_logic;
+        reset_n : in std_logic;
+        data    : in std_logic;
+        bits    : out std_logic_vector(7 downto 0)
+    );
+    end component;
+
+    component Unidad_Control
+    port(
+        clk : in std_logic;
+        reset_n : in std_logic;
+        data    : in std_logic;
+        paridad : in std_logic;
+        en_registro : out std_logic;
+        en_paridad  : out std_logic;
+        err_trama : out std_logic;
+        err_paridad : out std_logic
+    );
+    end component;
+
+begin
+
+    i1_Comprobarparidad: Comprobar_paridad
+    port map(
+        data => data, 
+        paridad => paridad,
+        clk     => clk,
+        reset_n => reset_n,
+        enable  => en_paridad
+    );
+
+    i1_Registro : Registro
+    port map(
+        clk     => clk,
+        enable  => en_registro,
+        reset_n => reset_n,
+        data    => data,
+        bits    => bits
+    );
+
+    i1_UnidadControl: Unidad_Control
+    port map(
+        clk => clk,
+        reset_n => reset_n,
+        data    => data,
+        paridad => paridad,
+        en_registro => en_registro,
+        en_paridad  => en_paridad,
+        err_trama => err_trama,
+        err_paridad => err_paridad
+    );
+
+

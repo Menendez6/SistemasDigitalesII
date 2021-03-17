@@ -1,0 +1,330 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\SistemasDigitalesII\pract2sistemas\simulation\modelsim
+Econtador
+Z1 w1614704515
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\altera\13.0sp1\SistemasDigitalesII\pract2sistemas\simulation\modelsim
+Z6 8C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Contador.vhd
+Z7 FC:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Contador.vhd
+l0
+L5
+VMH=C292FTANgT3?Pe>G:93
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1614792374.786000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Contador.vhd|
+Z11 !s107 C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Contador.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 Ah0?nM]SbXmg;k<>TMmCN2
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 8 contador 0 22 MH=C292FTANgT3?Pe>G:93
+l18
+L15
+VRYYM559zdhC`dzjR^L1ch3
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 815TTb[4TB[WL6[oP9KWW0
+!i10b 1
+Econtador1bit
+R1
+R2
+R3
+R4
+R5
+Z14 8C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Contador1bit.vhd
+Z15 FC:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Contador1bit.vhd
+l0
+L5
+VidFPOzV`3W2ceOZ3QlR;K1
+R8
+31
+Z16 !s108 1614792374.417000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Contador1bit.vhd|
+Z18 !s107 C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Contador1bit.vhd|
+R12
+R13
+!s100 :_[F8Tg[7:4IojKeEA<iB0
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 12 contador1bit 0 22 idFPOzV`3W2ceOZ3QlR;K1
+l18
+L15
+VUZ2@=IVBd]4<d9elC2a1O1
+R8
+31
+R16
+R17
+R18
+R12
+R13
+!s100 Ug1^UW`iC;d7e=`hJE?PP0
+!i10b 1
+Econtrolar_paridad
+Z19 w1614707170
+R3
+R4
+R5
+Z20 8C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Controlar_paridad.vhd
+Z21 FC:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Controlar_paridad.vhd
+l0
+L4
+VY7Kz5PK5O?mlG9@l9`G;O2
+R8
+31
+Z22 !s108 1614792374.193000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Controlar_paridad.vhd|
+Z24 !s107 C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Controlar_paridad.vhd|
+R12
+R13
+!s100 `?8@Rb`8cVo3Bk]belk]^2
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 17 controlar_paridad 0 22 Y7Kz5PK5O?mlG9@l9`G;O2
+l17
+L15
+VVAIN15dUJXP;Rccc;W`EU0
+R8
+31
+R22
+R23
+R24
+R12
+R13
+!s100 ?6XlegURSb2Q0:9k:_G[l2
+!i10b 1
+Edetectorflancobajada
+R1
+R3
+R4
+R5
+Z25 8C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/DetectorFlancobajada.vhd
+Z26 FC:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/DetectorFlancobajada.vhd
+l0
+L4
+VPER?0]mio3dG7[4_1Mol`3
+R8
+31
+Z27 !s108 1614792374.303000
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/DetectorFlancobajada.vhd|
+Z29 !s107 C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/DetectorFlancobajada.vhd|
+R12
+R13
+!s100 ^AUWM^9^bF1H6`iS19dYS0
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 20 detectorflancobajada 0 22 PER?0]mio3dG7[4_1Mol`3
+l17
+L13
+VIZ_3E7K0dC5TQ>;h<=;Xn1
+R8
+31
+R27
+R28
+R29
+R12
+R13
+!s100 IcO4fVElE>eK`gkb8VKU[2
+!i10b 1
+Emux_enviar
+R1
+R3
+R4
+R5
+Z30 8C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/mux_enviar.vhd
+Z31 FC:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/mux_enviar.vhd
+l0
+L4
+V[_YgRYMzW=N<ic:=A35C13
+R8
+31
+Z32 !s108 1614792374.922000
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/mux_enviar.vhd|
+Z34 !s107 C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/mux_enviar.vhd|
+R12
+R13
+!s100 WSOfZDG<2OfW[oE3KACO@2
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 10 mux_enviar 0 22 [_YgRYMzW=N<ic:=A35C13
+l14
+L13
+V02Y^]=JC3bhZLD8N:SQEE2
+R8
+31
+R32
+R33
+R34
+R12
+R13
+!s100 PnkdYgH>f24KPNcSzPn@N0
+!i10b 1
+Epract2
+Z35 w1614704516
+R2
+R3
+R4
+R5
+Z36 8C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/pract2.vhd
+Z37 FC:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/pract2.vhd
+l0
+L5
+VQ;ocNE_cOKKhPz7<_R_oE0
+R8
+31
+Z38 !s108 1614792374.066000
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/pract2.vhd|
+Z40 !s107 C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/pract2.vhd|
+R12
+R13
+!s100 ZQN32J5;O3;JndL8NCl`70
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 6 pract2 0 22 Q;ocNE_cOKKhPz7<_R_oE0
+l69
+L15
+VUYLULa8m^?1YEM@XXTen@1
+R8
+31
+R38
+R39
+R40
+R12
+R13
+!s100 Id`TMFKPhH;Gf6=J2jUlA1
+!i10b 1
+Epract2_vhd_tst
+Z41 w1614792328
+R3
+R4
+R5
+Z42 8C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/simulation/modelsim/pract2.vht
+Z43 FC:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/simulation/modelsim/pract2.vht
+l0
+L4
+VX=;mdP?nho1a;[jPF0:``2
+!s100 Q9FdDkJOIzfYRV`G9l4O:3
+R8
+31
+!i10b 1
+Z44 !s108 1614792375.044000
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/simulation/modelsim/pract2.vht|
+Z46 !s107 C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/simulation/modelsim/pract2.vht|
+R12
+R13
+Apract2_arch
+R3
+R4
+DEx4 work 14 pract2_vhd_tst 0 22 X=;mdP?nho1a;[jPF0:``2
+l24
+L6
+VLF;zbMOEnf=ocb1e^;Ij^3
+!s100 [3kS<h0RmMV:gHgmS>JIR0
+R8
+31
+!i10b 1
+R44
+R45
+R46
+R12
+R13
+Eregistrops8
+Z47 w1614712632
+R2
+R3
+R4
+R5
+Z48 8C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/registrops8.vhd
+Z49 FC:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/registrops8.vhd
+l0
+L5
+VI?MW_ZWCH`mDS2R=McmW13
+R8
+31
+Z50 !s108 1614792374.536000
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/registrops8.vhd|
+Z52 !s107 C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/registrops8.vhd|
+R12
+R13
+!s100 XT3Md70T:EJi`;DC7VV2T0
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 11 registrops8 0 22 I?MW_ZWCH`mDS2R=McmW13
+l18
+L15
+V]_SN9>AJKMiKzLJ`f_3e`3
+R8
+31
+R50
+R51
+R52
+R12
+R13
+!s100 `R[k?Uiff4Qo3E4]TIh^00
+!i10b 1
+Eunidad_control
+Z53 w1614711996
+R2
+R3
+R4
+R5
+Z54 8C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Unidad_control.vhd
+Z55 FC:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Unidad_control.vhd
+l0
+L5
+V=AARMGP<R_c1IV@Y14Bc80
+R8
+31
+Z56 !s108 1614792374.663000
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Unidad_control.vhd|
+Z58 !s107 C:/altera/13.0sp1/SistemasDigitalesII/pract2sistemas/Unidad_control.vhd|
+R12
+R13
+!s100 ]TW48PAESPR`@I:^oGQYz2
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 14 unidad_control 0 22 =AARMGP<R_c1IV@Y14Bc80
+l57
+L18
+VZCGdGDeWjUTNSf5N;iRc01
+R8
+31
+R56
+R57
+R58
+R12
+R13
+!s100 cPWZ=38lmNiX9ILoJJSGM3
+!i10b 1

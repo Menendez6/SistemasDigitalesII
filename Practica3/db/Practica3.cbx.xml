@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Practica3">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Practica3|AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0" CBX_FILE_NAME="altsyncram_n771.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

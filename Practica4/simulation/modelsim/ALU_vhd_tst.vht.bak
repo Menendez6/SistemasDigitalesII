@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Practica3_vhd_tst is
+end Practica3_vhd_tst;
+
+architecture tb of Practica3_vhd_tst is
+		signal clk 	   :  std_logic:='0';
+      signal reset_n :  std_logic;
+      signal dig_led :  std_logic_vector(16 downto 0);
+      signal digito  :  std_logic_vector(7 downto 0);
+		
+		constant c_clk_per : time :=10 ns;
+begin
+	
+	i1 : entity work.Practica3
+		port map(
+		   clk =>clk,
+       reset_n =>reset_n,
+       dig_led =>dig_led,
+       digito  =>digito);

@@ -1,0 +1,9 @@
+|Comprobar_paridad
+data => b.IN1
+paridad <= b.DB_MAX_OUTPUT_PORT_TYPE
+clk => b.CLK
+reset_n => b.IN0
+back_to_0 => b.IN1
+enable => b.ENA
+
+

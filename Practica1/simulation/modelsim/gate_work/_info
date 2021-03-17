@@ -1,0 +1,83 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/pablo/Documentos/SistemasDigitalesII/SistemasDigitalesII/Practica1/simulation/modelsim
+Epractica1
+Z1 w1612901614
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
+Z8 d/home/pablo/Documentos/SistemasDigitalesII/SistemasDigitalesII/Practica1/simulation/modelsim
+Z9 8Practica1.vho
+Z10 FPractica1.vho
+l0
+L34
+VA5jU3Ez3e04z32Omm`:gc2
+Z11 OV;C;10.1d;51
+31
+Z12 !s108 1612901808.617764
+Z13 !s90 -reportprogress|300|-93|-work|work|Practica1.vho|
+Z14 !s107 Practica1.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+!s100 nU>2`HGUg8eBHJj5Zj1B^3
+!i10b 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 9 practica1 0 22 A5jU3Ez3e04z32Omm`:gc2
+l157
+L61
+V5>XzmdmLB8?Y=N<6EA]Cz3
+R11
+31
+R12
+R13
+R14
+R15
+R16
+!s100 <QSAoPgl?<coTzzWL9<eH3
+!i10b 1
+Epractica1_vhd_tst
+Z17 w1612901775
+R5
+R6
+R8
+Z18 8/home/pablo/Documentos/SistemasDigitalesII/SistemasDigitalesII/Practica1/simulation/modelsim/Practica1.vht
+Z19 F/home/pablo/Documentos/SistemasDigitalesII/SistemasDigitalesII/Practica1/simulation/modelsim/Practica1.vht
+l0
+L4
+VQTic6nHQg=Q5`L<7UW3c52
+!s100 >ogBkjnQ6bC5Wh9LhR`?<1
+R11
+31
+!i10b 1
+Z20 !s108 1612901808.932537
+Z21 !s90 -reportprogress|300|-93|-work|work|/home/pablo/Documentos/SistemasDigitalesII/SistemasDigitalesII/Practica1/simulation/modelsim/Practica1.vht|
+Z22 !s107 /home/pablo/Documentos/SistemasDigitalesII/SistemasDigitalesII/Practica1/simulation/modelsim/Practica1.vht|
+R15
+R16
+Apractica1_arch
+R5
+R6
+DEx4 work 17 practica1_vhd_tst 0 22 QTic6nHQg=Q5`L<7UW3c52
+l31
+L6
+V1gzzac<:6_;mmX0YdN>ez3
+!s100 <LQh4i>X7nNz=<GZN<bdG3
+R11
+31
+!i10b 1
+R20
+R21
+R22
+R15
+R16

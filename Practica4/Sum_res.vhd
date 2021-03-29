@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity Sum_res is
     generic(
-        generic_length : integer := 32
+        generic_length : integer
     );
 	port(
 		a,b	    : in std_logic_vector(generic_length downto 0); --Entrada
@@ -14,10 +14,10 @@ entity Sum_res is
 end Sum_res;
 
 architecture behavioral of Sum_res is
-    signal salida : signed(generic_length downto 0);
+    signal salida : unsigned(generic_length downto 0);
 
 begin
-    salida <= signed(a) + signed(b) when s_r = "0000" else signed(a) - signed(b);
+    salida <= unsigned(a) + unsigned(b) when s_r = "0000" else unsigned(a) - unsigned(b);
 
     sig <= salida(generic_length);
     s <= std_logic_vector(salida(generic_length -1 downto 0));

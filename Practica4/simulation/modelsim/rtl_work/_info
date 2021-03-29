@@ -1,0 +1,117 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\SistemasDigitalesII\Practica4\simulation\modelsim
+Ealu
+Z1 w1617031862
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\altera\13.0sp1\SistemasDigitalesII\Practica4\simulation\modelsim
+Z6 8C:/altera/13.0sp1/SistemasDigitalesII/Practica4/ALU.vhd
+Z7 FC:/altera/13.0sp1/SistemasDigitalesII/Practica4/ALU.vhd
+l0
+L5
+VD=WckkjUGYbZOW3m6n3Zf2
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1617032940.347000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica4/ALU.vhd|
+Z11 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica4/ALU.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 SaRUjVJc_l6=ZTcg=@Ol[3
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+Z14 DEx4 work 3 alu 0 22 D=WckkjUGYbZOW3m6n3Zf2
+l34
+L18
+VMDVhBiA3?PiF[m2>5iEf33
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 QoHV0K6o9VF:G^Bhc>1`W3
+!i10b 1
+Ealu_vhd_tst
+Z15 w1617032891
+R2
+R3
+R4
+R5
+Z16 8C:/altera/13.0sp1/SistemasDigitalesII/Practica4/simulation/modelsim/ALU.vht
+Z17 FC:/altera/13.0sp1/SistemasDigitalesII/Practica4/simulation/modelsim/ALU.vht
+l0
+L5
+V3YZHMJ@KiTWI@I9]Sf:i_0
+!s100 <O?H[BUzXKWJ9jSMFS76m0
+R8
+31
+!i10b 1
+Z18 !s108 1617032940.619000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica4/simulation/modelsim/ALU.vht|
+Z20 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica4/simulation/modelsim/ALU.vht|
+R12
+R13
+Atb
+R14
+R2
+R3
+R4
+DEx4 work 11 alu_vhd_tst 0 22 3YZHMJ@KiTWI@I9]Sf:i_0
+l22
+L8
+VKl;7_Ai2J==e:;Dd5?3Y41
+!s100 Chf=^9nkUL3VX2H@mAjUf2
+R8
+31
+!i10b 1
+R18
+R19
+R20
+R12
+R13
+Esum_res
+Z21 w1617030651
+R2
+R3
+R4
+R5
+Z22 8C:/altera/13.0sp1/SistemasDigitalesII/Practica4/sum_res.vhd
+Z23 FC:/altera/13.0sp1/SistemasDigitalesII/Practica4/sum_res.vhd
+l0
+L5
+V:1C22]SMMTQkMRKlg2Lnk2
+R8
+31
+Z24 !s108 1617032940.494000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica4/sum_res.vhd|
+Z26 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica4/sum_res.vhd|
+R12
+R13
+!s100 Z4VemM5SAZBDdPW3baR]S2
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 7 sum_res 0 22 :1C22]SMMTQkMRKlg2Lnk2
+l19
+L16
+VjcfR7=4MANFCI37nUOn8^3
+R8
+31
+R24
+R25
+R26
+R12
+R13
+!s100 5BKkVPVDP5<GM:XLXWGX50
+!i10b 1

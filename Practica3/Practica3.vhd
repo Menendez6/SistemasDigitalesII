@@ -16,8 +16,19 @@ architecture structural of Practica3 is
     signal reg0, reg1, reg2, reg3, reg4, reg5, reg6, reg7 : std_logic_vector(7 downto 0);
     signal seleccion : std_logic_vector(2 downto 0);
     signal digito_intermedio, salida_mux : std_logic_vector(7 downto 0);
+    signal en_medioseg : std_logic;
+    signal num_caracter, cod_ASCII: std_logic_vector(7 downto 0);
+    signal ent_reg  : std_logic_vector(63 downto 0); 
 
     component Contador1ms
+        port(
+            reset_n : in std_logic;
+            clk     : in std_logic;
+            co      : out std_logic
+        );
+    end component;
+
+    component Contador_medioseg
         port(
             reset_n : in std_logic;
             clk     : in std_logic;
@@ -33,6 +44,32 @@ architecture structural of Practica3 is
             salida   : out std_logic_vector(2 downto 0)
         );
     end component;
+
+    component Contador_lgmsg
+        port(
+            reset_n : in std_logic;
+            clk     : in std_logic;
+            en      : in std_logic;
+            salida   : out std_logic_vector(7 downto 0) 
+    end component;
+
+    component Mensaje
+        port(
+            clk : in  std_logic;
+            e   : in  std_logic_vector(7 downto 0);    -- Entrada en entero
+            s   : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    component Registro_grande 
+        port(
+            clk: in std_logic;
+            reset_n: in std_logic;
+            enable  : in std_logic;
+            entrada : in std_logic_vector(7 downto 0);
+            salida : out std_logic_vector(63 downto 0)
+        );
+    end component Registro_grande;
 
     component Multiplexor
         port(
@@ -90,6 +127,38 @@ begin
         salida  => seleccion
     );
 
+    i_Contador_medioseg: Contador_medioseg
+    port map(
+        reset_n => reset_n,
+        clk => clk,
+        co => en_medioseg
+    );
+
+    i_Contador_longitud: Contador_lgmsg
+    port map(
+        reset_n => reset_n,
+        clk => clk,
+        en => en_medioseg,
+        salida => num_caracter
+    );
+
+    i_Mensaje: Mensaje
+    port map(
+        clk => clk,
+        e   => num_caracter,   -- Entrada en entero
+        s   => cod_ASCII
+    );
+
+    i_RegGrande: Registro_grande
+    port map(
+        clk => clk,
+        reset_n => reset_n,
+        enable  => en_medioseg,
+        entrada => cod_ASCII,
+        salida => ent_reg
+    );
+
+
     i_Selector  : Selector
     port map(
         e           => seleccion,
@@ -101,7 +170,7 @@ begin
             clk     => clk,
             enable  => digito_intermedio(0),
             reset_n => reset_n,
-            e       => "01001110",-- a inicializar --N
+            e       => ent_reg(63 downto 56),
             s       => reg0
         );
     
@@ -110,7 +179,7 @@ begin
             clk     => clk,
             enable  => digito_intermedio(1),
             reset_n => reset_n,
-            e       => "01001111",-- a inicializar --O
+            e       => ent_reg(55 downto 48),
             s       => reg1
         );
     
@@ -119,7 +188,7 @@ begin
             clk     => clk,
             enable  => digito_intermedio(2),
             reset_n => reset_n,
-            e       => "01010100",-- a inicializar --T
+            e       => ent_reg(47 downto 40),
             s       => reg2
         );
     
@@ -128,7 +197,7 @@ begin
             clk     => clk,
             enable  => digito_intermedio(3),
             reset_n => reset_n,
-            e       => "01000001",-- a inicializar --A
+            e       => ent_reg(39 downto 32),
             s       => reg3
         );
     
@@ -137,7 +206,7 @@ begin
             clk     => clk,
             enable  => digito_intermedio(4),
             reset_n => reset_n,
-            e       => "00111101",-- a inicializar -- =
+            e       => ent_reg(31 downto 24),
             s       => reg4
         );
     
@@ -146,7 +215,7 @@ begin
             clk     => clk,
             enable  => digito_intermedio(5),
             reset_n => reset_n,
-            e       => "00100000",-- a inicializar --espacio
+            e       => ent_reg(23 downto 16),
             s       => reg5
         );
     
@@ -155,7 +224,7 @@ begin
             clk     => clk,
             enable  => digito_intermedio(6),
             reset_n => reset_n,
-            e       => "00110001",-- a inicializar --1
+            e       => ent_reg(15 downto 8),
             s       => reg6
         );
     
@@ -164,7 +233,7 @@ begin
             clk     => clk,
             enable  => digito_intermedio(7),
             reset_n => reset_n,
-            e       => "00110000",-- a inicializar --0
+            e       => ent_reg(7 downto 0),
             s       => reg7
         );
     

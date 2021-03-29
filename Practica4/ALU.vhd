@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity ALU is
     generic(
-        generic_length : integer :=32
+        generic_length : integer :=4
     );
     port(
         a,b : in std_logic_vector(generic_length -1 downto 0);
@@ -19,10 +19,11 @@ architecture behavioral of ALU is
     signal a_ext, b_ext : std_logic_vector(generic_length downto 0);
     signal sr_out, sll_out, srl_out, sra_out,and_out,or_out,xor_out : std_logic_vector(generic_length -1 downto 0);
     signal sig : std_logic; 
+    signal ceros : std_logic_vector(generic_length -2 downto 0);
 
     component Sum_res
         generic(
-            generic_length : integer := 32
+            generic_length : integer
         );
         port(
             a,b	    : in std_logic_vector(generic_length downto 0); --Entrada
@@ -33,10 +34,14 @@ architecture behavioral of ALU is
 begin
     -- Extensión de signo
     a_ext <= a(generic_length -1) & a when alu_op = "0010" else '0' & a;
-    b_ext <= b(generic_length -1) & b when alu_op = "0010" else '0' & a;
+    b_ext <= b(generic_length -1) & b when alu_op = "0010" else '0' & b;
+    ceros <= (others => '0');
 
     -- Sumador/Restador
     i1_sr : Sum_res
+        generic map(
+            generic_length => generic_length
+        )
         port map(
             a => a_ext,
             b => b_ext,
@@ -68,8 +73,8 @@ begin
         alu_out <=
             sr_out when "0000",
             sr_out when "1000",
-				X"0000000" & "000" & sig when "0010",
-				X"0000000" & "000" & sig when "0011",
+			ceros & sig when "0010",
+			ceros & sig when "0011",
             -- Poner muchos 0 en un array
             sll_out when "0001",
             srl_out when "0101",

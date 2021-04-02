@@ -12,7 +12,7 @@ entity Registro_grande is
 end Registro_grande;
 
 architecture behavioral of Registro_grande is
-    s_registro : std_logic_vector(63 downto 0);
+    signal s_registro : std_logic_vector(63 downto 0);
 begin
     process(clk,reset_n)
     begin

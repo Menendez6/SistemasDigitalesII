@@ -50,7 +50,7 @@ architecture structural of Practica3 is
             reset_n : in std_logic;
             clk     : in std_logic;
             en      : in std_logic;
-            salida   : out std_logic_vector(7 downto 0) 
+            salida   : out std_logic_vector(7 downto 0));
     end component;
 
     component Mensaje

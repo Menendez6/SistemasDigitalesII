@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 dC:\altera\13.0sp1\SistemasDigitalesII\Practica4\simulation\modelsim
 Ealu
-Z1 w1617031862
+Z1 w1617309554
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -13,21 +13,21 @@ Z6 8C:/altera/13.0sp1/SistemasDigitalesII/Practica4/ALU.vhd
 Z7 FC:/altera/13.0sp1/SistemasDigitalesII/Practica4/ALU.vhd
 l0
 L5
-VD=WckkjUGYbZOW3m6n3Zf2
+V@=C1L=Z?EBL5J^MO[XQEO3
 Z8 OV;C;10.1d;51
 31
-Z9 !s108 1617032940.347000
+Z9 !s108 1617311355.122000
 Z10 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica4/ALU.vhd|
 Z11 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica4/ALU.vhd|
 Z12 o-93 -work work -O0
 Z13 tExplicit 1
-!s100 SaRUjVJc_l6=ZTcg=@Ol[3
+!s100 :IoCGf6Mn7CCHWY_>8[KJ1
 !i10b 1
 Abehavioral
 R2
 R3
 R4
-Z14 DEx4 work 3 alu 0 22 D=WckkjUGYbZOW3m6n3Zf2
+Z14 DEx4 work 3 alu 0 22 @=C1L=Z?EBL5J^MO[XQEO3
 l34
 L18
 VMDVhBiA3?PiF[m2>5iEf33
@@ -38,10 +38,10 @@ R10
 R11
 R12
 R13
-!s100 QoHV0K6o9VF:G^Bhc>1`W3
+!s100 AHV`0]V6Kj;UnOl294o=>1
 !i10b 1
 Ealu_vhd_tst
-Z15 w1617032891
+Z15 w1617311326
 R2
 R3
 R4
@@ -55,7 +55,7 @@ V3YZHMJ@KiTWI@I9]Sf:i_0
 R8
 31
 !i10b 1
-Z18 !s108 1617032940.619000
+Z18 !s108 1617311355.354000
 Z19 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica4/simulation/modelsim/ALU.vht|
 Z20 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica4/simulation/modelsim/ALU.vht|
 R12
@@ -68,8 +68,8 @@ R4
 DEx4 work 11 alu_vhd_tst 0 22 3YZHMJ@KiTWI@I9]Sf:i_0
 l22
 L8
-VKl;7_Ai2J==e:;Dd5?3Y41
-!s100 Chf=^9nkUL3VX2H@mAjUf2
+V6DKzlQO7[FVOV5LO80XJ52
+!s100 Jdje7HT64;SiCUU<TWW^23
 R8
 31
 !i10b 1
@@ -91,7 +91,7 @@ L5
 V:1C22]SMMTQkMRKlg2Lnk2
 R8
 31
-Z24 !s108 1617032940.494000
+Z24 !s108 1617311355.247000
 Z25 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/Practica4/sum_res.vhd|
 Z26 !s107 C:/altera/13.0sp1/SistemasDigitalesII/Practica4/sum_res.vhd|
 R12

@@ -9,7 +9,7 @@ architecture tb of ALU_vhd_tst is
 	constant generic_length : integer :=4;
 	signal a,b :std_logic_vector(generic_length -1 downto 0);
 	signal alu_op : std_logic_vector(3 downto 0);
-	signal  shamt   : std_logic_vector(4 downto 0); -- sería logaritmo de generic_length menos 1
+	signal  shamt   : std_logic_vector(2 downto 0); -- sería logaritmo de generic_length menos 1
 	signal  alu_out : std_logic_vector(generic_length -1 downto 0);
 	signal  z,lt,ge : std_logic;
 	signal a_and_b, a_or_b, a_xor_b : std_logic_vector(generic_length -1 downto 0); 
@@ -17,7 +17,7 @@ architecture tb of ALU_vhd_tst is
 	signal shamt_i : unsigned(2 downto 0);
 	constant max_value: integer := (2**generic_length-1);
 	
-	constant c_time : time :=5 ns;
+	constant c_time : time :=1 ns;
 
 begin
 	
@@ -148,28 +148,31 @@ begin
 			end loop;
 			
 			for k in 0 to 4 loop
-				shamt <= std_logic_vector(to_unsigned(k,5));
-				shamt_i <= to_unsigned(k,3);
+				wait for c_time;
+				shamt <= std_logic_vector(to_unsigned(k,3));
+				--shamt_i <= to_unsigned(k,3);
+				wait for c_time;
+				shamt_i <= unsigned(shamt);
 				wait for c_time;
 
 				-- shift logic left
 				alu_op <= "0001";
 				wait for c_time;
-				assert alu_out = std_logic_vector(shift_left(unsigned(a),to_integer(shamt_i)));
+				assert alu_out = std_logic_vector(shift_left(unsigned(a),to_integer(shamt_i)))
 					report "Fallo en el desplazamiento lógico a la izquierda"
 					severity failure;
 
 				wait for c_time;
 				alu_op <= "0101";
 				wait for c_time;
-				assert alu_out = std_logic_vector(shift_right(unsigned(a),to_integer(shamt_i)));
+				assert alu_out = std_logic_vector(shift_right(unsigned(a),to_integer(shamt_i)))
 					report "Fallo en el desplazamiento lógico a la derecho"
 					severity failure;
 
 				wait for c_time;
 				alu_op <= "1101";
 				wait for c_time;
-				assert alu_out = std_logic_vector(shift_right(signed(a),to_integer(shamt_i)));
+				assert alu_out = std_logic_vector(shift_right(signed(a),to_integer(shamt_i)))
 					report "Fallo en el desplazamiento lógico a la izquierda"
 					severity failure;
 				
@@ -178,7 +181,7 @@ begin
 		end loop;
 
 		
-		assert False
+		assert false
 		report "Fin de la simulación"
 		severity failure;
 	end process;

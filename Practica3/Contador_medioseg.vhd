@@ -2,15 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity Contadormedioseg is
+entity Contador_medioseg is
     port(
         reset_n : in std_logic;
         clk     : in std_logic;
         co      : out std_logic
     );
-end Contadormedioseg;
+end Contador_medioseg;
 
-architecture behavioral of Contadormedioseg is
+architecture behavioral of Contador_medioseg is
     signal contador : unsigned(24 downto 0);
 begin
     process(reset_n,clk)

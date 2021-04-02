@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica3
-Wed Mar 03 08:47:41 2021
+Fri Apr 02 11:29:11 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,21 +15,14 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Registers Packed Into Inferred Megafunctions
- 12. Source assignments for AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated
- 13. Parameter Settings for Inferred Entity Instance: AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0
- 14. altsyncram Parameter Settings by Entity Instance
- 15. Port Connectivity Checks: "Registro:i1_Registro7"
- 16. Port Connectivity Checks: "Registro:i1_Registro6"
- 17. Port Connectivity Checks: "Registro:i1_Registro5"
- 18. Port Connectivity Checks: "Registro:i1_Registro4"
- 19. Port Connectivity Checks: "Registro:i1_Registro3"
- 20. Port Connectivity Checks: "Registro:i1_Registro2"
- 21. Port Connectivity Checks: "Registro:i1_Registro1"
- 22. Port Connectivity Checks: "Registro:i1_Registro0"
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Source assignments for AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated
+ 14. Parameter Settings for Inferred Entity Instance: AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0
+ 15. altsyncram Parameter Settings by Entity Instance
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -55,18 +48,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 03 08:47:41 2021           ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 02 11:29:11 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Practica3                                       ;
 ; Top-level Entity Name              ; Practica3                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 62                                              ;
-;     Total combinational functions  ; 62                                              ;
-;     Dedicated logic registers      ; 27                                              ;
-; Total registers                    ; 27                                              ;
+; Total logic elements               ; 39                                              ;
+;     Total combinational functions  ; 39                                              ;
+;     Dedicated logic registers      ; 19                                              ;
+; Total registers                    ; 19                                              ;
 ; Total pins                         ; 27                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 2,176                                           ;
+; Total memory bits                  ; 34                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -176,6 +169,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; practica3.vhd                                  ; yes             ; Auto-Found VHDL File                                  ; C:/altera/13.0sp1/SistemasDigitalesII/Practica3/practica3.vhd                                  ;         ;
 ; contador1ms.vhd                                ; yes             ; Auto-Found VHDL File                                  ; C:/altera/13.0sp1/SistemasDigitalesII/Practica3/contador1ms.vhd                                ;         ;
 ; contador.vhd                                   ; yes             ; Auto-Found VHDL File                                  ; C:/altera/13.0sp1/SistemasDigitalesII/Practica3/contador.vhd                                   ;         ;
+; contador_medioseg.vhd                          ; yes             ; Auto-Found VHDL File                                  ; C:/altera/13.0sp1/SistemasDigitalesII/Practica3/contador_medioseg.vhd                          ;         ;
+; contador_lgmsg.vhd                             ; yes             ; Auto-Found VHDL File                                  ; C:/altera/13.0sp1/SistemasDigitalesII/Practica3/contador_lgmsg.vhd                             ;         ;
+; mensaje.vhd                                    ; yes             ; Auto-Found VHDL File                                  ; C:/altera/13.0sp1/SistemasDigitalesII/Practica3/mensaje.vhd                                    ;         ;
+; registro_grande.vhd                            ; yes             ; Auto-Found VHDL File                                  ; C:/altera/13.0sp1/SistemasDigitalesII/Practica3/registro_grande.vhd                            ;         ;
 ; selector.vhd                                   ; yes             ; Auto-Found VHDL File                                  ; C:/altera/13.0sp1/SistemasDigitalesII/Practica3/selector.vhd                                   ;         ;
 ; registro.vhd                                   ; yes             ; Auto-Found VHDL File                                  ; C:/altera/13.0sp1/SistemasDigitalesII/Practica3/registro.vhd                                   ;         ;
 ; multiplexor.vhd                                ; yes             ; Auto-Found VHDL File                                  ; C:/altera/13.0sp1/SistemasDigitalesII/Practica3/multiplexor.vhd                                ;         ;
@@ -199,29 +196,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 62    ;
+; Estimated Total logic elements              ; 39    ;
 ;                                             ;       ;
-; Total combinational functions               ; 62    ;
+; Total combinational functions               ; 39    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 23    ;
-;     -- 3 input functions                    ; 15    ;
+;     -- 4 input functions                    ; 6     ;
+;     -- 3 input functions                    ; 9     ;
 ;     -- <=2 input functions                  ; 24    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 47    ;
+;     -- normal mode                          ; 24    ;
 ;     -- arithmetic mode                      ; 15    ;
 ;                                             ;       ;
-; Total registers                             ; 27    ;
-;     -- Dedicated logic registers            ; 27    ;
+; Total registers                             ; 19    ;
+;     -- Dedicated logic registers            ; 19    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 27    ;
-; Total memory bits                           ; 2176  ;
+; Total memory bits                           ; 34    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 44    ;
-; Total fan-out                               ; 426   ;
-; Average fan-out                             ; 3.20  ;
+; Maximum fan-out                             ; 36    ;
+; Total fan-out                               ; 212   ;
+; Average fan-out                             ; 2.08  ;
 +---------------------------------------------+-------+
 
 
@@ -230,22 +227,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
-; |Practica3                                ; 62 (0)            ; 27 (0)       ; 2176        ; 0            ; 0       ; 0         ; 27   ; 0            ; |Practica3                                                                                   ; work         ;
-;    |AsciiA16Seg:i_ASCIIa17Seg|            ; 0 (0)             ; 0 (0)        ; 2176        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|AsciiA16Seg:i_ASCIIa17Seg                                                         ; work         ;
-;       |altsyncram:memoria_rtl_0|          ; 0 (0)             ; 0 (0)        ; 2176        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0                                ; work         ;
-;          |altsyncram_n771:auto_generated| ; 0 (0)             ; 0 (0)        ; 2176        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated ; work         ;
+; |Practica3                                ; 39 (1)            ; 19 (0)       ; 34          ; 0            ; 0       ; 0         ; 27   ; 0            ; |Practica3                                                                                   ; work         ;
+;    |AsciiA16Seg:i_ASCIIa17Seg|            ; 0 (0)             ; 0 (0)        ; 34          ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|AsciiA16Seg:i_ASCIIa17Seg                                                         ; work         ;
+;       |altsyncram:memoria_rtl_0|          ; 0 (0)             ; 0 (0)        ; 34          ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0                                ; work         ;
+;          |altsyncram_n771:auto_generated| ; 0 (0)             ; 0 (0)        ; 34          ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated ; work         ;
 ;    |Contador1ms:i_contador1ms|            ; 27 (27)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|Contador1ms:i_contador1ms                                                         ; work         ;
 ;    |Contador:i_Contador|                  ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|Contador:i_Contador                                                               ; work         ;
-;    |Multiplexor:i_Mux|                    ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|Multiplexor:i_Mux                                                                 ; work         ;
-;    |Registro:i1_Registro0|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|Registro:i1_Registro0                                                             ; work         ;
-;    |Registro:i1_Registro1|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|Registro:i1_Registro1                                                             ; work         ;
-;    |Registro:i1_Registro2|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|Registro:i1_Registro2                                                             ; work         ;
-;    |Registro:i1_Registro3|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|Registro:i1_Registro3                                                             ; work         ;
-;    |Registro:i1_Registro4|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|Registro:i1_Registro4                                                             ; work         ;
-;    |Registro:i1_Registro5|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|Registro:i1_Registro5                                                             ; work         ;
-;    |Registro:i1_Registro6|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|Registro:i1_Registro6                                                             ; work         ;
-;    |Registro:i1_Registro7|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|Registro:i1_Registro7                                                             ; work         ;
-;    |Selector:i_Selector|                  ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|Selector:i_Selector                                                               ; work         ;
+;    |Selector:i_Selector|                  ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica3|Selector:i_Selector                                                               ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -259,38 +247,174 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; Registro:i1_Registro7|s[0..3,6,7]      ; Stuck at GND due to stuck port data_in ;
-; Registro:i1_Registro6|s[1..3,6,7]      ; Stuck at GND due to stuck port data_in ;
-; Registro:i1_Registro5|s[0..4,6,7]      ; Stuck at GND due to stuck port data_in ;
-; Registro:i1_Registro4|s[1,6,7]         ; Stuck at GND due to stuck port data_in ;
-; Registro:i1_Registro3|s[1..5,7]        ; Stuck at GND due to stuck port data_in ;
-; Registro:i1_Registro2|s[0,1,3,5,7]     ; Stuck at GND due to stuck port data_in ;
-; Registro:i1_Registro1|s[4,5,7]         ; Stuck at GND due to stuck port data_in ;
-; Registro:i1_Registro0|s[0,4,5,7]       ; Stuck at GND due to stuck port data_in ;
-; Registro:i1_Registro0|s[1]             ; Merged with Registro:i1_Registro0|s[2] ;
-; Registro:i1_Registro0|s[2]             ; Merged with Registro:i1_Registro0|s[3] ;
-; Registro:i1_Registro0|s[3]             ; Merged with Registro:i1_Registro0|s[6] ;
-; Registro:i1_Registro1|s[0]             ; Merged with Registro:i1_Registro1|s[1] ;
-; Registro:i1_Registro1|s[1]             ; Merged with Registro:i1_Registro1|s[2] ;
-; Registro:i1_Registro1|s[2]             ; Merged with Registro:i1_Registro1|s[3] ;
-; Registro:i1_Registro1|s[3]             ; Merged with Registro:i1_Registro1|s[6] ;
-; Registro:i1_Registro2|s[2]             ; Merged with Registro:i1_Registro2|s[4] ;
-; Registro:i1_Registro2|s[4]             ; Merged with Registro:i1_Registro2|s[6] ;
-; Registro:i1_Registro3|s[0]             ; Merged with Registro:i1_Registro3|s[6] ;
-; Registro:i1_Registro4|s[0]             ; Merged with Registro:i1_Registro4|s[2] ;
-; Registro:i1_Registro4|s[2]             ; Merged with Registro:i1_Registro4|s[3] ;
-; Registro:i1_Registro4|s[3]             ; Merged with Registro:i1_Registro4|s[4] ;
-; Registro:i1_Registro4|s[4]             ; Merged with Registro:i1_Registro4|s[5] ;
-; Registro:i1_Registro6|s[0]             ; Merged with Registro:i1_Registro6|s[4] ;
-; Registro:i1_Registro6|s[4]             ; Merged with Registro:i1_Registro6|s[5] ;
-; Registro:i1_Registro7|s[4]             ; Merged with Registro:i1_Registro7|s[5] ;
-; Total Number of Removed Registers = 56 ;                                        ;
-+----------------------------------------+----------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                              ;
++---------------------------------------------------+---------------------------------------------+
+; Register name                                     ; Reason for Removal                          ;
++---------------------------------------------------+---------------------------------------------+
+; Registro_grande:i_RegGrande|s_registro[7..63]     ; Stuck at GND due to stuck port clock_enable ;
+; Mensaje:i_Mensaje|s_i[7]                          ; Lost fanout                                 ;
+; Registro_grande:i_RegGrande|s_registro[6]         ; Stuck at GND due to stuck port clock_enable ;
+; Mensaje:i_Mensaje|s_i[6]                          ; Lost fanout                                 ;
+; Registro_grande:i_RegGrande|s_registro[5]         ; Stuck at GND due to stuck port clock_enable ;
+; Mensaje:i_Mensaje|s_i[5]                          ; Lost fanout                                 ;
+; Registro_grande:i_RegGrande|s_registro[4]         ; Stuck at GND due to stuck port clock_enable ;
+; Mensaje:i_Mensaje|s_i[4]                          ; Lost fanout                                 ;
+; Registro_grande:i_RegGrande|s_registro[3]         ; Stuck at GND due to stuck port clock_enable ;
+; Mensaje:i_Mensaje|s_i[3]                          ; Lost fanout                                 ;
+; Registro_grande:i_RegGrande|s_registro[2]         ; Stuck at GND due to stuck port clock_enable ;
+; Mensaje:i_Mensaje|s_i[2]                          ; Lost fanout                                 ;
+; Registro_grande:i_RegGrande|s_registro[1]         ; Stuck at GND due to stuck port clock_enable ;
+; Mensaje:i_Mensaje|s_i[1]                          ; Lost fanout                                 ;
+; Registro_grande:i_RegGrande|s_registro[0]         ; Stuck at GND due to stuck port clock_enable ;
+; Mensaje:i_Mensaje|s_i[0]                          ; Lost fanout                                 ;
+; contador_lgmsg:i_Contador_longitud|contador[0..7] ; Stuck at GND due to stuck port clock_enable ;
+; Registro:i1_Registro7|s[0..7]                     ; Stuck at GND due to stuck port data_in      ;
+; Registro:i1_Registro6|s[0..7]                     ; Stuck at GND due to stuck port data_in      ;
+; Registro:i1_Registro5|s[0..7]                     ; Stuck at GND due to stuck port data_in      ;
+; Registro:i1_Registro4|s[0..7]                     ; Stuck at GND due to stuck port data_in      ;
+; Registro:i1_Registro3|s[0..7]                     ; Stuck at GND due to stuck port data_in      ;
+; Registro:i1_Registro2|s[0..7]                     ; Stuck at GND due to stuck port data_in      ;
+; Registro:i1_Registro1|s[0..7]                     ; Stuck at GND due to stuck port data_in      ;
+; Registro:i1_Registro0|s[0..7]                     ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 144           ;                                             ;
++---------------------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                        ;
++--------------------------------------------+--------------------------------+------------------------------------------------------+
+; Register name                              ; Reason for Removal             ; Registers Removed due to This Register               ;
++--------------------------------------------+--------------------------------+------------------------------------------------------+
+; Registro_grande:i_RegGrande|s_registro[0]  ; Stuck at GND                   ; Mensaje:i_Mensaje|s_i[0], Registro:i1_Registro7|s[0] ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[7]  ; Stuck at GND                   ; Mensaje:i_Mensaje|s_i[7], Registro:i1_Registro7|s[7] ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[6]  ; Stuck at GND                   ; Mensaje:i_Mensaje|s_i[6], Registro:i1_Registro7|s[6] ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[5]  ; Stuck at GND                   ; Mensaje:i_Mensaje|s_i[5], Registro:i1_Registro7|s[5] ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[4]  ; Stuck at GND                   ; Mensaje:i_Mensaje|s_i[4], Registro:i1_Registro7|s[4] ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[3]  ; Stuck at GND                   ; Mensaje:i_Mensaje|s_i[3], Registro:i1_Registro7|s[3] ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[2]  ; Stuck at GND                   ; Mensaje:i_Mensaje|s_i[2], Registro:i1_Registro7|s[2] ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[1]  ; Stuck at GND                   ; Mensaje:i_Mensaje|s_i[1], Registro:i1_Registro7|s[1] ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[55] ; Stuck at GND                   ; Registro:i1_Registro1|s[7]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[54] ; Stuck at GND                   ; Registro:i1_Registro1|s[6]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[53] ; Stuck at GND                   ; Registro:i1_Registro1|s[5]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[52] ; Stuck at GND                   ; Registro:i1_Registro1|s[4]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[51] ; Stuck at GND                   ; Registro:i1_Registro1|s[3]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[50] ; Stuck at GND                   ; Registro:i1_Registro1|s[2]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[49] ; Stuck at GND                   ; Registro:i1_Registro1|s[1]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[48] ; Stuck at GND                   ; Registro:i1_Registro1|s[0]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[47] ; Stuck at GND                   ; Registro:i1_Registro2|s[7]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[46] ; Stuck at GND                   ; Registro:i1_Registro2|s[6]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[45] ; Stuck at GND                   ; Registro:i1_Registro2|s[5]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[44] ; Stuck at GND                   ; Registro:i1_Registro2|s[4]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[43] ; Stuck at GND                   ; Registro:i1_Registro2|s[3]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[42] ; Stuck at GND                   ; Registro:i1_Registro2|s[2]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[41] ; Stuck at GND                   ; Registro:i1_Registro2|s[1]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[40] ; Stuck at GND                   ; Registro:i1_Registro2|s[0]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[39] ; Stuck at GND                   ; Registro:i1_Registro3|s[7]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[38] ; Stuck at GND                   ; Registro:i1_Registro3|s[6]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[37] ; Stuck at GND                   ; Registro:i1_Registro3|s[5]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[36] ; Stuck at GND                   ; Registro:i1_Registro3|s[4]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[35] ; Stuck at GND                   ; Registro:i1_Registro3|s[3]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[34] ; Stuck at GND                   ; Registro:i1_Registro3|s[2]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[33] ; Stuck at GND                   ; Registro:i1_Registro3|s[1]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[32] ; Stuck at GND                   ; Registro:i1_Registro3|s[0]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[31] ; Stuck at GND                   ; Registro:i1_Registro4|s[7]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[30] ; Stuck at GND                   ; Registro:i1_Registro4|s[6]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[29] ; Stuck at GND                   ; Registro:i1_Registro4|s[5]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[28] ; Stuck at GND                   ; Registro:i1_Registro4|s[4]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[27] ; Stuck at GND                   ; Registro:i1_Registro4|s[3]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[26] ; Stuck at GND                   ; Registro:i1_Registro4|s[2]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[25] ; Stuck at GND                   ; Registro:i1_Registro4|s[1]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[24] ; Stuck at GND                   ; Registro:i1_Registro4|s[0]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[23] ; Stuck at GND                   ; Registro:i1_Registro5|s[7]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[22] ; Stuck at GND                   ; Registro:i1_Registro5|s[6]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[21] ; Stuck at GND                   ; Registro:i1_Registro5|s[5]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[20] ; Stuck at GND                   ; Registro:i1_Registro5|s[4]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[19] ; Stuck at GND                   ; Registro:i1_Registro5|s[3]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[18] ; Stuck at GND                   ; Registro:i1_Registro5|s[2]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[17] ; Stuck at GND                   ; Registro:i1_Registro5|s[1]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[63] ; Stuck at GND                   ; Registro:i1_Registro0|s[7]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[15] ; Stuck at GND                   ; Registro:i1_Registro6|s[7]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[14] ; Stuck at GND                   ; Registro:i1_Registro6|s[6]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[13] ; Stuck at GND                   ; Registro:i1_Registro6|s[5]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[12] ; Stuck at GND                   ; Registro:i1_Registro6|s[4]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[11] ; Stuck at GND                   ; Registro:i1_Registro6|s[3]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[10] ; Stuck at GND                   ; Registro:i1_Registro6|s[2]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[9]  ; Stuck at GND                   ; Registro:i1_Registro6|s[1]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[16] ; Stuck at GND                   ; Registro:i1_Registro5|s[0]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[62] ; Stuck at GND                   ; Registro:i1_Registro0|s[6]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[61] ; Stuck at GND                   ; Registro:i1_Registro0|s[5]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[60] ; Stuck at GND                   ; Registro:i1_Registro0|s[4]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[59] ; Stuck at GND                   ; Registro:i1_Registro0|s[3]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[58] ; Stuck at GND                   ; Registro:i1_Registro0|s[2]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[57] ; Stuck at GND                   ; Registro:i1_Registro0|s[1]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[56] ; Stuck at GND                   ; Registro:i1_Registro0|s[0]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
+; Registro_grande:i_RegGrande|s_registro[8]  ; Stuck at GND                   ; Registro:i1_Registro6|s[0]                           ;
+;                                            ; due to stuck port clock_enable ;                                                      ;
++--------------------------------------------+--------------------------------+------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -298,10 +422,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 27    ;
+; Total registers                              ; 19    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 27    ;
+; Number of registers using Asynchronous Clear ; 19    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -407,104 +531,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------------+
 
 
-+---------------------------------------------------+
-; Port Connectivity Checks: "Registro:i1_Registro7" ;
-+---------+-------+----------+----------------------+
-; Port    ; Type  ; Severity ; Details              ;
-+---------+-------+----------+----------------------+
-; e[5..4] ; Input ; Info     ; Stuck at VCC         ;
-; e[7..6] ; Input ; Info     ; Stuck at GND         ;
-; e[3..0] ; Input ; Info     ; Stuck at GND         ;
-+---------+-------+----------+----------------------+
-
-
-+---------------------------------------------------+
-; Port Connectivity Checks: "Registro:i1_Registro6" ;
-+---------+-------+----------+----------------------+
-; Port    ; Type  ; Severity ; Details              ;
-+---------+-------+----------+----------------------+
-; e[5..4] ; Input ; Info     ; Stuck at VCC         ;
-; e[7..6] ; Input ; Info     ; Stuck at GND         ;
-; e[3..1] ; Input ; Info     ; Stuck at GND         ;
-; e[0]    ; Input ; Info     ; Stuck at VCC         ;
-+---------+-------+----------+----------------------+
-
-
-+---------------------------------------------------+
-; Port Connectivity Checks: "Registro:i1_Registro5" ;
-+---------+-------+----------+----------------------+
-; Port    ; Type  ; Severity ; Details              ;
-+---------+-------+----------+----------------------+
-; e[7..6] ; Input ; Info     ; Stuck at GND         ;
-; e[4..0] ; Input ; Info     ; Stuck at GND         ;
-; e[5]    ; Input ; Info     ; Stuck at VCC         ;
-+---------+-------+----------+----------------------+
-
-
-+---------------------------------------------------+
-; Port Connectivity Checks: "Registro:i1_Registro4" ;
-+---------+-------+----------+----------------------+
-; Port    ; Type  ; Severity ; Details              ;
-+---------+-------+----------+----------------------+
-; e[5..2] ; Input ; Info     ; Stuck at VCC         ;
-; e[7..6] ; Input ; Info     ; Stuck at GND         ;
-; e[1]    ; Input ; Info     ; Stuck at GND         ;
-; e[0]    ; Input ; Info     ; Stuck at VCC         ;
-+---------+-------+----------+----------------------+
-
-
-+---------------------------------------------------+
-; Port Connectivity Checks: "Registro:i1_Registro3" ;
-+---------+-------+----------+----------------------+
-; Port    ; Type  ; Severity ; Details              ;
-+---------+-------+----------+----------------------+
-; e[5..1] ; Input ; Info     ; Stuck at GND         ;
-; e[7]    ; Input ; Info     ; Stuck at GND         ;
-; e[6]    ; Input ; Info     ; Stuck at VCC         ;
-; e[0]    ; Input ; Info     ; Stuck at VCC         ;
-+---------+-------+----------+----------------------+
-
-
-+---------------------------------------------------+
-; Port Connectivity Checks: "Registro:i1_Registro2" ;
-+---------+-------+----------+----------------------+
-; Port    ; Type  ; Severity ; Details              ;
-+---------+-------+----------+----------------------+
-; e[1..0] ; Input ; Info     ; Stuck at GND         ;
-; e[7]    ; Input ; Info     ; Stuck at GND         ;
-; e[6]    ; Input ; Info     ; Stuck at VCC         ;
-; e[5]    ; Input ; Info     ; Stuck at GND         ;
-; e[4]    ; Input ; Info     ; Stuck at VCC         ;
-; e[3]    ; Input ; Info     ; Stuck at GND         ;
-; e[2]    ; Input ; Info     ; Stuck at VCC         ;
-+---------+-------+----------+----------------------+
-
-
-+---------------------------------------------------+
-; Port Connectivity Checks: "Registro:i1_Registro1" ;
-+---------+-------+----------+----------------------+
-; Port    ; Type  ; Severity ; Details              ;
-+---------+-------+----------+----------------------+
-; e[3..0] ; Input ; Info     ; Stuck at VCC         ;
-; e[5..4] ; Input ; Info     ; Stuck at GND         ;
-; e[7]    ; Input ; Info     ; Stuck at GND         ;
-; e[6]    ; Input ; Info     ; Stuck at VCC         ;
-+---------+-------+----------+----------------------+
-
-
-+---------------------------------------------------+
-; Port Connectivity Checks: "Registro:i1_Registro0" ;
-+---------+-------+----------+----------------------+
-; Port    ; Type  ; Severity ; Details              ;
-+---------+-------+----------+----------------------+
-; e[3..1] ; Input ; Info     ; Stuck at VCC         ;
-; e[5..4] ; Input ; Info     ; Stuck at GND         ;
-; e[7]    ; Input ; Info     ; Stuck at GND         ;
-; e[6]    ; Input ; Info     ; Stuck at VCC         ;
-; e[0]    ; Input ; Info     ; Stuck at GND         ;
-+---------+-------+----------+----------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -520,7 +546,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Mar 03 08:47:40 2021
+    Info: Processing started: Fri Apr 02 11:29:08 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica3 -c Practica3
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Warning (12125): Using design file practica3.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
@@ -535,6 +561,22 @@ Warning (12125): Using design file contador.vhd, which is not specified as a des
     Info (12022): Found design unit 1: Contador-behavioral
     Info (12023): Found entity 1: Contador
 Info (12128): Elaborating entity "Contador" for hierarchy "Contador:i_Contador"
+Warning (12125): Using design file contador_medioseg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Contador_medioseg-behavioral
+    Info (12023): Found entity 1: Contador_medioseg
+Info (12128): Elaborating entity "Contador_medioseg" for hierarchy "Contador_medioseg:i_Contador_medioseg"
+Warning (12125): Using design file contador_lgmsg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: contador_lgmsg-behavioral
+    Info (12023): Found entity 1: contador_lgmsg
+Info (12128): Elaborating entity "Contador_lgmsg" for hierarchy "Contador_lgmsg:i_Contador_longitud"
+Warning (12125): Using design file mensaje.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Mensaje-behavioural
+    Info (12023): Found entity 1: Mensaje
+Info (12128): Elaborating entity "Mensaje" for hierarchy "Mensaje:i_Mensaje"
+Warning (12125): Using design file registro_grande.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Registro_grande-behavioral
+    Info (12023): Found entity 1: Registro_grande
+Info (12128): Elaborating entity "Registro_grande" for hierarchy "Registro_grande:i_RegGrande"
 Warning (12125): Using design file selector.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: Selector-behavioral
     Info (12023): Found entity 1: Selector
@@ -577,18 +619,19 @@ Info (12133): Instantiated megafunction "AsciiA16Seg:i_ASCIIa17Seg|altsyncram:me
     Info (12134): Parameter "INIT_FILE" = "db/Practica3.ram0_AsciiA16Seg_c28836d7.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_n771.tdf
     Info (12023): Found entity 1: altsyncram_n771
-Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ALTSYNCRAM"
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 7 MSB VCC or GND address nodes from RAM block "AsciiA16Seg:i_ASCIIa17Seg|altsyncram:memoria_rtl_0|altsyncram_n771:auto_generated|ALTSYNCRAM"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 106 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 83 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 25 output pins
-    Info (21061): Implemented 62 logic cells
+    Info (21061): Implemented 39 logic cells
     Info (21064): Implemented 17 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4654 megabytes
-    Info: Processing ended: Wed Mar 03 08:47:41 2021
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4647 megabytes
+    Info: Processing ended: Fri Apr 02 11:29:11 2021
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -9,7 +9,7 @@ entity ALU is
     port(
         a,b : in std_logic_vector(generic_length -1 downto 0);
         alu_op : in std_logic_vector(3 downto 0);
-        shamt   : in std_logic_vector(4 downto 0);
+        shamt   : in std_logic_vector(2 downto 0); --normalmente (4 downto 0) pero para implantar lo hacemos con 4 bits
         alu_out : out std_logic_vector(generic_length -1 downto 0);
         z,lt,ge : out std_logic
     );
@@ -32,9 +32,12 @@ architecture behavioral of ALU is
             sig		: out std_logic); --Acarreo de salida
     end component;
 begin
+
     -- Extensión de signo
     a_ext <= a(generic_length -1) & a when alu_op = "0010" else '0' & a;
     b_ext <= b(generic_length -1) & b when alu_op = "0010" else '0' & b;
+   
+    -- vector de ceros para el slt
     ceros <= (others => '0');
 
     -- Sumador/Restador
@@ -75,7 +78,6 @@ begin
             sr_out when "1000",
 			ceros & sig when "0010",
 			ceros & sig when "0011",
-            -- Poner muchos 0 en un array
             sll_out when "0001",
             srl_out when "0101",
             sra_out when "1101",

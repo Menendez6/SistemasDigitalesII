@@ -2,16 +2,16 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity Contador is
+entity contador_lgmsg is
     port(
         reset_n : in std_logic;
         clk     : in std_logic;
         en      : in std_logic;
         salida   : out std_logic_vector(7 downto 0) 
     );
-end Contador;
+end contador_lgmsg;
 
-architecture behavioral of Contador is
+architecture behavioral of contador_lgmsg is
     signal contador : unsigned(7 downto 0);
 
 begin

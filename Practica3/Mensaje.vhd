@@ -14,23 +14,23 @@ end Mensaje;
 architecture behavioural of Mensaje is
   type mem_t is array (0 to 255) of std_logic_vector(7 downto 0);
   signal memoria : mem_t := (
-    16#00# =>
-    16#01# => --Aquí ponemos el mensaje en el orden que está. Si queremos poner más mensaje añadimos líneas (ahora está hasta 14 caracteres, pero podemos poner hasta 256 )
-    16#02# => 
-    16#03# => 
-    16#04# => 
-    16#05# => 
-    16#06# => 
-    16#07# => 
-    16#08# => 
-    16#09# => 
-    16#0A# => 
-    16#0B# => 
-    16#0C# => 
-    16#0C# => 
-    16#0D# => 
+    16#00# => "00000000",
+    16#01# => "00000000",--Aquí ponemos el mensaje en el orden que está. Si queremos poner más mensaje añadimos líneas (ahora está hasta 14 caracteres, pero podemos poner hasta 256 )
+    16#02# => "00000000",
+    16#03# => "00000000",
+    16#04# => "00000000",
+    16#05# => "00000000",
+    16#06# => "00000000",
+    16#07# => "00000000",
+    16#08# => "00000000",
+    16#09# => "00000000",
+    16#0A# => "00000000",
+    16#0B# => "00000000",
+    16#0C# => "00000000",
+    16#0D# => "00000000",
+    16#0E# => "00000000",
     
-    others => X"0000"&'0');             
+    others => X"00");             
   
   signal s_i : std_logic_vector(7 downto 0);
   

@@ -52,10 +52,10 @@
 # 
 #           File in use by: pablo  Hostname: LAPTOP-E50T53VR  ProcessID: 17808
 # 
-#           Attempting to use alternate WLF file "./wlftj9cnk3".
+#           Attempting to use alternate WLF file "./wlft79gnye".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftj9cnk3
+#           Using alternate file: ./wlft79gnye
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -68,8 +68,8 @@
 #    Time: 0 ps  Iteration: 0  Instance: /alu_vhd_tst/i1
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /alu_vhd_tst/i1
-# ** Failure: Fallo en el desplazamiento lógico a la izquierda
-#    Time: 1405 ns  Iteration: 0  Process: /alu_vhd_tst/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/Practica4/simulation/modelsim/ALU.vht
-# Break in ForLoop loop at C:/altera/13.0sp1/SistemasDigitalesII/Practica4/simulation/modelsim/ALU.vht line 160
-# Simulation Breakpoint: Break in ForLoop loop at C:/altera/13.0sp1/SistemasDigitalesII/Practica4/simulation/modelsim/ALU.vht line 160
+# ** Failure: Fin de la simulación
+#    Time: 4862 ns  Iteration: 0  Process: /alu_vhd_tst/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/Practica4/simulation/modelsim/ALU.vht
+# Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/Practica4/simulation/modelsim/ALU.vht line 185
+# Simulation Breakpoint: Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/Practica4/simulation/modelsim/ALU.vht line 185
 # MACRO ./Practica4_run_msim_rtl_vhdl.do PAUSED at line 18

@@ -1,0 +1,64 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do practica5_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica5/BancoRegistros.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity BancoRegistros
+# -- Compiling architecture behavioral of BancoRegistros
+# 
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/BancoRegistros.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity BancoRegistros_vhd_tst
+# -- Compiling architecture tb of BancoRegistros_vhd_tst
+# -- Loading entity BancoRegistros
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoRegistros_vhd_tst
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoRegistros_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bancoregistros_vhd_tst(tb)
+# Loading work.bancoregistros(behavioral)
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: pablo  Hostname: LAPTOP-E50T53VR  ProcessID: 8652
+# 
+#           Attempting to use alternate WLF file "./wlftwiwgz9".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftwiwgz9
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /bancoregistros_vhd_tst/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /bancoregistros_vhd_tst/i1
+# ** Failure: Fin de la simulacion
+#    Time: 3092 ns  Iteration: 0  Process: /bancoregistros_vhd_tst/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/BancoRegistros.vht
+# Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/BancoRegistros.vht line 106
+# Simulation Breakpoint: Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/BancoRegistros.vht line 106
+# MACRO ./practica5_run_msim_rtl_vhdl.do PAUSED at line 17

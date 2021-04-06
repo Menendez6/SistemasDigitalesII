@@ -52,10 +52,10 @@
 # 
 #           File in use by: pablo  Hostname: LAPTOP-E50T53VR  ProcessID: 17808
 # 
-#           Attempting to use alternate WLF file "./wlft79gnye".
+#           Attempting to use alternate WLF file "./wlftqjjqy7".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft79gnye
+#           Using alternate file: ./wlftqjjqy7
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct

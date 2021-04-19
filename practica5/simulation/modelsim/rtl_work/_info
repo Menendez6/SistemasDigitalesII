@@ -3,34 +3,35 @@ K3
 13
 cModel Technology
 Z0 dC:\altera\13.0sp1\SistemasDigitalesII\practica5\simulation\modelsim
-Ebancoregistros
-Z1 w1617723667
+Eram
+Z1 w1618333502
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z5 dC:\altera\13.0sp1\SistemasDigitalesII\practica5\simulation\modelsim
-Z6 8C:/altera/13.0sp1/SistemasDigitalesII/practica5/BancoRegistros.vhd
-Z7 FC:/altera/13.0sp1/SistemasDigitalesII/practica5/BancoRegistros.vhd
+Z6 8C:/altera/13.0sp1/SistemasDigitalesII/practica5/Ram.vhd
+Z7 FC:/altera/13.0sp1/SistemasDigitalesII/practica5/Ram.vhd
 l0
 L5
-V<aoMYG4U;iaJMT2=]?e@:0
+V2=9=An2A?BV@OjnMa0O>Z0
 Z8 OV;C;10.1d;51
 31
-Z9 !s108 1617724071.788000
-Z10 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/BancoRegistros.vhd|
-Z11 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/BancoRegistros.vhd|
+Z9 !s108 1618333653.161000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/Ram.vhd|
+Z11 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/Ram.vhd|
 Z12 o-93 -work work -O0
 Z13 tExplicit 1
-!s100 YgJ2Yh2L7081<Fm^0l8g31
+!s100 7b29Yo2KbiLH9m>A]QnZR2
 !i10b 1
-Abehavioral
+Aarch_ram
+Z14 DEx4 work 8 ram_core 0 22 8835[OM>4h2Mh;11=K6122
 R2
 R3
 R4
-Z14 DEx4 work 14 bancoregistros 0 22 <aoMYG4U;iaJMT2=]?e@:0
-l21
-L17
-Vn@`N;X9FC<]NCX9@_`V2d0
+DEx4 work 3 ram 0 22 2=9=An2A?BV@OjnMa0O>Z0
+l25
+L14
+V=U7J:7FNi2E`L>T]Z`]Jd3
 R8
 31
 R9
@@ -38,43 +39,62 @@ R10
 R11
 R12
 R13
-!s100 W8:8NK<>oQjgMJ8<_khe81
+!s100 fof?5KIkm8dodRh>aI1^02
 !i10b 1
-Ebancoregistros_vhd_tst
-Z15 w1617724050
+Eram_core
+Z15 w1618330884
 R2
 R3
 R4
 R5
-Z16 8C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/BancoRegistros.vht
-Z17 FC:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/BancoRegistros.vht
+Z16 8C:/altera/13.0sp1/SistemasDigitalesII/practica5/ram_core.vhd
+Z17 FC:/altera/13.0sp1/SistemasDigitalesII/practica5/ram_core.vhd
 l0
 L5
-VeBl`]abUFaFUZo?;;h_XM0
-!s100 nQFB9k18UJ>e?R:hYM_b42
+V8835[OM>4h2Mh;11=K6122
 R8
 31
-!i10b 1
-Z18 !s108 1617724071.884000
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/BancoRegistros.vht|
-Z20 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/BancoRegistros.vht|
+Z18 !s108 1618333653.054000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/ram_core.vhd|
+Z20 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/ram_core.vhd|
 R12
 R13
-Atb
-R14
+!s100 M;Z6D;7zHKK[__WR4GX:E3
+!i10b 1
+Abehavioral
 R2
 R3
 R4
-DEx4 work 22 bancoregistros_vhd_tst 0 22 eBl`]abUFaFUZo?;;h_XM0
-l19
-L8
-VdElH<4:>?9O8bW@J_hNBi0
-!s100 @UBF;P>zO[ch93LhniQ]?3
+R14
+l23
+L20
+VIMAhGQ>LPDQb8c:dW:Y1X3
 R8
 31
-!i10b 1
 R18
 R19
 R20
+R12
+R13
+!s100 MEHcX8oBcZ[LBhbW3;jgQ2
+!i10b 1
+Eram_vhd_tst
+w1618333585
+R2
+R3
+R4
+R5
+8C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/Ram.vht
+FC:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/Ram.vht
+l0
+L5
+VOY9FOf;DM>BIFli>Y[GIl0
+!s100 Qa8aaeAU`0W6OhBnQJm6H0
+R8
+31
+!i10b 1
+!s108 1618333653.262000
+!s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/Ram.vht|
+!s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/Ram.vht|
 R12
 R13

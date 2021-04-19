@@ -9,7 +9,7 @@ entity ALU is
     port(
         a,b : in std_logic_vector(generic_length -1 downto 0);
         alu_op : in std_logic_vector(3 downto 0);
-        shamt   : in std_logic_vector(1 downto 0); --normalmente (4 downto 0) pero para implantar lo hacemos con 4 bits
+        shamt   : in std_logic_vector(2 downto 0); --normalmente (4 downto 0) pero para implantar lo hacemos con 4 bits
         alu_out : out std_logic_vector(generic_length -1 downto 0);
         z,lt,ge : out std_logic
     );

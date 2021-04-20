@@ -20,7 +20,7 @@ entity UnidadControl is
 	tipo_acc : out std_logic_vector(1 downto 0); --ir_out 13 12
 	l_u : out std_logic;
 	wc_ram : out std_logic;
-	in_ram : out std_logic;
+    m_shamt: out std_logic;
 	m_ram : out std_logic);
 end UnidadControl;
 
@@ -117,8 +117,8 @@ architecture behavioral of UnidadControl is
 	tipo_acc <="00";
 	l_u <='0';
 	wc_ram <='0';
-	in_ram <='0';
 	m_ram <='0';
+    m_shamt <= '0';
 	
 	case estado_act is
 		when Reset=>
@@ -182,6 +182,7 @@ architecture behavioral of UnidadControl is
 			alu_op<=ir_out(30) & ir_out(14 downto 12);-- Llenar el valor de esta variable
 			m_alu_a<="00";   --Por que no es 10 ? 
 			m_alu_b<="10";
+            m_shamt <= '1';
 		when Jal=>
 			--Llenar las variables que tiene
 			tipo_inst<="100";

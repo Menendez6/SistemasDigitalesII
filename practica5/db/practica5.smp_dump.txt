@@ -1,5 +1,5 @@
 
-State Machine - |UnidadControl|estado_act
+State Machine - |RISCV|UnidadControl:i_Control|estado_act
 Name estado_act.Jalr estado_act.Jal estado_act.Inm3 estado_act.lw5 estado_act.Arit4 estado_act.sw4 estado_act.lw4 estado_act.SalCond estado_act.Arit3 estado_act.auipc3 estado_act.lwsw3 estado_act.lui3 estado_act.Decod estado_act.Fetch estado_act.Reset 
 estado_act.Reset 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 estado_act.Fetch 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 

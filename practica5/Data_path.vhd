@@ -6,8 +6,8 @@ entity Data_path is
     port(
         clk, reset_n : in std_logic;
         wr_pc, wr_pc_cond : in std_logic;-- ¿ Qué es wr_pc_cond?
-        m_flags : in std_logic_vector(2 downto 0);
-        m_pc : in std_logic_vector(2 downto 0);
+        --m_flags : in std_logic_vector(2 downto 0); ir_out(14 downto 12)
+        m_pc : in std_logic_vector(1 downto 0);
         en_ir : in std_logic;
         tipo_inst : in std_logic_vector(2 downto 0);
         mask_b0 : in std_logic;
@@ -35,11 +35,13 @@ architecture structural of Data_path is
     signal dout_ram: std_logic_vector(31 downto 0);
     signal shamt : std_logic_vector(4 downto 0);
     signal sal_mux_ini : std_logic;
+    signal m_flags : std_logic_vector(1 downto 0);
 
 
 
 begin
 
+    m_flags <= ir_out_m(14) & ir_out_m(12);
 
     sal_mux_ini <= z when m_flags="00" else 
                     not z when m_flags = "01" else 

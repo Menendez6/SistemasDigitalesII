@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C20F484C7
-set_global_assignment -name TOP_LEVEL_ENTITY UnidadControl
+set_global_assignment -name TOP_LEVEL_ENTITY RISCV
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:18:03  APRIL 05, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -64,6 +64,7 @@ set_global_assignment -name EDA_TEST_BENCH_NAME Ram_vhd_tst -section_id eda_simu
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME i1 -section_id Ram_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Ram_vhd_tst -section_id Ram_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/Ram.vht -section_id Ram_vhd_tst
+set_global_assignment -name VHDL_FILE RISCV.vhd
 set_global_assignment -name VHDL_FILE UnidadControl.vhd
 set_global_assignment -name VHDL_FILE ALU.vhd
 set_global_assignment -name VHDL_FILE ROM.vhd

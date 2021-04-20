@@ -23,25 +23,13 @@ architecture arch_ram of Ram is
 	signal we1, we2, we3, we0 : std_logic;
 	
 begin
-	--Escritura , síncrona??
-	p_write: process(clk)
-		begin
-			if rising_edge(clk) then
-				if we_ram = '1' then
-					if tipo_acc = "00" then
-						we_b(to_integer(unsigned(addr(1 downto 0)))) <= '1';
-					elsif tipo_acc = "01" then
-						if addr(1) = '0' then
-							we_h(0) <= '1';
-						else
-							we_h(1) <= '1';
-						end if;
-					elsif tipo_acc = "10" then
-						we_w <= '1';
-					end if;
-				end if;
-			end if;
-		end process;
+	--Escritura
+
+	we_b(to_integer(unsigned(addr(1 downto 0)))) <= we_ram when tipo_acc = "00" else 'X';
+	we_h <= '0' & we_ram when tipo_acc = "01" and addr(1) = '0' else
+			we_ram & '0' when tipo_acc = "01" and addr(1) = '1' else
+			"XX";
+	we_w <= we_ram when tipo_acc = "10" else 'X';
 		
 	-- Byte 0
 	we0 <= we_b(0) or we_h(0) or we_w;
@@ -55,7 +43,7 @@ begin
 		dout  => b(0)
 		);
 
-	ram1 <= din(7 downto 0) when tipo_acc = "00" else din(15 downto 8) when tipo_acc = "01" or tipo_acc="10";
+	ram1 <= din(7 downto 0) when tipo_acc = "00" else din(15 downto 8) when tipo_acc = "01" or tipo_acc="10" else din(15 downto 8);
 	we1 <= we_b(1) or we_h(0) or we_w;
 		
 	-- Byte1
@@ -68,7 +56,7 @@ begin
 		dout  => b(1)
 		);
 
-	ram2 <= din(7 downto 0) when tipo_acc = "00" or tipo_acc = "01" else din(23 downto 16) when tipo_acc="10";
+	ram2 <= din(7 downto 0) when tipo_acc = "00" or tipo_acc = "01" else din(23 downto 16);
 	we2 <= we_b(2) or we_h(1) or we_w;
 		
 	-- Byte2
@@ -81,7 +69,7 @@ begin
 		dout  => b(2)
 		);
 		
-	ram3 <= din(7 downto 0) when tipo_acc = "00" else din(15 downto 8) when tipo_acc = "01" else din(31 downto 24) when tipo_acc = "10";
+	ram3 <= din(7 downto 0) when tipo_acc = "00" else din(15 downto 8) when tipo_acc = "01" else din(31 downto 24);
 	we3 <= we_b(3) or we_h(1) or we_w;
 	-- Byte3
 	i_byte3: entity work.ram_core
@@ -95,29 +83,13 @@ begin
 		
 	--Lectura
 	h <= b(1) & b(0) when addr(1) = '0' else b(3) & b(2) when addr(1) = '1' else (others => '0');
+	dout <= std_logic_vector(resize(signed(b(to_integer(unsigned(addr(1 downto 0))))),32)) when tipo_acc = "00" and l_u = '0' else
+			std_logic_vector(resize(unsigned(b(to_integer(unsigned(addr(1 downto 0))))),32)) when tipo_acc = "00" and l_u = '1' else
+			std_logic_vector(resize(signed(h),32)) when tipo_acc = "01" and l_u = '0' else
+			std_logic_vector(resize(unsigned(h),32)) when tipo_acc = "01" and l_u = '1' else
+			b(3) & b(2) & b(1) & b(0) when tipo_acc = "10" else
+			(others => 'X');
 
-	p_read: process(clk)
-	begin
-		if rising_edge(clk) then
-			if tipo_acc = "00" then
-				if l_u = '1' then
-					dout <= std_logic_vector(resize(signed(b(to_integer(unsigned(addr(1 downto 0))))),32)); 
-				else
-					dout <= std_logic_vector(resize(unsigned(b(to_integer(unsigned(addr(1 downto 0))))),32));
-				end if;
-			elsif tipo_acc = "01" then
-				if l_u = '1' then
-					dout <= std_logic_vector(resize(signed(h),32)); 
-				else
-					dout <= std_logic_vector(resize(unsigned(h),32));
-				end if;
-			elsif tipo_acc = "10" then
-				dout <= b(3) & b(2) & b(1) & b(0);
-			else
-				dout <= (others => '0');
-			end if;
-		end if;
-	end process;
 end arch_ram;
 			
 	

@@ -11,14 +11,15 @@ entity Data_path is
         en_ir : in std_logic;
         tipo_inst : in std_logic_vector(2 downto 0);
         mask_b0 : in std_logic;
-        m_banco: in std_logic;
+        m_banco: in std_logic_vector(1 downto 0);
         en_banco: in std_logic;
-        m_alu_a, m_alu_b: in std_logic;
+        m_alu_a, m_alu_b: in std_logic_vector(1 downto 0);
         alu_op: in std_logic_vector(3 downto 0);
         m_shamt: in std_logic;
-        tipo_acc, l_u, we_ram: in std_logic;
+        tipo_acc: in std_logic_vector(1 downto 0);
+        l_u, we_ram: in std_logic;
         m_ram: in std_logic;
-        ir_out: out std_logic_vector(6 downto 0) -- lo necesitamos para la máquina de estados 
+        ir_out: out std_logic_vector(31 downto 0) -- lo necesitamos para la máquina de estados 
     );
 end Data_path;
 
@@ -33,15 +34,19 @@ architecture structural of Data_path is
     signal alu_out, alur_out: std_logic_vector(31 downto 0);
     signal dout_ram: std_logic_vector(31 downto 0);
     signal shamt : std_logic_vector(4 downto 0);
+    signal sal_mux_ini : std_logic;
 
 
 
 begin
 
-    en_pc <= wr_pc or (wr_pc_cond and (z when m_flags="00" else 
-                                       not z when m_flags = "01" else 
-                                       lt when m_flags = "10" else
-                                       ge when m_flags = "11"));
+
+    sal_mux_ini <= z when m_flags="00" else 
+                    not z when m_flags = "01" else 
+                    lt when m_flags = "10" else
+                    ge when m_flags = "11" else
+                    '0';
+    en_pc <= wr_pc or (wr_pc_cond and sal_mux_ini);
 
     pc_in <= alu_out when m_pc = "00" else alur_out when m_pc = "01" else (others => '0');
 
@@ -57,6 +62,13 @@ begin
     end process;
 
     --Aquí enchufamos la ROM cuando la tengamos, pcin va a la entrada de la ROM, no pc_out (mirar apuntes)
+    i_ROM : entity work.ROM
+    port map(
+        clk => clk,
+        en_pc => en_pc,
+        addr => pc_in,
+        data => ir_in
+    );
 
     p_irout: process(clk)
     begin
@@ -79,10 +91,11 @@ begin
         inm => inm
     );
 
-    d_in_banco <= d_ram_alu when m_banco = "00" else 
-                  pc_out when m_banco = "01" else
-                  inm when m_banco = "10" else
-                  (others => '0');
+    with m_banco select
+    d_in_banco <= d_ram_alu when "00",
+                  pc_out when "01",
+                  inm when "10",
+                  (others => '0') when others;
 
     i_BancoReg: entity work.BancoRegistros
     port map(
@@ -112,16 +125,16 @@ begin
     --shamt
     shamt <= reg_b(4 downto 0) when m_shamt = '0' else ir_out_m(24 downto 20) when m_shamt = '1' else "00000";
 
-    i_ALU: entity work.i_ALU
+    i_ALU: entity work.ALU
     port map(
-        a <= a,
-        b <= b,
-        alu_op <= alu_op,
-        shamt <= shamt,
-        alu_out <= alu_out,
-        z <= z,
-        lt <= lt,
-        ge <= ge
+        a => a,
+        b => b,
+        alu_op => alu_op,
+        shamt => shamt,
+        alu_out => alu_out,
+        z => z,
+        lt => lt,
+        ge => ge
     );
 
     p_aluout: process(clk)
@@ -135,14 +148,14 @@ begin
             
 
     i_RAM : entity work.Ram
-    port(
-        addr <= alur_out,
-        din <= reg_b,
-        tipo_acc <= tipo_acc,
-        l_u <= l_u,
-        we_ram <= we_ram,
-        clk <= clk,
-        dout <= dout_ram
+    port map(
+        addr => alur_out,
+        din => reg_b,
+        tipo_acc => tipo_acc,
+        l_u => l_u,
+        we_ram => we_ram,
+        clk => clk,
+        dout => dout_ram
     );
 
     d_ram_alu <= alur_out when m_ram = '0' else dout_ram;

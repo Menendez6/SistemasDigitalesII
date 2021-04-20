@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 dC:\altera\13.0sp1\SistemasDigitalesII\practica5\simulation\modelsim
 Eram
-Z1 w1618333502
+Z1 w1618901943
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -16,7 +16,7 @@ L5
 V2=9=An2A?BV@OjnMa0O>Z0
 Z8 OV;C;10.1d;51
 31
-Z9 !s108 1618333653.161000
+Z9 !s108 1618912037.689000
 Z10 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/Ram.vhd|
 Z11 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/Ram.vhd|
 Z12 o-93 -work work -O0
@@ -28,10 +28,10 @@ Z14 DEx4 work 8 ram_core 0 22 8835[OM>4h2Mh;11=K6122
 R2
 R3
 R4
-DEx4 work 3 ram 0 22 2=9=An2A?BV@OjnMa0O>Z0
+Z15 DEx4 work 3 ram 0 22 2=9=An2A?BV@OjnMa0O>Z0
 l25
 L14
-V=U7J:7FNi2E`L>T]Z`]Jd3
+VFJTn5N^mDL>Q1GkUF3<;U0
 R8
 31
 R9
@@ -39,24 +39,24 @@ R10
 R11
 R12
 R13
-!s100 fof?5KIkm8dodRh>aI1^02
+!s100 zZ6Bh<AldJ5Gfmb^iZ]_20
 !i10b 1
 Eram_core
-Z15 w1618330884
+Z16 w1618330884
 R2
 R3
 R4
 R5
-Z16 8C:/altera/13.0sp1/SistemasDigitalesII/practica5/ram_core.vhd
-Z17 FC:/altera/13.0sp1/SistemasDigitalesII/practica5/ram_core.vhd
+Z17 8C:/altera/13.0sp1/SistemasDigitalesII/practica5/ram_core.vhd
+Z18 FC:/altera/13.0sp1/SistemasDigitalesII/practica5/ram_core.vhd
 l0
 L5
 V8835[OM>4h2Mh;11=K6122
 R8
 31
-Z18 !s108 1618333653.054000
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/ram_core.vhd|
-Z20 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/ram_core.vhd|
+Z19 !s108 1618912037.553000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/ram_core.vhd|
+Z21 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/ram_core.vhd|
 R12
 R13
 !s100 M;Z6D;7zHKK[__WR4GX:E3
@@ -71,21 +71,21 @@ L20
 VIMAhGQ>LPDQb8c:dW:Y1X3
 R8
 31
-R18
 R19
 R20
+R21
 R12
 R13
 !s100 MEHcX8oBcZ[LBhbW3;jgQ2
 !i10b 1
 Eram_vhd_tst
-w1618333585
+Z22 w1618911967
 R2
 R3
 R4
 R5
-8C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/Ram.vht
-FC:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/Ram.vht
+Z23 8C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/Ram.vht
+Z24 FC:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/Ram.vht
 l0
 L5
 VOY9FOf;DM>BIFli>Y[GIl0
@@ -93,8 +93,26 @@ VOY9FOf;DM>BIFli>Y[GIl0
 R8
 31
 !i10b 1
-!s108 1618333653.262000
-!s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/Ram.vht|
-!s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/Ram.vht|
+Z25 !s108 1618912037.759000
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/Ram.vht|
+Z27 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/Ram.vht|
+R12
+R13
+Atst_bnch
+R15
+R2
+R3
+R4
+DEx4 work 11 ram_vhd_tst 0 22 OY9FOf;DM>BIFli>Y[GIl0
+l21
+L8
+VVPdo^R9;ij54M8?99@PBk1
+!s100 bkfL7D07Yf8<TECWP8hJG3
+R8
+31
+!i10b 1
+R25
+R26
+R27
 R12
 R13

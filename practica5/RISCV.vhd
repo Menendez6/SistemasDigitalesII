@@ -25,11 +25,12 @@ architecture structural of RISCV is
 	signal wc_ram : std_logic;
 	signal m_ram : std_logic;
     signal m_shamt : std_logic;
+    signal maskb0 : std_logic;
 
 begin
     i_Control : entity work.UnidadControl
     port map(
-        start => not reset_n,
+        reset_n => reset_n,
         clk => clk,
         ir_out => ir_out,
         m_pc => m_pc,
@@ -46,7 +47,8 @@ begin
         l_u => l_u,
         wc_ram => wc_ram,
         m_shamt => m_shamt,
-        m_ram => m_ram
+        m_ram => m_ram,
+        maskb0 => maskb0
     );
 
     i_Path : entity work.Data_path
@@ -58,7 +60,7 @@ begin
         m_pc => m_pc,
         en_ir => en_ir,
         tipo_inst => tipo_inst,
-        mask_b0 => '0', -- No sé muy bien qué hace
+        mask_b0 => maskb0, 
         m_banco=> m_banco,
         en_banco => en_banco,
         m_alu_a => m_alu_a,

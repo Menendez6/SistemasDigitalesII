@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity UnidadControl is
 	port(
-	start : in std_logic;
+	reset_n : in std_logic;
 	--opcode : in std_logic_vector(4 downto 0); SON LOS 7 ÚLTIMOS DE IR_OUT PERO OS ÚLTIMOS 2 SON 1
 	clk : in std_logic;
 	ir_out : in std_logic_vector(31 downto 0);
@@ -20,6 +20,7 @@ entity UnidadControl is
 	tipo_acc : out std_logic_vector(1 downto 0); --ir_out 13 12
 	l_u : out std_logic;
 	wc_ram : out std_logic;
+    maskb0: out std_logic;
     m_shamt: out std_logic;
 	m_ram : out std_logic);
 end UnidadControl;
@@ -32,7 +33,7 @@ architecture behavioral of UnidadControl is
 	
 	begin
 	opcode<=ir_out(6 downto 2);	--los últimos son siempre 1s
-	TransicionesEstados : process(estado_act, opcode, start, clk)
+	TransicionesEstados : process(estado_act, opcode, clk)
 	begin
 	estado_sig<=estado_act;
 	case estado_act is
@@ -91,9 +92,9 @@ architecture behavioral of UnidadControl is
 		end case;
 	end process;
 	
-	VarEstado: process(clk,start,start)
+	VarEstado: process(clk,reset_n)
 	begin
-	if start='1' then
+	if reset_n='0' then
 		estado_act<= Reset;
 	else 
 		if rising_edge(clk) then
@@ -119,6 +120,7 @@ architecture behavioral of UnidadControl is
 	wc_ram <='0';
 	m_ram <='0';
     m_shamt <= '0';
+    maskb0 <= '0';
 	
 	case estado_act is
 		when Reset=>
@@ -180,19 +182,21 @@ architecture behavioral of UnidadControl is
 			alu_op<="001X";
 		when Inm3 =>
 			alu_op<=ir_out(30) & ir_out(14 downto 12);-- Llenar el valor de esta variable
-			m_alu_a<="00";   --Por que no es 10 ? 
+			tipo_inst <= "000";
+            m_alu_a<="00";   --Por que no es 10 ? 
 			m_alu_b<="10";
             m_shamt <= '1';
 		when Jal=>
 			--Llenar las variables que tiene
 			tipo_inst<="100";
-			m_alu_a<="10";
+			m_alu_a<="01";
 			m_alu_b<="10";
 			alu_op<="0000"; --se suma para la dirección de salto
 			
 		when Jalr=>
 			tipo_inst<="000";
 			m_banco<="10";
+            maskb0 <= '1';
 			en_banco<='1';
 			m_alu_a<="00";
 			m_alu_b<="10";

@@ -81,9 +81,9 @@ architecture behavioral of UnidadControl is
 			estado_sig<=Arit4;
 		when SalCond =>
 			estado_sig<=Fetch;
-		when jal =>
+		when Jal =>
 			estado_sig<=Fetch;
-		when jalr =>
+		when Jalr =>
 			estado_sig<=Fetch;
 		when Inm3 =>
 			estado_sig<=Arit4;
@@ -139,11 +139,11 @@ architecture behavioral of UnidadControl is
 			m_alu_b<="10";
 			alu_op<="0000";
 		when lui3=>
-			tipo_inst<="100";
+			tipo_inst<="011";
 			m_banco<="10";
 			en_banco<='1';
 		when lwsw3=>
-			if (opcode="000") then
+			if (opcode="00000") then
 				tipo_inst<="000";
 			else
 				tipo_inst<="001";
@@ -162,7 +162,7 @@ architecture behavioral of UnidadControl is
 			en_banco<='1';
 			m_ram<='1';
 		when auipc3=>
-			tipo_inst<="100";
+			tipo_inst<="011";
 			alu_op<="0000";
 			m_alu_a<="10";
 			m_alu_b<="10";
@@ -181,13 +181,17 @@ architecture behavioral of UnidadControl is
 			m_alu_b<="00";
 			alu_op<="001X";
 		when Inm3 =>
-			alu_op<=ir_out(30) & ir_out(14 downto 12);-- Llenar el valor de esta variable
+			if ir_out(14 downto 12) = "101" then
+				alu_op<=ir_out(30) & ir_out(14 downto 12); -- ¿Cómo diferencias el caso de shift y normal?
+			else
+				alu_op <= '0' & ir_out(14 downto 12);
+			end if;
 			tipo_inst <= "000";
-            m_alu_a<="00";   --Por que no es 10 ? 
+            m_alu_a<="00";    
 			m_alu_b<="10";
             m_shamt <= '1';
 		when Jal=>
-			--Llenar las variables que tiene
+			--Llenar las variables que tiene ¿Habría otro estado más para jal? --Primero guardar en ra el PC +4 y luego hacer el salto de PC más inmediato
 			tipo_inst<="100";
 			m_alu_a<="01";
 			m_alu_b<="10";

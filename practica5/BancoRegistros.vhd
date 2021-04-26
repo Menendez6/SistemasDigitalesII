@@ -38,7 +38,7 @@ architecture behavioral of BancoRegistros is
 
         -- Muxes
         regA <= reg(to_integer(unsigned(addrA)));
-        regB <= reg(to_integer(unsigned(addrA)));
+        regB <= reg(to_integer(unsigned(addrB)));
         
 
 end behavioral;

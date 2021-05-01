@@ -2,8 +2,9 @@
 <LOG_ROOT>
 	<PROJECT NAME="practica5">
 		<CBX_INST_ENTRY INSTANCE_NAME="|RISCV|Data_path:i_Path|Ram:i_RAM|ram_core:i_byte0|altsyncram:ram_block_rtl_0" CBX_FILE_NAME="altsyncram_utg1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|RISCV|Data_path:i_Path|Ram:i_RAM|ram_core:i_byte1|altsyncram:ram_block_rtl_0" CBX_FILE_NAME="altsyncram_utg1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|RISCV|Data_path:i_Path|Ram:i_RAM|ram_core:i_byte2|altsyncram:ram_block_rtl_0" CBX_FILE_NAME="altsyncram_utg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RISCV|Data_path:i_Path|ROM:i_ROM|altsyncram:memory_rtl_0" CBX_FILE_NAME="altsyncram_k571.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RISCV|Data_path:i_Path|Ram:i_RAM|ram_core:i_byte1|altsyncram:ram_block_rtl_0" CBX_FILE_NAME="altsyncram_utg1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|RISCV|Data_path:i_Path|Ram:i_RAM|ram_core:i_byte3|altsyncram:ram_block_rtl_0" CBX_FILE_NAME="altsyncram_utg1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

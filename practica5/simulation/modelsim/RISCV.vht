@@ -27,7 +27,7 @@ begin
     p_reset_n: process
     begin 
         reset_n<='0';
-        wait for 20 ns;
+        wait for 10 ns;
         reset_n<='1';
         wait;
     end process;
@@ -35,7 +35,7 @@ begin
     p_stim: process
     begin
         wait until reset_n = '1';
-        wait for 1000 ns;
+        wait for 5 ns;
 
         assert false
         report "Se acabó mamahuevo"

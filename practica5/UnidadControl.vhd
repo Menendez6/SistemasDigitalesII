@@ -41,10 +41,10 @@ architecture behavioral of UnidadControl is
 				estado_sig<=Fetch;
 		when Fetch =>
 				estado_sig<=Decod;
-		when Decod=>
+		when Decod=> -- No entiendo muy bien qué hace el decode
 			if opcode="01101" then
 				estado_sig<=lui3;
-			elsif (opcode="00000" or opcode="01000") then
+			elsif opcode="00000" or opcode="01000" then
 				estado_sig<=lwsw3;
 			elsif opcode="00101" then
 				estado_sig<=auipc3;
@@ -131,10 +131,10 @@ architecture behavioral of UnidadControl is
 			m_alu_b<="01";
 			alu_op<="0000";
 			m_pc<="00";
-			wr_pc<='0';
+			wr_pc<='1';
 			en_ir<='1';
 		when Decod=>
-			tipo_inst<="011";
+			tipo_inst<="010"; -- no sé si es 3 o 2??
 			m_alu_a<="10";
 			m_alu_b<="10";
 			alu_op<="0000";
@@ -143,11 +143,7 @@ architecture behavioral of UnidadControl is
 			m_banco<="10";
 			en_banco<='1';
 		when lwsw3=>
-			if (opcode="00000") then
-				tipo_inst<="000";
-			else
-				tipo_inst<="001";
-			end if;									
+			tipo_inst <= "00" & opcode(3);									
 			alu_op<="0000";
 			m_alu_a<="00";
 			m_alu_b<="10";
@@ -171,7 +167,7 @@ architecture behavioral of UnidadControl is
 			m_alu_a<="00";
 			m_alu_b<="00";
 		when Arit4 =>
-			m_ram<='1';
+			m_ram<='0';
 			m_banco<="00";
 			en_banco<='1';
 		when SalCond =>
@@ -181,30 +177,36 @@ architecture behavioral of UnidadControl is
 			m_alu_b<="00";
 			alu_op<="001X";
 		when Inm3 =>
-			if ir_out(14 downto 12) = "101" then
+			if ir_out(14 downto 12) = "101" or ir_out(14 downto 12) = "001" then
 				alu_op<=ir_out(30) & ir_out(14 downto 12); -- ¿Cómo diferencias el caso de shift y normal?
+				m_shamt <= '1';
 			else
 				alu_op <= '0' & ir_out(14 downto 12);
 			end if;
 			tipo_inst <= "000";
             m_alu_a<="00";    
 			m_alu_b<="10";
-            m_shamt <= '1';
 		when Jal=>
 			--Llenar las variables que tiene ¿Habría otro estado más para jal? --Primero guardar en ra el PC +4 y luego hacer el salto de PC más inmediato
 			tipo_inst<="100";
-			m_alu_a<="01";
+			m_alu_a<="10";
 			m_alu_b<="10";
 			alu_op<="0000"; --se suma para la dirección de salto
+			en_banco <= '1';
+			m_banco <= "01";
+			wr_pc <= '1';
+			m_pc <= "00";
 			
 		when Jalr=>
 			tipo_inst<="000";
-			m_banco<="10";
-            maskb0 <= '1';
+			wr_pc <= '1';
+			m_banco<="01";
+           -- maskb0 <= '1';
 			en_banco<='1';
 			m_alu_a<="00";
 			m_alu_b<="10";
 			alu_op<="0000";
+			m_pc <= "00";
 			--Llenar las variables que tiene
 		
 		when others =>

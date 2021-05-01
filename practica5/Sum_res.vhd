@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity Sum_res is
     generic(
-        generic_length : integer
+        generic_length : integer:=32
     );
 	port(
 		a,b	    : in std_logic_vector(generic_length downto 0); --Entrada

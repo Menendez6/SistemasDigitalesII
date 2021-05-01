@@ -36,6 +36,7 @@ architecture structural of Data_path is
     signal shamt : std_logic_vector(4 downto 0);
     signal sal_mux_ini : std_logic;
     signal m_flags : std_logic_vector(1 downto 0);
+    signal sal_and: std_logic;
 
 
 
@@ -48,7 +49,9 @@ begin
                     lt when m_flags = "10" else
                     ge when m_flags = "11" else
                     '0';
-    en_pc <= wr_pc or (wr_pc_cond and sal_mux_ini);
+
+    sal_and <= wr_pc_cond and sal_mux_ini;
+    en_pc <= wr_pc or sal_and;
 
     pc_in <= alu_out when m_pc = "00" else alur_out when m_pc = "01" else (others => '0');
 
@@ -119,7 +122,7 @@ begin
         (others => '0');
 
     b <= reg_b when m_alu_b = "00" else 
-        std_logic_vector(to_unsigned(4,32)) when m_alu_b = "01" else 
+        X"00000004" when m_alu_b = "01" else 
         inm when m_alu_b = "10" else
         (others => '0');
     

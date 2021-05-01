@@ -5,10 +5,9 @@
 comp: 	li t0,1				#me daba error en que tenía que modificar una cosa dentro de memory configuration
 	li t5, 15
 	beq a0,a1,true
-false: 	sw t5, 0(t6)
+false:	sw t5, 0(t6)
 	j return
-true: 	sw t0, 0(t6)
-	j return			#me daba error en que tenía que modificar una cosa dentro de memory configuration
+true: 	sw t0, 0(t6)			#me daba error en que tenía que modificar una cosa dentro de memory configuration
 
 return:	addi t6, t6, 4
 	ret

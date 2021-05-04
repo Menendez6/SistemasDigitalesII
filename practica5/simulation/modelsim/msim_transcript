@@ -129,10 +129,10 @@
 # 
 #           File in use by: pablo  Hostname: LAPTOP-E50T53VR  ProcessID: 8652
 # 
-#           Attempting to use alternate WLF file "./wlftve3xdg".
+#           Attempting to use alternate WLF file "./wlft6hjffy".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftve3xdg
+#           Using alternate file: ./wlft6hjffy
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -178,7 +178,8 @@
 # Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/RISCV.vht line 41
 # Simulation Breakpoint: Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/RISCV.vht line 41
 # MACRO ./practica5_run_msim_rtl_vhdl.do PAUSED at line 26
-add wave -r sim:/riscv_tst_bnch/i1/i_Path/i_RAM/*
+add wave  \
+sim:/riscv_tst_bnch/i1/i_Path/i_RAM/i_byte0/ram_block
 restart -f
 run -all
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0

@@ -186,6 +186,7 @@ architecture behavioral of UnidadControl is
 			tipo_inst <= "000";
             m_alu_a<="00";    
 			m_alu_b<="10";
+			maskb0 <= '1';
 		when Jal=>
 			--Llenar las variables que tiene ¿Habría otro estado más para jal? --Primero guardar en ra el PC +4 y luego hacer el salto de PC más inmediato
 			tipo_inst<="100";

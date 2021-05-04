@@ -21,6 +21,7 @@ architecture structural of practica6 is
     signal dout_PSP: std_logic_vector(7 downto 0);
     signal mid_PEP, dout_PEP: std_logic_vector(7 downto 0);
     signal p_data: std_logic_vector(31 downto 0);
+    signal we_ram: std_logic;
 
 begin
     i_RISCV : entity work.RISCV
@@ -34,6 +35,7 @@ begin
         l_u => l_u,
         we => we
     );
+    we_ram <= we when addr(31 downto 12) = (others => '0') else '0';
 
     i_RAM : entity work.Ram
     port map(
@@ -41,7 +43,7 @@ begin
         din => w_data,
 		tipo_acc => tipo_acc,
 		l_u => l_u,
-        we_ram => we and addr(31),
+        we_ram => we_ram,
         clk => clk,
 		dout  => dout_ram
     );

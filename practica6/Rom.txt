@@ -1,0 +1,101 @@
+Address     Code        Basic                        Line Source
+
+0x00003000  0x00000f93  addi x31,x0,0                3    	li t6, 0
+0x00003004  0x0240006f  jal x0,0x00000024            4    	j main
+0x00003008  0x00100293  addi x5,x0,1                 5    comp: 	li t0,1				#me daba error en que tenía que modificar una cosa dentro de memory configuration
+0x0000300c  0x00f00f13  addi x30,x0,15               6    	li t5, 15
+0x00003010  0x00b50663  beq x10,x11,0x0000000c       7    	beq a0,a1,true
+0x00003014  0x01efa023  sw x30,0(x31)                8    false:	sw t5, 0(t6)
+0x00003018  0x0080006f  jal x0,0x00000008            9    	j return
+0x0000301c  0x005fa023  sw x5,0(x31)                 10   true: 	sw t0, 0(t6)			#me daba error en que tenía que modificar una cosa dentro de memory configuration
+0x00003020  0x004f8f93  addi x31,x31,4               12   return:	addi t6, t6, 4
+0x00003024  0x00008067  jalr x0,x1,0                 13   	ret
+0x00003028  0x00500593  addi x11,x0,5                16   	addi a1,x0,5
+0x0000302c  0x00500513  addi x10,x0,5                17   	addi a0,x0,5
+0x00003030  0xfd9ff0ef  jal x1,0xffffffd8            18   	jal comp
+0x00003034  0x00100593  addi x11,x0,1                20   	addi a1,x0,1
+0x00003038  0x00400513  addi x10,x0,4                21   	addi a0,x0,4
+0x0000303c  0x00b50533  add x10,x10,x11              22   	add a0,a0,a1
+0x00003040  0x00500593  addi x11,x0,5                23   	addi a1,x0,5			#el resultado de sumar 1+4=5 por eso ponemos ahora el 5 para que después al comparar arriba esté bien.
+0x00003044  0xfc5ff0ef  jal x1,0xffffffc4            24   	jal comp
+0x00003048  0x00500593  addi x11,x0,5                26   	addi a1,x0,5
+0x0000304c  0x00300513  addi x10,x0,3                27   	addi a0,x0,3
+0x00003050  0x40a58533  sub x10,x11,x10              28   	sub  a0, a1,a0
+0x00003054  0x00200593  addi x11,x0,2                29   	addi a1,x0,2
+0x00003058  0xfb1ff0ef  jal x1,0xffffffb0            30   	jal comp			#el resultado de hacer 5-3=2
+0x0000305c  0x00100593  addi x11,x0,1                33   	addi a1,x0,1
+0x00003060  0x00400513  addi x10,x0,4                34   	addi a0,x0,4
+0x00003064  0x00552513  slti x10,x10,5               35   	slti a0,a0,5	
+0x00003068  0xfa1ff0ef  jal x1,0xffffffa0            36   	jal comp
+0x0000306c  0x00100593  addi x11,x0,1                38   	addi a1,x0,1
+0x00003070  0x00400513  addi x10,x0,4                39   	addi a0,x0,4
+0x00003074  0x00a5a533  slt x10,x11,x10              40   	slt a0,a1,a0	
+0x00003078  0x00100593  addi x11,x0,1                41   	addi a1,x0,1			#el resultado de hacer un slt 1<4 es 1 porque es verdad
+0x0000307c  0xf8dff0ef  jal x1,0xffffff8c            42   	jal comp
+0x00003080  0x00100513  addi x10,x0,1                44   	addi a0,x0,1
+0x00003084  0x00400593  addi x11,x0,4                45   	addi a1,x0,4
+0x00003088  0x00b53533  sltu x10,x10,x11             46   	sltu a0,a0,a1
+0x0000308c  0x00100593  addi x11,x0,1                47   	addi a1,x0,1			#el resultado de 1<4 es 1 
+0x00003090  0xf79ff0ef  jal x1,0xffffff78            48   	jal comp
+0x00003094  0x00100513  addi x10,x0,1                50   	addi a0,x0,1
+0x00003098  0x00453513  sltiu x10,x10,4              51   	sltiu a0,a0,4
+0x0000309c  0x00100593  addi x11,x0,1                52   	addi a1,x0,1			#el resultado de 1<4 es 1 
+0x000030a0  0xf69ff0ef  jal x1,0xffffff68            53   	jal comp
+0x000030a4  0x00400513  addi x10,x0,4                55   	addi a0,x0,4
+0x000030a8  0x00551513  slli x10,x10,5               56   	slli a0,a0,5			# al desplazar el número 4 0000000100 cinco posiciones es 128 10000000
+0x000030ac  0x08000593  addi x11,x0,0x00000080       57   	addi a1,x0,128
+0x000030b0  0xf59ff0ef  jal x1,0xffffff58            58   	jal comp
+0x000030b4  0x00200593  addi x11,x0,2                60   	addi a1,x0,2
+0x000030b8  0x01000513  addi x10,x0,16               61   	addi a0,x0,16
+0x000030bc  0x00b51533  sll x10,x10,x11              62   	sll a0,a0,a1
+0x000030c0  0x04000593  addi x11,x0,0x00000040       63   	addi a1,x0,64			#al desplazar el número 0000100 2 posiciones a la izquierda nos queda 01000000 64
+0x000030c4  0xf45ff0ef  jal x1,0xffffff44            64   	jal comp
+0x000030c8  0x00100593  addi x11,x0,1                67   	addi a1,x0,1
+0x000030cc  0x01000513  addi x10,x0,16               68   	addi a0,x0,16
+0x000030d0  0x00255513  srli x10,x10,2               69   	srli a0,a0,2
+0x000030d4  0x00400593  addi x11,x0,4                70   	addi a1,x0,4			#en este caso tenemos 16/2^2=4			
+0x000030d8  0xf31ff0ef  jal x1,0xffffff30            71   	jal comp
+0x000030dc  0x01000593  addi x11,x0,16               73   	addi a1,x0,16
+0x000030e0  0x00200513  addi x10,x0,2                74   	addi a0,x0,2
+0x000030e4  0x00a5d533  srl x10,x11,x10              75   	srl a0,a1,a0
+0x000030e8  0x00400593  addi x11,x0,4                76   	addi a1,x0,4			#10000 se desplazan dos posiciones y queda 00100
+0x000030ec  0xf1dff0ef  jal x1,0xffffff1c            77   	jal comp
+0x000030f0  0x01000593  addi x11,x0,16               79   	addi a1,x0,16
+0x000030f4  0x01000513  addi x10,x0,16               80   	addi a0,x0,16
+0x000030f8  0x40255513  srai x10,x10,2               81   	srai a0,a0,2
+0x000030fc  0x00400593  addi x11,x0,4                82   	addi a1,x0,4
+0x00003100  0xf09ff0ef  jal x1,0xffffff08            83   	jal comp
+0x00003104  0x00200593  addi x11,x0,2                85   	addi a1,x0,2
+0x00003108  0x02000513  addi x10,x0,0x00000020       86   	addi a0,x0,32
+0x0000310c  0x40b55533  sra x10,x10,x11              87   	sra a0,a0,a1
+0x00003110  0x00800593  addi x11,x0,8                88   	addi a1,x0,8			# 32/2^2=8
+0x00003114  0xef5ff0ef  jal x1,0xfffffef4            89   	jal comp
+0x00003118  0x00100593  addi x11,x0,1                91   	addi a1,x0,1
+0x0000311c  0x00400513  addi x10,x0,4                92   	addi a0,x0,4
+0x00003120  0x00554513  xori x10,x10,5               93   	xori a0,a0,5
+0x00003124  0xee5ff0ef  jal x1,0xfffffee4            94   	jal comp
+0x00003128  0x00100593  addi x11,x0,1                96   	addi a1,x0,1
+0x0000312c  0x00400513  addi x10,x0,4                97   	addi a0,x0,4
+0x00003130  0x00a5c533  xor x10,x11,x10              98   	xor a0,a1,a0
+0x00003134  0x00500593  addi x11,x0,5                99   	addi a1,x0,5			#al hacer el xor de 0001 y 0100 te queda 0101=5
+0x00003138  0xed1ff0ef  jal x1,0xfffffed0            100  	jal comp	
+0x0000313c  0x00100593  addi x11,x0,1                102  	addi a1,x0,1
+0x00003140  0x00400513  addi x10,x0,4                103  	addi a0,x0,4
+0x00003144  0x00556513  ori x10,x10,5                104  	ori a0,a0,5
+0x00003148  0x00500593  addi x11,x0,5                105  	addi a1,x0,5			#al hacer el or de 0001 y 0100 te queda 0101 = 5
+0x0000314c  0xebdff0ef  jal x1,0xfffffebc            106  	jal comp
+0x00003150  0x00100593  addi x11,x0,1                108  	addi a1,x0,1
+0x00003154  0x00400513  addi x10,x0,4                109  	addi a0,x0,4
+0x00003158  0x00b56533  or x10,x10,x11               110  	or a0,a0,a1
+0x0000315c  0x00500593  addi x11,x0,5                111  	addi a1,x0,5			#al hacer el or de 0001 y 0100 te queda 0101 = 5
+0x00003160  0xea9ff0ef  jal x1,0xfffffea8            112  	jal comp
+0x00003164  0x00100593  addi x11,x0,1                114  	addi a1,x0,1
+0x00003168  0x00400513  addi x10,x0,4                115  	addi a0,x0,4
+0x0000316c  0x00557513  andi x10,x10,5               116  	andi a0,a0,5
+0x00003170  0x00400593  addi x11,x0,4                117  	addi a1,x0,4			#al hacer 0100 and 0101 es 4=0100
+0x00003174  0xe95ff0ef  jal x1,0xfffffe94            118  	jal comp
+0x00003178  0x00500593  addi x11,x0,5                120  	addi a1,x0,5
+0x0000317c  0x00400513  addi x10,x0,4                121  	addi a0,x0,4
+0x00003180  0x00b57533  and x10,x10,x11              122  	and a0,a0,a1
+0x00003184  0x00400593  addi x11,x0,4                123  	addi a1,x0,4			#al hacer 0100 and 0101 es 4=0100
+0x00003188  0xe81ff0ef  jal x1,0xfffffe80            124  	jal comp

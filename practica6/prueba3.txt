@@ -1,0 +1,13 @@
+Address     Code        Basic                        Line Source
+
+0x00003000  0x123452b7  lui x5,0x00012345            2    li t0 , 0x12345678
+0x00003004  0x67828293  addi x5,x5,0x00000678             
+0x00003008  0x12300313  addi x6,x0,0x00000123        4    addi t1 , zero , 0x123
+0x0000300c  0x01431313  slli x6,x6,20                5    slli t1 , t1 , 20
+0x00003010  0x45600393  addi x7,x0,0x00000456        6    addi t2 , zero , 0x456
+0x00003014  0x00839393  slli x7,x7,8                 7    slli t2 , t2 , 8
+0x00003018  0x0063e333  or x6,x7,x6                  8    or t1 , t2 , t1
+0x0000301c  0x07836313  ori x6,x6,0x00000078         9    ori t1 , t1 , 0x78
+0x00003020  0x00628463  beq x5,x6,0x00000008         10   beq t0 , t1 , lui_arith_ok
+0x00003024  0x0000006f  jal x0,0x00000000            12   	j err_lui_arith
+0x00003028  0x0000006f  jal x0,0x00000000            14   	j lui_arith_ok

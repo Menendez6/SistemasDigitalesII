@@ -178,7 +178,7 @@ architecture behavioral of UnidadControl is
 			alu_op<="001X";
 		when Inm3 =>
 			if ir_out(14 downto 12) = "101" or ir_out(14 downto 12) = "001" then
-				alu_op<=ir_out(30) & ir_out(14 downto 12); -- ¿Cómo diferencias el caso de shift y normal?
+				alu_op<=ir_out(30) & ir_out(14 downto 12); 
 				m_shamt <= '1';
 			else
 				alu_op <= '0' & ir_out(14 downto 12);
@@ -186,6 +186,7 @@ architecture behavioral of UnidadControl is
 			tipo_inst <= "000";
             m_alu_a<="00";    
 			m_alu_b<="10";
+			maskb0<='1'; 
 		when Jal=>
 			--Llenar las variables que tiene ¿Habría otro estado más para jal? --Primero guardar en ra el PC +4 y luego hacer el salto de PC más inmediato
 			tipo_inst<="100";

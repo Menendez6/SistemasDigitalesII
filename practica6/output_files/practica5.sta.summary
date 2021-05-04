@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk'
+Slack : -16.169
+TNS   : -12571.920
+
+Type  : Slow Model Setup 'RISCV:i_RISCV|Data_path:i_Path|alur_out[0]'
+Slack : -2.910
+TNS   : -10.935
+
+Type  : Slow Model Hold 'clk'
+Slack : -1.850
+TNS   : -2.224
+
+Type  : Slow Model Hold 'RISCV:i_RISCV|Data_path:i_Path|alur_out[0]'
+Slack : 2.188
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -2.064
+TNS   : -2398.577
+
+Type  : Slow Model Minimum Pulse Width 'RISCV:i_RISCV|Data_path:i_Path|alur_out[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clk'
+Slack : -5.720
+TNS   : -4699.981
+
+Type  : Fast Model Setup 'RISCV:i_RISCV|Data_path:i_Path|alur_out[0]'
+Slack : -1.483
+TNS   : -5.071
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.459
+TNS   : -32.132
+
+Type  : Fast Model Hold 'RISCV:i_RISCV|Data_path:i_Path|alur_out[0]'
+Slack : 1.611
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.627
+TNS   : -1933.230
+
+Type  : Fast Model Minimum Pulse Width 'RISCV:i_RISCV|Data_path:i_Path|alur_out[0]'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

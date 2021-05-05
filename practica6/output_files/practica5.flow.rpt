@@ -1,5 +1,5 @@
 Flow report for practica5
-Mon May 03 22:17:47 2021
+Wed May 05 09:25:03 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon May 03 22:17:47 2021           ;
+; Flow Status                        ; Successful - Wed May 05 09:25:03 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; practica5                                       ;
 ; Top-level Entity Name              ; practica6                                       ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 3,008 / 18,752 ( 16 % )                         ;
-;     Total combinational functions  ; 2,477 / 18,752 ( 13 % )                         ;
-;     Dedicated logic registers      ; 1,157 / 18,752 ( 6 % )                          ;
-; Total registers                    ; 1157                                            ;
+; Total logic elements               ; 531 / 18,752 ( 3 % )                            ;
+;     Total combinational functions  ; 479 / 18,752 ( 3 % )                            ;
+;     Dedicated logic registers      ; 302 / 18,752 ( 2 % )                            ;
+; Total registers                    ; 302                                             ;
 ; Total pins                         ; 18 / 315 ( 6 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 35,828 / 239,616 ( 15 % )                       ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/03/2021 22:17:09 ;
+; Start date & time ; 05/05/2021 09:24:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; practica5           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id             ;
 +--------------------------------------+----------------------------------------+---------------+-------------+------------------------+
-; COMPILER_SIGNATURE_ID                ; 211898720085821.162007302921048        ; --            ; --          ; --                     ;
+; COMPILER_SIGNATURE_ID                ; 211898720085821.162019948707276        ; --            ; --          ; --                     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; i1                                     ; --            ; --          ; InmGen_vhd_tst         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; i1                                     ; --            ; --          ; BancoRegistros_vhd_tst ;
 ; EDA_DESIGN_INSTANCE_NAME             ; i1                                     ; --            ; --          ; Ram_vhd_tst            ;
@@ -113,12 +113,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 4654 MB             ; 00:00:10                           ;
-; Fitter                    ; 00:00:20     ; 1.0                     ; 4865 MB             ; 00:00:20                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4556 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4576 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4550 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:36     ; --                      ; --                  ; 00:00:34                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4632 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 4836 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4551 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4545 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:13     ; --                      ; --                  ; 00:00:12                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

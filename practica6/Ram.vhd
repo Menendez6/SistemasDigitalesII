@@ -4,7 +4,8 @@ use ieee.numeric_std.all;
 
 entity Ram is
 	port(
-		addr, din: in std_logic_vector(31 downto 0);
+		addr: in std_logic_vector(11 downto 0);
+		din: in std_logic_vector(31 downto 0);
 		tipo_acc : in std_logic_vector(1 downto 0);
 		l_u, we_ram,clk: in std_logic;
 		dout : out std_logic_vector(31 downto 0)

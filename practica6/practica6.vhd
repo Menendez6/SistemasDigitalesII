@@ -35,11 +35,11 @@ begin
         l_u => l_u,
         we => we
     );
-    we_ram <= we when addr(31 downto 12) = (others => '0') else '0';
+    we_ram <= we when addr(31 downto 12) = "0000000000000000000" else '0';
 
     i_RAM : entity work.Ram
     port map(
-        addr => addr,
+        addr => addr(11 downto 0),
         din => w_data,
 		tipo_acc => tipo_acc,
 		l_u => l_u,
@@ -87,5 +87,5 @@ begin
     r_data <= dout_ram when addr(31)= '0' else p_data;
 
     out_pins <= dout_PSP;
-
+   
 end structural;

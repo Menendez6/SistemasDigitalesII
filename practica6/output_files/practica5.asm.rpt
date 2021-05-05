@@ -1,5 +1,5 @@
 Assembler report for practica5
-Mon May 03 22:17:43 2021
+Wed May 05 09:24:59 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon May 03 22:17:43 2021 ;
+; Assembler Status      ; Successful - Wed May 05 09:24:59 2021 ;
 ; Revision Name         ; practica5                             ;
 ; Top-level Entity Name ; practica6                             ;
 ; Family                ; Cyclone II                            ;
@@ -94,8 +94,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                             ;
 +----------------+-------------------------------------------------------------------------------------+
 ; Device         ; EP2C20F484C7                                                                        ;
-; JTAG usercode  ; 0x0041CA26                                                                          ;
-; Checksum       ; 0x0041CA26                                                                          ;
+; JTAG usercode  ; 0x0021A2B5                                                                          ;
+; Checksum       ; 0x0021A2B5                                                                          ;
 +----------------+-------------------------------------------------------------------------------------+
 
 
@@ -106,8 +106,8 @@ applicable agreement for further details.
 +--------------------+---------------------------------------------------------------------------------+
 ; Device             ; EPCS16                                                                          ;
 ; JTAG usercode      ; 0x00000000                                                                      ;
-; Checksum           ; 0x1D9D12A0                                                                      ;
-; Compression Ratio  ; 2                                                                               ;
+; Checksum           ; 0x1DCEE916                                                                      ;
+; Compression Ratio  ; 3                                                                               ;
 +--------------------+---------------------------------------------------------------------------------+
 
 
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon May 03 22:17:41 2021
+    Info: Processing started: Wed May 05 09:24:58 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off practica5 -c practica5
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4556 megabytes
-    Info: Processing ended: Mon May 03 22:17:43 2021
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4551 megabytes
+    Info: Processing ended: Wed May 05 09:24:59 2021
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

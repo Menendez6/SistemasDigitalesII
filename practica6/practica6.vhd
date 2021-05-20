@@ -20,8 +20,16 @@ architecture structural of practica6 is
     signal dout_ram: std_logic_vector(31 downto 0);
     signal dout_PSP: std_logic_vector(7 downto 0);
     signal mid_PEP, dout_PEP: std_logic_vector(7 downto 0);
-    signal p_data: std_logic_vector(31 downto 0);
     signal we_ram: std_logic;
+    signal re: std_logic;
+    signal paddr: std_logic_vector(3 downto 0);
+    signal p_write: std_logic;
+    signal pwdata: std_logic_vector(7 downto 0);
+    signal psel0,psel1, psel2,psel3,penable: std_logic;
+    signal dout_puente: std_logic_vector(31 downto 0);
+    signal dato_val: std_logic;
+    signal pwrite: std_logic;
+    signal DIN2, DIN3: std_logic_vector(7 downto 0);
 
 begin
     i_RISCV : entity work.RISCV
@@ -33,7 +41,9 @@ begin
         w_data => w_data,
         tipo_acc => tipo_acc,
         l_u => l_u,
-        we => we
+        we => we,
+        re => re,
+        dato_val => dato_val
     );
     we_ram <= we when addr(31 downto 12) = "0000000000000000000" else '0';
 
@@ -48,14 +58,38 @@ begin
 		dout  => dout_ram
     );
 
+    i_Puente: entity work.puente
+    port map(
+        reset_n => reset_n,
+        clk => clk,
+        addr => addr,
+        re => re, -- hay que añadir esta señal al RISCV
+        we => we,
+        paddr_out => paddr,
+        WE_out => pwrite,
+        din => w_data(7 downto 0),
+        pwdata => pwdata,
+        psel0 => psel0,
+        psel1 => psel1,
+        psel2 => psel2,
+        psel3 => psel3,
+        penable => penable,
+        --dato_val : out std_logic; dato val y penable es lo mismo
+        dout => dout_puente,
+        DIN0 => dout_PSP,
+        DIN1 => dout_PEP, 
+        DIN2 => DIN2, -- de momento las dejo a null hasta que tenga todo (UART y temporizador)
+        DIN3 => DIN3
+    );
+
     -- PSP
     p_PSP : process(clk,reset_n,w_data)
     begin
         if reset_n = '0' then
             dout_PSP <= (others => '0');
         elsif rising_edge(clk) then
-            if (we and addr(31)) = '1' then
-                dout_PSP <= w_data(7 downto 0);
+            if (pwrite and psel0 and penable) = '1' then
+                dout_PSP <= pwdata;
             end if;
         end if;
     end process;
@@ -80,11 +114,13 @@ begin
         end if;
     end process;
 
-    --p_data
-    p_data(31 downto 8) <= (others => '0');
-    p_data(7 downto 0) <= dout_PSP when addr(2) = '0' else dout_PEP;
+    --muxes
+    --M2
+    dato_val <= penable when addr(31) = '1' else '1';
 
-    r_data <= dout_ram when addr(31)= '0' else p_data;
+    --M1
+    r_data <= dout_puente when addr(31) = '1' else dout_ram;
+    
 
     out_pins <= dout_PSP;
    

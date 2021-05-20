@@ -35,7 +35,7 @@ begin
     p_stim: process
     begin
         wait until reset_n = '1';
-        wait for 5 ns;
+        wait for 100 ns;
 
         assert false
         report "Se acabó mamahuevo"

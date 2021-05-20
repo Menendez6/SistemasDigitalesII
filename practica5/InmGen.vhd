@@ -25,7 +25,7 @@ architecture behavioral of InmGen is
             inst(7) when tipo_inst = TYPE_S else
             '0';
         
-        inm(0) <= inm_sin_mask and mask_b0;
+        inm(0) <= inm_sin_mask and not mask_b0;
 
         inm(4 downto 1) <= inst(24 downto 21) when tipo_inst = TYPE_I or tipo_inst = TYPE_J else
                            inst(11 downto 8) when tipo_inst = TYPE_S or tipo_inst = TYPE_B else "0000";

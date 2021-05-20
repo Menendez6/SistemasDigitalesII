@@ -129,10 +129,10 @@
 # 
 #           File in use by: pablo  Hostname: LAPTOP-E50T53VR  ProcessID: 8652
 # 
-#           Attempting to use alternate WLF file "./wlft6hjffy".
+#           Attempting to use alternate WLF file "./wlft2scx8w".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft6hjffy
+#           Using alternate file: ./wlft2scx8w
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -174,12 +174,12 @@
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_Path/i_RAM/i_byte3
 # ** Failure: Se acabó mamahuevo
-#    Time: 15 ns  Iteration: 0  Process: /riscv_tst_bnch/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/RISCV.vht
+#    Time: 110 ns  Iteration: 0  Process: /riscv_tst_bnch/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/RISCV.vht
 # Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/RISCV.vht line 41
 # Simulation Breakpoint: Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/RISCV.vht line 41
 # MACRO ./practica5_run_msim_rtl_vhdl.do PAUSED at line 26
-add wave  \
-sim:/riscv_tst_bnch/i1/i_Path/i_RAM/i_byte0/ram_block
+add wave sim:/riscv_tst_bnch/i1/i_Path/*
+add wave sim:/riscv_tst_bnch/i1/i_Path/i_BancoReg/*
 restart -f
 run -all
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -217,13 +217,45 @@ run -all
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_Path/i_RAM/i_byte3
 # ** Failure: Se acabó mamahuevo
-#    Time: 15 ns  Iteration: 0  Process: /riscv_tst_bnch/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/RISCV.vht
+#    Time: 110 ns  Iteration: 0  Process: /riscv_tst_bnch/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/RISCV.vht
 # Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/RISCV.vht line 41
+add wave sim:/riscv_tst_bnch/i1/i_Control/*
+restart -f
 run -all
-# ** Fatal: (vsim-3734) Index value 102 is out of range 0 to 101.
-#    Time: 4137500 ps  Iteration: 1  Process: /riscv_tst_bnch/i1/i_Path/i_ROM/mem_rom File: C:/altera/13.0sp1/SistemasDigitalesII/practica5/ROM.vhd
-# Fatal error in Process mem_rom at C:/altera/13.0sp1/SistemasDigitalesII/practica5/ROM.vhd line 132
-# 
-# HDL call sequence:
-# Stopped at C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/RISCV.vht 37 Process p_stim
-# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_Path/i_RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_Path/i_ALU
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_Path/i_ALU
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_Path/i_ALU
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_Path/i_BancoReg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_Path/i_BancoReg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_Path/i_RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_Path/i_RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_Path/i_BancoReg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_Path/i_BancoReg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_Path/i_ALU
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_Path/i_ALU
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_Path/i_ALU
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_Path/i_RAM/i_byte0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_Path/i_RAM/i_byte1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_Path/i_RAM/i_byte2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_Path/i_RAM/i_byte3
+# ** Failure: Se acabó mamahuevo
+#    Time: 110 ns  Iteration: 0  Process: /riscv_tst_bnch/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/RISCV.vht
+# Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/RISCV.vht line 41

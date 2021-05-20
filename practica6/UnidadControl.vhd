@@ -22,7 +22,9 @@ entity UnidadControl is
 	wc_ram : out std_logic;
     maskb0: out std_logic;
     m_shamt: out std_logic;
-	m_ram : out std_logic);
+	m_ram : out std_logic;
+	re: out std_logic;
+	dato_val: in std_logic);
 end UnidadControl;
 
 architecture behavioral of UnidadControl is
@@ -70,7 +72,9 @@ architecture behavioral of UnidadControl is
 		when lw4 =>
 			estado_sig<=lw5;
 		when lw5 =>
-			estado_sig<=Fetch;
+			if dato_val = '1' then
+				estado_sig<=Fetch;
+			end if;
 		when sw4 =>
 			estado_sig<=Fetch;
 		when auipc3 =>
@@ -121,6 +125,7 @@ architecture behavioral of UnidadControl is
 	m_ram <='0';
     m_shamt <= '0';
     maskb0 <= '0';
+	re <= '0';
 	
 	case estado_act is
 		when Reset=>
@@ -150,10 +155,12 @@ architecture behavioral of UnidadControl is
 		when lw4 =>
 			tipo_acc<=ir_out(13) & ir_out(12);
 			l_u<=ir_out(14);
+			re <= '1';
 		when sw4=>
 			tipo_acc<=ir_out(13) & ir_out(12);
 			wc_ram<='1';
 		when lw5=>
+			l_u <= ir_out(14);
 			m_banco<="00";
 			en_banco<='1';
 			m_ram<='1';

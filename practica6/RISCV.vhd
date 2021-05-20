@@ -10,7 +10,9 @@ entity RISCV is
         w_data : out std_logic_vector(31 downto 0);
         tipo_acc : out std_logic_vector(1 downto 0);
         l_u : out std_logic;
-        we : out std_logic
+        we : out std_logic;
+        re: out std_logic;
+        dato_val : in std_logic
     );
 end RISCV;
 
@@ -51,7 +53,9 @@ begin
         wc_ram => we,
         m_shamt => m_shamt,
         m_ram => m_ram,
-        maskb0 => maskb0
+        maskb0 => maskb0,
+        re => re,
+        dato_val => dato_val
     );
 
     i_Path : entity work.Data_path

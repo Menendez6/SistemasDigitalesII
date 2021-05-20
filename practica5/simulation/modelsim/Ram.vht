@@ -85,7 +85,7 @@ begin
             end loop;
         end loop;
 
-        tipo_acc <= "01"; -- word access
+        tipo_acc <= "01"; -- half word access
     for i in 0 to 255 loop
       for a in 0 to 7 loop
         -- The data written is composed of 2 bytes, each with a distinct value.

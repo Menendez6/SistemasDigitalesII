@@ -10,6 +10,14 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/Control_puente.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Control_puente
+# -- Compiling architecture behavioral of Control_puente
 # vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/UnidadControl.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -64,6 +72,15 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Sum_res
 # -- Compiling architecture behavioral of Sum_res
+# vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/puente.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity puente
+# -- Compiling architecture structural of puente
+# -- Loading entity Control_puente
 # vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/Data_path.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -104,9 +121,10 @@
 # -- Compiling entity practica6
 # -- Compiling architecture structural of practica6
 # -- Loading entity RISCV
-# ** Warning: C:/altera/13.0sp1/SistemasDigitalesII/practica6/practica6.vhd(38): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 20 is not equal to right length 19).
+# ** Warning: C:/altera/13.0sp1/SistemasDigitalesII/practica6/practica6.vhd(48): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 20 is not equal to right length 19).
 # 
 # -- Loading entity Ram
+# -- Loading entity puente
 # 
 # vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/simulation/modelsim/RISCV.vht}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -136,16 +154,22 @@
 # Loading work.sum_res(behavioral)
 # Loading work.ram(arch_ram)
 # Loading work.ram_core(behavioral)
+# Loading work.puente(structural)
+# Loading work.control_puente(behavioral)
+# ** Warning: (vsim-8683) Uninitialized out port /riscv_tst_bnch/i1/i_Puente/paddr_out(3 downto 0) has no driver.
+# 
+# This port will contribute value (UUUU) to the signal network.
+# 
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: pablo  Hostname: LAPTOP-E50T53VR  ProcessID: 8652
 # 
-#           Attempting to use alternate WLF file "./wlftcgx2vw".
+#           Attempting to use alternate WLF file "./wlftrt5kq5".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftcgx2vw
+#           Using alternate file: ./wlftrt5kq5
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -187,87 +211,7 @@
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_RAM/i_byte3
 # ** Failure: Se acabó mamahuevo
-#    Time: 5135 ns  Iteration: 0  Process: /riscv_tst_bnch/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/practica6/simulation/modelsim/RISCV.vht
-# Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/practica6/simulation/modelsim/RISCV.vht line 55
-# Simulation Breakpoint: Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/practica6/simulation/modelsim/RISCV.vht line 55
-# MACRO ./practica5_run_msim_rtl_vhdl.do PAUSED at line 27
-add wave -r sim:/riscv_tst_bnch/i1/i_RISCV/i_Path/i_BancoReg/*
-restart -f
-run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_RAM
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_ALU
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_ALU
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_ALU
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_BancoReg
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_BancoReg
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_RAM
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_RAM
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_BancoReg
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_BancoReg
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_ALU
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_ALU
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_ALU
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_RAM/i_byte0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_RAM/i_byte1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_RAM/i_byte2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_RAM/i_byte3
-# ** Failure: Se acabó mamahuevo
-#    Time: 5135 ns  Iteration: 0  Process: /riscv_tst_bnch/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/practica6/simulation/modelsim/RISCV.vht
-# Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/practica6/simulation/modelsim/RISCV.vht line 55
-add wave sim:/riscv_tst_bnch/i1/*
-restart -f
-run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_RAM
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_ALU
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_ALU
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_ALU
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_BancoReg
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_BancoReg
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_RAM
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_RAM
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_BancoReg
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_BancoReg
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_ALU
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_ALU
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /riscv_tst_bnch/i1/i_RISCV/i_Path/i_ALU
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_RAM/i_byte0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_RAM/i_byte1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_RAM/i_byte2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2500 ps  Iteration: 1  Instance: /riscv_tst_bnch/i1/i_RAM/i_byte3
-# ** Failure: Se acabó mamahuevo
-#    Time: 5135 ns  Iteration: 0  Process: /riscv_tst_bnch/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/practica6/simulation/modelsim/RISCV.vht
-# Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/practica6/simulation/modelsim/RISCV.vht line 55
+#    Time: 38415 ns  Iteration: 0  Process: /riscv_tst_bnch/p_stim File: C:/altera/13.0sp1/SistemasDigitalesII/practica6/simulation/modelsim/RISCV.vht
+# Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/practica6/simulation/modelsim/RISCV.vht line 57
+# Simulation Breakpoint: Break in Process p_stim at C:/altera/13.0sp1/SistemasDigitalesII/practica6/simulation/modelsim/RISCV.vht line 57
+# MACRO ./practica5_run_msim_rtl_vhdl.do PAUSED at line 29

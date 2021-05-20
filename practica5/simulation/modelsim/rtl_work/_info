@@ -16,7 +16,7 @@ L5
 VmfHDNR5]dX9<f`[K2V<QW2
 Z8 OV;C;10.1d;51
 31
-Z9 !s108 1620146509.824000
+Z9 !s108 1620412857.394000
 Z10 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/ALU.vhd|
 Z11 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/ALU.vhd|
 Z12 o-93 -work work -O0
@@ -53,7 +53,7 @@ L5
 V<aoMYG4U;iaJMT2=]?e@:0
 R8
 31
-Z18 !s108 1620146509.951000
+Z18 !s108 1620412857.553000
 Z19 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/BancoRegistros.vhd|
 Z20 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/BancoRegistros.vhd|
 R12
@@ -90,7 +90,7 @@ L5
 V_z`0HbCWEISHShM`zA[CW2
 R8
 31
-Z25 !s108 1620146510.285000
+Z25 !s108 1620412858.023000
 Z26 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/Data_path.vhd|
 Z27 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/Data_path.vhd|
 R12
@@ -131,7 +131,7 @@ L4
 VJ8limiNKW>Fo74h05H4YW3
 R8
 31
-Z35 !s108 1620146510.018000
+Z35 !s108 1620412857.643000
 Z36 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/InmGen.vhd|
 Z37 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/InmGen.vhd|
 R12
@@ -167,7 +167,7 @@ L5
 V2=9=An2A?BV@OjnMa0O>Z0
 R8
 31
-Z41 !s108 1620146510.217000
+Z41 !s108 1620412857.910000
 Z42 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/Ram.vhd|
 Z43 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/Ram.vhd|
 R12
@@ -205,7 +205,7 @@ L5
 V8835[OM>4h2Mh;11=K6122
 R8
 31
-Z48 !s108 1620146510.081000
+Z48 !s108 1620412857.732000
 Z49 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/ram_core.vhd|
 Z50 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/ram_core.vhd|
 R12
@@ -241,7 +241,7 @@ L4
 VdJ;J<9IU=ocX]C18ic29G0
 R8
 31
-Z54 !s108 1620146510.358000
+Z54 !s108 1620412858.133000
 Z55 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/RISCV.vhd|
 Z56 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/RISCV.vhd|
 R12
@@ -268,7 +268,7 @@ R13
 !s100 ^Qn>1zcXXP_=Uc@oPYPVS2
 !i10b 1
 Eriscv_tst_bnch
-Z59 w1619607150
+Z59 w1620412843
 R3
 R4
 R5
@@ -281,7 +281,7 @@ V<PzLSZ7QQ=12YDbZW^TO?0
 R8
 31
 !i10b 1
-Z62 !s108 1620146510.434000
+Z62 !s108 1620412858.218000
 Z63 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/RISCV.vht|
 Z64 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/simulation/modelsim/RISCV.vht|
 R12
@@ -293,8 +293,8 @@ R4
 DEx4 work 14 riscv_tst_bnch 0 22 <PzLSZ7QQ=12YDbZW^TO?0
 l12
 L7
-V3bS2Q_1lHiJ0n>PDUT_503
-!s100 Ei26Qh;S_aSeFgYQZAOCQ1
+VGB=jV1:kh90a^MNADzVzF3
+!s100 ?gQmV19:Z_`D1:<f?54Yb2
 R8
 31
 !i10b 1
@@ -304,7 +304,7 @@ R64
 R12
 R13
 Erom
-Z65 w1619606769
+Z65 w1620412755
 R2
 R3
 R4
@@ -316,7 +316,7 @@ L8
 VY>a[GHI;2X:lBJJoFT6=m2
 R8
 31
-Z68 !s108 1620146509.888000
+Z68 !s108 1620412857.453000
 Z69 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/ROM.vhd|
 Z70 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/ROM.vhd|
 R12
@@ -328,9 +328,9 @@ R2
 R3
 R4
 R30
-l124
+l31
 L16
-VBUz?jPHh2iLI57ncS@Tb]3
+Vceo7IRbbm8WnWl?aScz9A0
 R8
 31
 R68
@@ -338,7 +338,7 @@ R69
 R70
 R12
 R13
-!s100 WXc:8QPm<lN=FJ[YA307D0
+!s100 6e:H`75Q;@??e;^OeHS642
 !i10b 1
 Esum_res
 Z71 w1619547995
@@ -353,7 +353,7 @@ L5
 Vo];?VC3N:`5TI747YQEo<3
 R8
 31
-Z74 !s108 1620146510.148000
+Z74 !s108 1620412857.813000
 Z75 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/sum_res.vhd|
 Z76 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/sum_res.vhd|
 R12
@@ -389,7 +389,7 @@ L4
 VMh_J=DMNciPIW>AFUW=H12
 R8
 31
-Z80 !s108 1620146509.760000
+Z80 !s108 1620412857.320000
 Z81 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/SistemasDigitalesII/practica5/UnidadControl.vhd|
 Z82 !s107 C:/altera/13.0sp1/SistemasDigitalesII/practica5/UnidadControl.vhd|
 R12

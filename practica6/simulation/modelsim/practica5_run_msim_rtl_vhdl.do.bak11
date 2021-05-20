@@ -5,6 +5,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/Control_puente.vhd}
 vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/UnidadControl.vhd}
 vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/ALU.vhd}
 vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/ROM.vhd}
@@ -12,6 +13,7 @@ vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/BancoRegist
 vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/InmGen.vhd}
 vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/ram_core.vhd}
 vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/sum_res.vhd}
+vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/puente.vhd}
 vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/Data_path.vhd}
 vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/Ram.vhd}
 vcom -93 -work work {C:/altera/13.0sp1/SistemasDigitalesII/practica6/RISCV.vhd}

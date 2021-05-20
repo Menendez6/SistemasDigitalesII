@@ -43,12 +43,14 @@ begin
         wait until reset_n = '1';
         wait for 5 ns;
 
+
         for i in 0 to (2**8 -1) loop
             in_pins <= std_logic_vector(to_unsigned(i,8));
-            wait for 20 ns;
+            wait for 150 ns;
+        
             --assert out_pins = std_logic_vector(to_unsigned(i,8))
-            --    report "Error"
-            --    severity failure;
+            --   report "Error"
+            --   severity failure;
         end loop;
 
         assert false
